@@ -8,7 +8,7 @@ Plain static HTML and CSS, no build step. GitHub Pages serves `main` as is
 - `index.html`: the page.
 - `css/site.css`: colors from piccolo's BLUE theme, dark by default, light with
   `prefers-color-scheme`.
-- `img/`: copies of `piccolo/assets/branding` (the source of truth; copy again
+- `img/`: copies of `piccolo/assets/branding` and `piccoletto/assets/branding` (the source of truth; copy again
   when the branding changes).
 
 Preview locally:
