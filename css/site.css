@@ -1,0 +1,111 @@
+/* piccolo site. Colors from the BLUE theme (see piccolo/assets/branding/README.md). */
+
+:root {
+  --bg: #1A2840;
+  --band: #2A4068;
+  --card: #2A4068;
+  --card-on-band: #1A2840;
+  --text: #E0E6F0;
+  --muted: #AEBBD4;
+  --shadow: #101828;
+  --edge: #5878A8;
+  --accent: #FFC93C;
+  --link: #9DB8E8;
+  --code-bg: #101828;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #E8EDF5;
+    --band: #FFFFFF;
+    --card: #FFFFFF;
+    --card-on-band: #E8EDF5;
+    --text: #1A2840;
+    --muted: #4A5A78;
+    --shadow: #B4C2DC;
+    --edge: #B4C2DC;
+    --accent: #FFC93C;
+    --link: #2A4068;
+    --code-bg: #1A2840;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 17px/1.55 Inter, system-ui, sans-serif;
+}
+
+a { color: var(--link); }
+a:hover { color: var(--accent); }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+h2, h3, .brand { font-family: Fredoka, Inter, sans-serif; font-weight: 600; letter-spacing: -0.02em; }
+h2 { font-size: 40px; line-height: 1.1; margin: 0 0 24px; text-shadow: 4px 4px 0 var(--shadow); }
+
+/* Header: like piccolo's menu bar, uppercase entries on one strip. */
+.top { background: var(--band); border-bottom: 2px solid var(--shadow); }
+.top-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; min-height: 56px; }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 24px; color: var(--text); text-decoration: none; }
+nav { display: flex; gap: 4px; flex-wrap: wrap; }
+nav a {
+  color: var(--text); text-decoration: none; padding: 10px 12px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+}
+nav a:hover { background: var(--accent); color: #1A2840; }
+
+section { padding: 72px 0; }
+.band { background: var(--band); }
+
+.hero { padding: 88px 0 80px; text-align: center; }
+.logo { width: min(560px, 100%); height: auto; }
+.tagline { font-size: 26px; margin: 28px 0 12px; }
+.tagline strong { color: var(--accent); font-weight: 700; }
+.lede { max-width: 640px; margin: 0 auto; color: var(--muted); }
+
+.actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+.btn {
+  display: inline-block; min-height: 48px; padding: 12px 22px;
+  font-weight: 700; text-decoration: none; color: var(--text);
+  background: var(--band); border: 2px solid var(--edge);
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+.btn:hover { color: var(--text); transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--shadow); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #1A2840; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+.card { background: var(--card-on-band); padding: 20px 22px; box-shadow: 6px 6px 0 var(--shadow); }
+.card h3 {
+  margin: 0 0 8px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
+}
+/* Yellow text doesn't read on the light page: there the accent is a highlighter stroke. */
+@media (prefers-color-scheme: light) {
+  .card h3 { color: #2A4068; }
+  .tagline strong { color: var(--text); box-shadow: inset 0 -0.4em 0 var(--accent); }
+}
+.card p { margin: 0; color: var(--muted); font-size: 16px; }
+
+.split { max-width: 720px; }
+.note { color: var(--muted); font-size: 15px; }
+
+pre {
+  background: var(--code-bg); color: #E0E6F0; padding: 18px 20px; overflow-x: auto;
+  font: 14px/1.6 ui-monospace, "JetBrains Mono", Menlo, monospace;
+  box-shadow: 6px 6px 0 var(--shadow);
+}
+
+footer { padding: 32px 0; border-top: 2px solid var(--shadow); color: var(--muted); font-size: 15px; }
+.foot-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer p { margin: 0; }
+
+@media (max-width: 600px) {
+  h2 { font-size: 32px; }
+  section { padding: 56px 0; }
+  .hero { padding: 56px 0; }
+  .tagline { font-size: 21px; }
+}

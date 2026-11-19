@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>piccolo: a small libretro frontend for playing games</title>
+<meta name="description" content="piccolo is a small libretro frontend for playing games: no library, just load a game and play, with a retro-style UI, sync options, input mapping and savestates.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#1A2840">
+<link rel="icon" href="img/piccolo-icon-small.svg" type="image/svg+xml">
+<link rel="icon" href="img/piccolo-icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/piccolo-icon-256.png">
+<meta property="og:title" content="piccolo">
+<meta property="og:description" content="A small libretro frontend for playing games.">
+<meta property="og:image" content="https://get-piccolo.app/img/piccolo-logo-dark.png">
+<meta property="og:url" content="https://get-piccolo.app/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Inter:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="./"><img src="img/piccolo-icon-small.svg" width="28" height="28" alt=""> piccolo</a>
+    <nav aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#piccoletto">piccoletto</a>
+      <a href="#get">Get it</a>
+      <a href="https://github.com/multitap-org/piccolo">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <picture>
+      <source srcset="img/piccolo-logo-light.svg" media="(prefers-color-scheme: light)">
+      <img class="logo" src="img/piccolo-logo-dark.svg" width="639" height="161" alt="piccolo">
+    </picture>
+    <p class="tagline">A small libretro frontend for <strong>playing games</strong>.</p>
+    <p class="lede">No library to build, no playlists to scan. Pick a core, pick a game, play.
+      piccolo puts its effort where you notice it: smooth timing, sharp pixels,
+      controls that do what you want, and a classic emulator look.</p>
+    <div class="actions">
+      <a class="btn primary" href="#get">Coming in December</a>
+      <a class="btn" href="https://github.com/multitap-org/piccolo">Source on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="band">
+  <div class="wrap">
+    <h2>What it does</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>LOAD GAME</h3>
+        <p>Choose a core first, then a file. The list shows only what that core can load, asked
+          from the core itself. RECENT keeps your last games one click away.</p>
+      </article>
+      <article class="card">
+        <h3>Timing that feels right</h3>
+        <p>Vsync or exact timing, frame delay with an automatic search per game, low latency
+          presentation and dynamic rate control so sound never crackles.</p>
+      </article>
+      <article class="card">
+        <h3>Sharp pixels</h3>
+        <p>Aspect ratio, integer or automatic scaling, filters and overscan crop, with a live
+          preview in IMAGE SETTINGS. Picture controls and shaders through librashader are next.</p>
+      </article>
+      <article class="card">
+        <h3>Savestates</h3>
+        <p>Nine slots per game with thumbnails and dates in the QUICK MENU. Save RAM and states
+          are kept for you.</p>
+      </article>
+      <article class="card">
+        <h3>Your controls</h3>
+        <p>One controller per port, remaps per core with per-game copies, turbo, combos, macros
+          you record, mouse and lightgun, and a MAP CONTROLLER wizard for unknown pads.</p>
+      </article>
+      <article class="card">
+        <h3>Settings in layers</h3>
+        <p>Every setting is global, and many can be set for one core or one game. Core options
+          can be kept per core, per folder or per game.</p>
+      </article>
+      <article class="card">
+        <h3>A retro-style UI</h3>
+        <p>A menu bar, windows and a 5&times;5 pixel font drawn for piccolo. Themes: BLUE,
+          PURPLE, ZSNES and BLACK, or your own.</p>
+      </article>
+      <article class="card">
+        <h3>Small and fast</h3>
+        <p>Native code on Vulkan, tested on a low-end ARM board. English and Spanish.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="piccoletto">
+  <div class="wrap split">
+    <div>
+      <h2>piccoletto</h2>
+      <p>piccolo's companion app, Android first. Use your phone as a gamepad, play remotely
+        from piccolo running on your computer, and manage your devices.</p>
+      <p class="note">Ships alongside piccolo.</p>
+    </div>
+  </div>
+</section>
+
+<section id="get" class="band">
+  <div class="wrap">
+    <h2>Get it</h2>
+    <p>The first release, for Linux and Windows, is planned for early December. Until then you can
+      build it from source; you'll need CMake, Ninja, a C++20 compiler and the Vulkan SDK.</p>
+<pre><code>git clone --recursive https://github.com/multitap-org/piccolo.git
+cd piccolo
+cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+./build/piccolo</code></pre>
+    <p>piccolo runs <a href="https://www.libretro.com/">libretro</a> cores: bring the cores and the games you own.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <p>piccolo is free software (MIT), part of the <a href="https://github.com/multitap-org">Multitap</a> project.</p>
+    <p><a href="https://github.com/multitap-org/piccolo">GitHub</a> &middot; <a href="https://github.com/multitap-org/piccolo/issues">Issues</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
