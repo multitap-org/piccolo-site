@@ -90,12 +90,15 @@ section { padding: 72px 0; }
 }
 .card p { margin: 0; color: var(--muted); font-size: 16px; }
 
-.split { max-width: 720px; }
 .logo-small { width: min(420px, 100%); height: auto; margin-bottom: 16px; }
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; overflow: hidden;
   clip: rect(0 0 0 0); white-space: nowrap;
 }
+#piccoletto p { max-width: 720px; }
+.tagline-small { font-size: 21px; margin: 0 0 8px; }
+.modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin: 32px 0 24px; }
+.modes .card { background: var(--card); }
 .note { color: var(--muted); font-size: 15px; }
 
 pre {

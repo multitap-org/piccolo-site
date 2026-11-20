@@ -59,17 +59,19 @@
       <article class="card">
         <h3>LOAD GAME</h3>
         <p>Choose a core first, then a file. The list shows only what that core can load, asked
-          from the core itself. RECENT keeps your last games one click away.</p>
+          from the core itself. Games inside zip and 7z archives work too, and RECENT keeps your
+          last games one click away.</p>
       </article>
       <article class="card">
         <h3>Timing that feels right</h3>
-        <p>Vsync or exact timing, frame delay with an automatic search per game, low latency
-          presentation and dynamic rate control so sound never crackles.</p>
+        <p>Vsync or exact timing, frame delay with an automatic search per game, run-ahead,
+          low latency presentation and dynamic rate control so sound never crackles.</p>
       </article>
       <article class="card">
         <h3>Sharp pixels</h3>
         <p>Aspect ratio, integer or automatic scaling, filters and overscan crop, with a live
-          preview in IMAGE SETTINGS. Picture controls and shaders through librashader are next.</p>
+          preview in IMAGE SETTINGS. Picture controls, and a short list of shaders we picked,
+          run through librashader.</p>
       </article>
       <article class="card">
         <h3>Savestates</h3>
@@ -87,29 +89,59 @@
           can be kept per core, per folder or per game.</p>
       </article>
       <article class="card">
+        <h3>Cores in one place</h3>
+        <p>TOOLS &gt; CORES downloads and updates libretro cores, with signed downloads. Cores
+          under non-free licenses stay hidden until you ask for them.</p>
+      </article>
+      <article class="card">
+        <h3>Phones as controllers</h3>
+        <p>Pair a phone with a 6-digit code and choose what it may do: be a gamepad, play the
+          game streamed to it, or browse your games and load them. Encrypted, on your
+          own network.</p>
+      </article>
+      <article class="card">
         <h3>A retro-style UI</h3>
         <p>A menu bar, windows and a 5&times;5 pixel font drawn for piccolo. Themes: BLUE,
           PURPLE, ZSNES and BLACK, or your own.</p>
       </article>
       <article class="card">
         <h3>Small and fast</h3>
-        <p>Native code on Vulkan, tested on a low-end ARM board. English and Spanish.</p>
+        <p>Native code on Vulkan, tested on a low-end ARM board. Linux, Windows, Android and
+          Android TV. English and Spanish.</p>
       </article>
     </div>
   </div>
 </section>
 
 <section id="piccoletto">
-  <div class="wrap split">
+  <div class="wrap">
     <div>
       <h2 class="visually-hidden">piccoletto</h2>
       <picture>
         <source srcset="img/piccoletto-logo-light.svg" media="(prefers-color-scheme: light)">
         <img class="logo-small" src="img/piccoletto-logo-dark.svg" width="816" height="161" alt="piccoletto">
       </picture>
-      <p>piccolo's companion app, Android first. Use your phone as a gamepad, play remotely
-        from piccolo running on your computer, and manage your devices.</p>
-      <p class="note">Ships alongside piccolo.</p>
+      <p class="tagline-small">piccolo's companion app, for Android first.</p>
+      <p>piccoletto pairs with a piccolo on your network and does what that piccolo lets it.
+        It never runs games itself: the game always runs on piccolo.</p>
+      <div class="modes">
+        <article class="card">
+          <h3>GAMEPAD</h3>
+          <p>Your phone becomes a controller on any of piccolo's ports, with buttons you can
+            move. A gamepad connected to the phone works too.</p>
+        </article>
+        <article class="card">
+          <h3>REMOTE PLAY</h3>
+          <p>piccolo streams the picture and the sound to the phone, which plays it with
+            touch or a gamepad, and with piccolo's shaders.</p>
+        </article>
+        <article class="card">
+          <h3>DEVICES</h3>
+          <p>See who is playing on which port and move phones and controllers between ports
+            from the couch.</p>
+        </article>
+      </div>
+      <p class="note">Ships alongside piccolo, for Android phones and Android TV.</p>
     </div>
   </div>
 </section>
@@ -117,8 +149,9 @@
 <section id="get" class="band">
   <div class="wrap">
     <h2>Get it</h2>
-    <p>The first release, for Linux and Windows, is planned for early December. Until then you can
-      build it from source; you'll need CMake, Ninja, a C++20 compiler and the Vulkan SDK.</p>
+    <p>The first release is planned for early December: piccolo for Linux (Flatpak), Windows and
+      Android, and piccoletto for Android. Until then you can build piccolo from source; you'll
+      need CMake, Ninja, a C++20 compiler and the Vulkan SDK.</p>
 <pre><code>git clone --recursive https://github.com/multitap-org/piccolo.git
 cd piccolo
 cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
