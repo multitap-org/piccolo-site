@@ -1,0 +1,3522 @@
+# piccolo: Spanish translation.
+# msgctxt = the string key from src/strings.txt; msgid = the English text.
+# Language names (ENGLISH, ESPAÑOL) stay as they are on purpose.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: es\n"
+
+msgctxt "menu_game"
+msgid "GAME"
+msgstr "JUEGO"
+
+msgctxt "menu_config"
+msgid "SETTINGS"
+msgstr "AJUSTES"
+
+msgctxt "menu_misc"
+msgid "MISC"
+msgstr "VARIOS"
+
+msgctxt "menu_load_game"
+msgid "LOAD GAME..."
+msgstr "CARGAR JUEGO..."
+
+msgctxt "menu_reset"
+msgid "RESET"
+msgstr "REINICIAR"
+
+msgctxt "menu_save_state"
+msgid "SAVE STATE"
+msgstr "GUARDAR ESTADO"
+
+msgctxt "menu_load_state"
+msgid "LOAD STATE"
+msgstr "CARGAR ESTADO"
+
+msgctxt "menu_quit"
+msgid "QUIT"
+msgstr "SALIR"
+
+msgctxt "menu_general"
+msgid "GENERAL..."
+msgstr "GENERAL..."
+
+msgctxt "menu_video"
+msgid "VIDEO..."
+msgstr "VIDEO..."
+
+msgctxt "menu_input"
+msgid "INPUT..."
+msgstr "CONTROLES..."
+
+msgctxt "menu_sound"
+msgid "SOUND..."
+msgstr "SONIDO..."
+
+msgctxt "menu_debug_window"
+msgid "DEBUG WINDOW"
+msgstr "VENTANA DE DEPURACIÓN"
+
+msgctxt "menu_about"
+msgid "ABOUT PICCOLO"
+msgstr "ACERCA DE PICCOLO"
+
+msgctxt "menu_recent_empty"
+msgid "NO RECENT GAMES"
+msgstr "NO HAY JUEGOS RECIENTES"
+
+msgctxt "recent_no_game"
+msgid "NO GAME"
+msgstr "SIN JUEGO"
+
+msgctxt "status_start"
+msgid "GAME > LOAD GAME TO START"
+msgstr "JUEGO > CARGAR JUEGO PARA EMPEZAR"
+
+msgctxt "status_reset"
+msgid "RESET"
+msgstr "REINICIADO"
+
+msgctxt "status_not_there_yet"
+msgid "NOT THERE YET"
+msgstr "TODAVÍA NO ESTÁ"
+
+msgctxt "picker_title"
+msgid "LOAD GAME"
+msgstr "CARGAR JUEGO"
+
+msgctxt "picker_core"
+msgid "CORE"
+msgstr "CORE"
+
+msgctxt "picker_folder"
+msgid "FOLDER"
+msgstr "CARPETA"
+
+msgctxt "picker_home"
+msgid "HOME"
+msgstr "INICIO"
+
+msgctxt "picker_folder_title"
+msgid "CHOOSE FOLDER"
+msgstr "ELEGIR CARPETA"
+
+msgctxt "picker_use_folder"
+msgid "USE THIS FOLDER"
+msgstr "USAR ESTA CARPETA"
+
+msgctxt "picker_no_cores"
+msgid "NO CORES FOUND"
+msgstr "NO HAY CORES"
+
+msgctxt "picker_nothing_here"
+msgid "NOTHING THIS CORE LOADS HERE"
+msgstr "NADA QUE ESTE CORE CARGUE AQUÍ"
+
+msgctxt "picker_show_all"
+msgid "SHOW ALL FILES"
+msgstr "MOSTRAR TODOS LOS ARCHIVOS"
+
+msgctxt "picker_start_without_game"
+msgid "START WITHOUT GAME"
+msgstr "INICIAR SIN JUEGO"
+
+msgctxt "picker_load"
+msgid "LOAD"
+msgstr "CARGAR"
+
+msgctxt "picker_browse"
+msgid "BROWSE"
+msgstr "EXPLORAR"
+
+msgctxt "picker_peek_whole"
+msgid "THIS CORE LOADS THE WHOLE ARCHIVE"
+msgstr "ESTE CORE CARGA EL ARCHIVO COMPLETO"
+
+msgctxt "picker_peek_loads"
+msgid "LOAD STARTS"
+msgstr "CARGAR INICIA"
+
+msgctxt "picker_peek_folder"
+msgid "LOAD OPENS IT AS A FOLDER, FILES THIS CORE LOADS:"
+msgstr "CARGAR LO ABRE COMO CARPETA, ARCHIVOS QUE ESTE CORE CARGA:"
+
+msgctxt "picker_peek_none"
+msgid "NOTHING INSIDE THAT THIS CORE LOADS"
+msgstr "NO HAY NADA ADENTRO QUE ESTE CORE CARGUE"
+
+msgctxt "picker_peek_unreadable"
+msgid "CAN'T READ THIS ARCHIVE (SEE THE LOG)"
+msgstr "NO SE PUEDE LEER ESTE ARCHIVO (VER EL LOG)"
+
+msgctxt "settings_title"
+msgid "SETTINGS"
+msgstr "AJUSTES"
+
+msgctxt "tab_general"
+msgid "GENERAL"
+msgstr "GENERAL"
+
+msgctxt "tab_video"
+msgid "VIDEO"
+msgstr "VIDEO"
+
+msgctxt "tab_picture"
+msgid "PICTURE"
+msgstr "IMAGEN"
+
+msgctxt "tab_display"
+msgid "DISPLAY"
+msgstr "PANTALLA"
+
+msgctxt "tab_sync"
+msgid "SYNC"
+msgstr "SINCRONÍA"
+
+msgctxt "scope"
+msgid "SCOPE"
+msgstr "ALCANCE"
+
+msgctxt "scope_help"
+msgid "WHERE CHANGES GO. A CORE OR GAME SETTING WINS OVER THE GLOBAL ONE."
+msgstr "DÓNDE VAN LOS CAMBIOS. UN AJUSTE DEL CORE O DEL JUEGO GANA SOBRE EL GLOBAL."
+
+msgctxt "scope_start_game_help"
+msgid "START A GAME TO CHANGE SETTINGS FOR ONE CORE OR ONE GAME"
+msgstr "INICIA UN JUEGO PARA CAMBIAR AJUSTES DE UN CORE O DE UN JUEGO"
+
+msgctxt "scope_global"
+msgid "GLOBAL"
+msgstr "GLOBAL"
+
+msgctxt "scope_core"
+msgid "THIS CORE"
+msgstr "ESTE CORE"
+
+msgctxt "scope_game"
+msgid "THIS GAME"
+msgstr "ESTE JUEGO"
+
+msgctxt "marker_core_help"
+msgid "SET FOR THIS CORE"
+msgstr "DEFINIDO PARA ESTE CORE"
+
+msgctxt "marker_game_help"
+msgid "SET FOR THIS GAME"
+msgstr "DEFINIDO PARA ESTE JUEGO"
+
+msgctxt "reset"
+msgid "RESET"
+msgstr "RESTABLECER"
+
+msgctxt "reset_help_global"
+msgid "BACK TO THE DEFAULT"
+msgstr "VOLVER AL VALOR POR DEFECTO"
+
+msgctxt "reset_help_override"
+msgid "BACK TO THE VALUE BELOW (STOP OVERRIDING)"
+msgstr "VOLVER AL VALOR DE ABAJO (DEJAR DE SOBRESCRIBIR)"
+
+msgctxt "global_only_help"
+msgid "GLOBAL ONLY: SWITCH THE SCOPE TO GLOBAL TO CHANGE IT"
+msgstr "SOLO GLOBAL: CAMBIA EL ALCANCE A GLOBAL PARA MODIFICARLO"
+
+msgctxt "section_folders"
+msgid "FOLDERS"
+msgstr "CARPETAS"
+
+msgctxt "folders_next_game"
+msgid "FOLDER CHANGES APPLY TO THE NEXT GAME"
+msgstr "LOS CAMBIOS DE CARPETA SE APLICAN AL PRÓXIMO JUEGO"
+
+msgctxt "image_settings_button"
+msgid "IMAGE SETTINGS..."
+msgstr "AJUSTES DE IMAGEN..."
+
+msgctxt "image_settings_button_help"
+msgid "BEST WITH A GAME RUNNING: IT SHOWS THE PICTURE"
+msgstr "MEJOR CON UN JUEGO EN MARCHA: MUESTRA LA IMAGEN"
+
+msgctxt "crop_summary"
+msgid "CROP (TOP, BOTTOM, LEFT, RIGHT)"
+msgstr "RECORTE (ARRIBA, ABAJO, IZQUIERDA, DERECHA)"
+
+msgctxt "section_window"
+msgid "WINDOW"
+msgstr "VENTANA"
+
+msgctxt "window_sized_when_running"
+msgid "SIZED TO THE GAME WHEN ONE RUNS"
+msgstr "TOMA EL TAMAÑO DEL JUEGO CUANDO HAY UNO EN MARCHA"
+
+msgctxt "section_low_latency"
+msgid "LOW LATENCY"
+msgstr "BAJA LATENCIA"
+
+msgctxt "frame_delay_needs_wait"
+msgid "ONLY WITH WAIT FOR PRESENT: WITHOUT IT THE LOOP WAITS FOR THE DISPLAY AFTER READING INPUT, SO A DELAY ONLY ADDS LATENCY."
+msgstr "SOLO CON ESPERAR LA PRESENTACIÓN: SIN ESO EL CICLO ESPERA A LA PANTALLA DESPUÉS DE LEER LOS CONTROLES, ASÍ QUE UN RETARDO SOLO SUMA LATENCIA."
+
+msgctxt "latency_preset"
+msgid "PRESET"
+msgstr "PERFIL"
+
+msgctxt "latency_preset_help"
+msgid "Sets the three settings below. Change them one by one for anything in between."
+msgstr "Fija los tres ajustes de abajo. Cámbialos uno por uno para algo intermedio."
+
+msgctxt "preset_off"
+msgid "OFF"
+msgstr "APAGADO"
+
+msgctxt "preset_low"
+msgid "LOW"
+msgstr "BAJA"
+
+msgctxt "preset_lowest"
+msgid "LOWEST"
+msgstr "MÍNIMA"
+
+msgctxt "preset_custom"
+msgid "CUSTOM"
+msgstr "PERSONALIZADO"
+
+msgctxt "present_wait_screen"
+msgid "THIS GPU: WAITS UNTIL THE FRAME IS ON SCREEN"
+msgstr "ESTA GPU: ESPERA A QUE EL FRAME ESTÉ EN PANTALLA"
+
+msgctxt "present_wait_gpu"
+msgid "THIS GPU: NO PRESENT WAIT, WAITS FOR THE GPU INSTEAD"
+msgstr "ESTA GPU: SIN ESPERA DE PRESENTACIÓN, ESPERA A LA GPU"
+
+msgctxt "image_title"
+msgid "IMAGE SETTINGS"
+msgstr "AJUSTES DE IMAGEN"
+
+msgctxt "image_editing"
+msgid "EDITING"
+msgstr "EDITANDO"
+
+msgctxt "image_no_picture"
+msgid "START A GAME TO\nSEE ITS PICTURE HERE"
+msgstr "INICIA UN JUEGO PARA\nVER SU IMAGEN AQUÍ"
+
+msgctxt "image_section_crop"
+msgid "OVERSCAN CROP"
+msgstr "RECORTE DE OVERSCAN"
+
+msgctxt "image_section_profile"
+msgid "COLOR PROFILE"
+msgstr "PERFIL DE COLOR"
+
+msgctxt "image_section_controls"
+msgid "PICTURE CONTROLS"
+msgstr "CONTROLES DE IMAGEN"
+
+msgctxt "image_controls_unavailable"
+msgid "NEEDS LIBRASHADER (NOT FOUND):\nSAVED, NOT USED"
+msgstr "NECESITA LIBRASHADER (NO ESTÁ):\nSE GUARDAN, NO SE USAN"
+
+msgctxt "shader_preset_none"
+msgid "NONE"
+msgstr "NINGUNO"
+
+msgctxt "shader_unavailable"
+msgid "LIBRASHADER NOT FOUND: SHADERS ARE OFF"
+msgstr "LIBRASHADER NO ESTÁ: SHADERS APAGADOS"
+
+msgctxt "shader_choose"
+msgid "CHOOSE"
+msgstr "ELEGIR"
+
+msgctxt "shader_picker_title"
+msgid "SHADER PRESET"
+msgstr "PRESET DE SHADER"
+
+msgctxt "shader_picker_use"
+msgid "USE"
+msgstr "USAR"
+
+msgctxt "setting_language"
+msgid "LANGUAGE"
+msgstr "IDIOMA"
+
+msgctxt "setting_language_help"
+msgid "The language of piccolo's menus. Cores are told it too when they start."
+msgstr "El idioma de los menús de piccolo. También se les avisa a los cores al iniciar."
+
+msgctxt "setting_pause_in_menu"
+msgid "PAUSE WHILE THE MENU IS OPEN"
+msgstr "PAUSAR CON EL MENÚ ABIERTO"
+
+msgctxt "setting_pause_in_menu_help"
+msgid "Off: the game keeps running behind the menu."
+msgstr "Apagado: el juego sigue corriendo detrás del menú."
+
+msgctxt "setting_pause_on_focus_loss"
+msgid "PAUSE WHEN THE WINDOW LOSES FOCUS"
+msgstr "PAUSAR AL PERDER EL FOCO"
+
+msgctxt "setting_pause_on_focus_loss_help"
+msgid "Pause while another window is active."
+msgstr "Pausa mientras otra ventana está activa."
+
+msgctxt "setting_pause_on_disconnect"
+msgid "PAUSE WHEN CONTROLLERS DISCONNECT"
+msgstr "PAUSAR AL DESCONECTARSE LOS CONTROLES"
+
+msgctxt "setting_pause_on_disconnect_help"
+msgid "Pause when the last controller playing goes away (unplugged, out of battery, a phone that dropped). Not when the keyboard was what played. START, or closing the menu, resumes."
+msgstr "Pausa cuando se va el último control que estaba jugando (desconectado, sin batería, un teléfono que se cayó). No si se jugaba con el teclado. START, o cerrar el menú, reanuda."
+
+msgctxt "status_paused_disconnected"
+msgid "PAUSED: CONTROLLER DISCONNECTED. START OR THE MENU TO GO ON"
+msgstr "EN PAUSA: CONTROL DESCONECTADO. START O EL MENÚ PARA SEGUIR"
+
+msgctxt "setting_screensaver"
+msgid "ALLOW SCREENSAVER WHILE PAUSED"
+msgstr "PERMITIR PROTECTOR DE PANTALLA EN PAUSA"
+
+msgctxt "setting_screensaver_help"
+msgid "While a game runs the screensaver is always blocked. On: it may start while paused or in the menu."
+msgstr "Con un juego corriendo el protector de pantalla siempre está bloqueado. Encendido: puede activarse en pausa o en el menú."
+
+msgctxt "setting_path_cores"
+msgid "CORES"
+msgstr "CORES"
+
+msgctxt "setting_path_cores_help"
+msgid "Folder with the cores. Empty: the cores folder in piccolo's folder."
+msgstr "Carpeta con los cores. Vacía: la carpeta cores dentro de la de piccolo."
+
+msgctxt "setting_path_system"
+msgid "SYSTEM / BIOS"
+msgstr "SISTEMA / BIOS"
+
+msgctxt "setting_path_system_help"
+msgid "Folder for BIOS and other files cores ask for. Empty: the system folder in piccolo's folder."
+msgstr "Carpeta para BIOS y otros archivos que piden los cores. Vacía: la carpeta system dentro de la de piccolo."
+
+msgctxt "setting_path_saves"
+msgid "SAVES"
+msgstr "PARTIDAS"
+
+msgctxt "setting_path_saves_help"
+msgid "Folder for save RAM. Empty: the saves folder in piccolo's folder."
+msgstr "Carpeta para la RAM de guardado. Vacía: la carpeta saves dentro de la de piccolo."
+
+msgctxt "setting_path_states"
+msgid "STATES"
+msgstr "ESTADOS"
+
+msgctxt "setting_path_states_help"
+msgid "Folder for savestates. Empty: the states folder in piccolo's folder."
+msgstr "Carpeta para los estados guardados. Vacía: la carpeta states dentro de la de piccolo."
+
+msgctxt "setting_path_games"
+msgid "GAME FOLDER"
+msgstr "CARPETA DE JUEGOS"
+
+msgctxt "setting_path_games_help"
+msgid "A folder with games. LOAD GAME offers it as a place to start, and devices with FULL access can browse and load games from it over the network (never from outside these folders)."
+msgstr "Una carpeta con juegos. CARGAR JUEGO la ofrece como punto de partida, y los dispositivos con acceso COMPLETO pueden explorarla y cargar juegos de ella por la red (nunca de fuera de estas carpetas)."
+
+msgctxt "section_game_folders"
+msgid "GAME FOLDERS"
+msgstr "CARPETAS DE JUEGOS"
+
+msgctxt "game_folder_add_help"
+msgid "Adds a game folder."
+msgstr "Agrega una carpeta de juegos."
+
+msgctxt "game_folder_choose_help"
+msgid "Opens CHOOSE FOLDER to pick another folder."
+msgstr "Abre ELEGIR CARPETA para escoger otra carpeta."
+
+msgctxt "game_folder_remove_help"
+msgid "Removes this folder from the list. Nothing is deleted."
+msgstr "Quita esta carpeta de la lista. No se borra nada."
+
+msgctxt "setting_aspect"
+msgid "ASPECT RATIO"
+msgstr "RELACIÓN DE ASPECTO"
+
+msgctxt "setting_aspect_help"
+msgid "The shape of the whole picture. Square pixels: the frame's own width / height."
+msgstr "La forma de la imagen completa. Píxeles cuadrados: el ancho / alto propio del frame."
+
+msgctxt "setting_scaling"
+msgid "SCALING"
+msgstr "ESCALA"
+
+msgctxt "setting_scaling_help"
+msgid "Integer sizes keep every pixel the same size. Auto: one size up if it goes past the window by at most the % below."
+msgstr "Los tamaños enteros dejan todos los píxeles del mismo tamaño. Auto: un tamaño más si se sale de la ventana como mucho el % de abajo."
+
+msgctxt "setting_max_offscreen"
+msgid "AUTO: MAX OFFSCREEN"
+msgstr "AUTO: MÁXIMO FUERA DE PANTALLA"
+
+msgctxt "setting_max_offscreen_help"
+msgid "How much of the picture Auto may push past the window edges."
+msgstr "Cuánto de la imagen puede sacar Auto fuera de los bordes de la ventana."
+
+msgctxt "setting_filter"
+msgid "FILTER"
+msgstr "FILTRO"
+
+msgctxt "setting_filter_help"
+msgid "Sharp bilinear: sharp pixels, soft only where a pixel lands between two screen pixels."
+msgstr "Bilineal nítido: píxeles nítidos, suaves solo donde un píxel cae entre dos de la pantalla."
+
+msgctxt "setting_shader_preset"
+msgid "SHADER"
+msgstr "SHADER"
+
+msgctxt "setting_shader_preset_help"
+msgid "A RetroArch shader preset (.slangp). Empty: none."
+msgstr "Un preset de shaders de RetroArch (.slangp). Vacío: ninguno."
+
+msgctxt "setting_image_color_profile"
+msgid "COLOR PROFILE"
+msgstr "PERFIL DE COLOR"
+
+msgctxt "setting_image_color_profile_help"
+msgid "The colors of a screen: a handheld's LCD, or an NTSC TV. NONE: unchanged."
+msgstr "Los colores de una pantalla: el LCD de una portátil, o un televisor NTSC. NINGUNO: sin cambio."
+
+msgctxt "setting_image_profile_strength"
+msgid "PROFILE STRENGTH"
+msgstr "INTENSIDAD DEL PERFIL"
+
+msgctxt "setting_image_profile_strength_help"
+msgid "How much of the profile: 0 none, 1 all of it."
+msgstr "Cuánto del perfil: 0 nada, 1 todo."
+
+msgctxt "value_color_profile_none"
+msgid "NONE"
+msgstr "NINGUNO"
+
+msgctxt "value_color_profile_gba"
+msgid "GAME BOY ADVANCE"
+msgstr "GAME BOY ADVANCE"
+
+msgctxt "value_color_profile_gba_sp101"
+msgid "GBA SP (AGS-101)"
+msgstr "GBA SP (AGS-101)"
+
+msgctxt "value_color_profile_gba_nso"
+msgid "GBA (SWITCH ONLINE)"
+msgstr "GBA (SWITCH ONLINE)"
+
+msgctxt "value_color_profile_gbc"
+msgid "GAME BOY COLOR"
+msgstr "GAME BOY COLOR"
+
+msgctxt "value_color_profile_gbc_gambatte"
+msgid "GBC (GAMBATTE)"
+msgstr "GBC (GAMBATTE)"
+
+msgctxt "value_color_profile_gb_micro"
+msgid "GAME BOY MICRO"
+msgstr "GAME BOY MICRO"
+
+msgctxt "value_color_profile_nds"
+msgid "NINTENDO DS"
+msgstr "NINTENDO DS"
+
+msgctxt "value_color_profile_nds_lite"
+msgid "DS LITE"
+msgstr "DS LITE"
+
+msgctxt "value_color_profile_psp"
+msgid "PSP"
+msgstr "PSP"
+
+msgctxt "value_color_profile_switch_oled"
+msgid "SWITCH OLED"
+msgstr "SWITCH OLED"
+
+msgctxt "value_color_profile_palm"
+msgid "PALM"
+msgstr "PALM"
+
+msgctxt "value_color_profile_vba"
+msgid "VISUALBOYADVANCE"
+msgstr "VISUALBOYADVANCE"
+
+msgctxt "value_color_profile_ntsc"
+msgid "NTSC (TV)"
+msgstr "NTSC (TV)"
+
+msgctxt "setting_image_brightness"
+msgid "BRIGHTNESS"
+msgstr "BRILLO"
+
+msgctxt "setting_image_brightness_help"
+msgid "Added to every color. 0: unchanged."
+msgstr "Se suma a cada color. 0: sin cambio."
+
+msgctxt "setting_image_contrast"
+msgid "CONTRAST"
+msgstr "CONTRASTE"
+
+msgctxt "setting_image_contrast_help"
+msgid "Spread around mid grey. 1: unchanged."
+msgstr "Separación alrededor del gris medio. 1: sin cambio."
+
+msgctxt "setting_image_saturation"
+msgid "SATURATION"
+msgstr "SATURACIÓN"
+
+msgctxt "setting_image_saturation_help"
+msgid "Color strength. 0: black and white, 1: unchanged."
+msgstr "Intensidad del color. 0: blanco y negro, 1: sin cambio."
+
+msgctxt "setting_image_hue"
+msgid "HUE"
+msgstr "TONO"
+
+msgctxt "setting_image_hue_help"
+msgid "Turns every color around the color wheel, in degrees. 0: unchanged."
+msgstr "Gira cada color en el círculo cromático, en grados. 0: sin cambio."
+
+msgctxt "setting_image_gamma"
+msgid "GAMMA"
+msgstr "GAMMA"
+
+msgctxt "setting_image_gamma_help"
+msgid "Above 1 darkens the mid tones, below 1 lightens them. 1: unchanged."
+msgstr "Más de 1 oscurece los tonos medios, menos de 1 los aclara. 1: sin cambio."
+
+msgctxt "setting_image_black_level"
+msgid "BLACK LEVEL"
+msgstr "NIVEL DE NEGRO"
+
+msgctxt "setting_image_black_level_help"
+msgid "Lifts (+) or crushes (-) the blacks; white stays white. 0: unchanged."
+msgstr "Levanta (+) o hunde (-) los negros; el blanco sigue blanco. 0: sin cambio."
+
+msgctxt "setting_image_temperature"
+msgid "TEMPERATURE"
+msgstr "TEMPERATURA"
+
+msgctxt "setting_image_temperature_help"
+msgid "Warmer (+, redder) or cooler (-, bluer). 0: unchanged."
+msgstr "Más cálido (+, más rojo) o más frío (-, más azul). 0: sin cambio."
+
+msgctxt "setting_image_gain_red"
+msgid "RED GAIN"
+msgstr "GANANCIA ROJO"
+
+msgctxt "setting_image_gain_red_help"
+msgid "How much red. 1: unchanged."
+msgstr "Cuánto rojo. 1: sin cambio."
+
+msgctxt "setting_image_gain_green"
+msgid "GREEN GAIN"
+msgstr "GANANCIA VERDE"
+
+msgctxt "setting_image_gain_green_help"
+msgid "How much green. 1: unchanged."
+msgstr "Cuánto verde. 1: sin cambio."
+
+msgctxt "setting_image_gain_blue"
+msgid "BLUE GAIN"
+msgstr "GANANCIA AZUL"
+
+msgctxt "setting_image_gain_blue_help"
+msgid "How much blue. 1: unchanged."
+msgstr "Cuánto azul. 1: sin cambio."
+
+msgctxt "setting_position"
+msgid "POSITION"
+msgstr "POSICIÓN"
+
+msgctxt "setting_position_help"
+msgid "Where the picture sits when it doesn't fill the window."
+msgstr "Dónde queda la imagen cuando no llena la ventana."
+
+msgctxt "setting_crop_top"
+msgid "CROP TOP"
+msgstr "RECORTE ARRIBA"
+
+msgctxt "setting_crop_top_help"
+msgid "Core pixels cut from the top edge."
+msgstr "Píxeles del core que se cortan del borde de arriba."
+
+msgctxt "setting_crop_bottom"
+msgid "CROP BOTTOM"
+msgstr "RECORTE ABAJO"
+
+msgctxt "setting_crop_bottom_help"
+msgid "Core pixels cut from the bottom edge."
+msgstr "Píxeles del core que se cortan del borde de abajo."
+
+msgctxt "setting_crop_left"
+msgid "CROP LEFT"
+msgstr "RECORTE IZQUIERDA"
+
+msgctxt "setting_crop_left_help"
+msgid "Core pixels cut from the left edge."
+msgstr "Píxeles del core que se cortan del borde izquierdo."
+
+msgctxt "setting_crop_right"
+msgid "CROP RIGHT"
+msgstr "RECORTE DERECHA"
+
+msgctxt "setting_crop_right_help"
+msgid "Core pixels cut from the right edge."
+msgstr "Píxeles del core que se cortan del borde derecho."
+
+msgctxt "setting_timing"
+msgid "TIMING"
+msgstr "TIEMPOS"
+
+msgctxt "setting_timing_help"
+msgid "Vsync: one frame per display refresh (smooth; falls back to Exact when the rates are too far apart). Exact: the core's own speed."
+msgstr "Vsync: un frame por refresco de pantalla (fluido; pasa a Exacto si las frecuencias están muy lejos). Exacto: la velocidad propia del core."
+
+msgctxt "setting_frames_in_flight"
+msgid "FRAMES IN FLIGHT"
+msgstr "FRAMES EN VUELO"
+
+msgctxt "setting_frames_in_flight_help"
+msgid "How many frames the CPU may prepare ahead of the GPU. 1: less delay, but a slow frame shows."
+msgstr "Cuántos frames puede preparar la CPU por delante de la GPU. 1: menos demora, pero se nota un frame lento."
+
+msgctxt "setting_wait_for_present"
+msgid "WAIT FOR PRESENT"
+msgstr "ESPERAR LA PRESENTACIÓN"
+
+msgctxt "setting_wait_for_present_help"
+msgid "Don't start the next frame until this one is on screen (or, where the GPU can't tell, until the GPU has finished it)."
+msgstr "No empezar el frame siguiente hasta que este esté en pantalla (o, donde la GPU no puede saberlo, hasta que la GPU lo termine)."
+
+msgctxt "setting_frame_delay"
+msgid "FRAME DELAY (MS)"
+msgstr "RETARDO DE FRAME (MS)"
+
+msgctxt "setting_frame_delay_help"
+msgid "Vsync timing: wait this long before running each frame, so input is read later. Too much and frames are missed: raise it slowly."
+msgstr "Con Vsync: esperar esto antes de correr cada frame, así el control se lee más tarde. Demasiado y se pierden frames: súbelo de a poco."
+
+msgctxt "setting_fullscreen"
+msgid "FULLSCREEN"
+msgstr "PANTALLA COMPLETA"
+
+msgctxt "setting_fullscreen_help"
+msgid "F11 or Alt+Enter switch it too."
+msgstr "F11 o Alt+Enter también la activan."
+
+msgctxt "setting_fullscreen_type"
+msgid "FULLSCREEN TYPE"
+msgstr "TIPO DE PANTALLA COMPLETA"
+
+msgctxt "setting_fullscreen_type_help"
+msgid "Borderless: a window covering the screen (quick to switch). Exclusive: the display is piccolo's, at its current resolution."
+msgstr "Sin bordes: una ventana que cubre la pantalla (cambia rápido). Exclusiva: la pantalla es de piccolo, en su resolución actual."
+
+msgctxt "setting_window_mode"
+msgid "WINDOW MODE"
+msgstr "MODO DE VENTANA"
+
+msgctxt "setting_window_mode_help"
+msgid "Fixed size: the window keeps its own shape and size. Dynamic: the window is the game's picture, resized when the game changes size."
+msgstr "Tamaño fijo: la ventana mantiene su forma y tamaño. Dinámico: la ventana es la imagen del juego, y cambia cuando el juego cambia de tamaño."
+
+msgctxt "setting_window_aspect"
+msgid "WINDOW ASPECT"
+msgstr "ASPECTO DE VENTANA"
+
+msgctxt "setting_window_aspect_help"
+msgid "Fixed size: the window's shape."
+msgstr "Tamaño fijo: la forma de la ventana."
+
+msgctxt "setting_window_height"
+msgid "WINDOW HEIGHT (LINES)"
+msgstr "ALTO DE VENTANA (LÍNEAS)"
+
+msgctxt "setting_window_height_help"
+msgid "Fixed size: the window's height. Smaller if the screen has less room."
+msgstr "Tamaño fijo: el alto de la ventana. Menos si la pantalla no tiene lugar."
+
+msgctxt "setting_window_scale"
+msgid "WINDOW SCALE"
+msgstr "ESCALA DE VENTANA"
+
+msgctxt "setting_window_scale_help"
+msgid "Dynamic: the window is the game's picture times this. Lowered when the screen has less room."
+msgstr "Dinámico: la ventana es la imagen del juego por esto. Baja si la pantalla no tiene lugar."
+
+msgctxt "setting_window_remember"
+msgid "REMEMBER WINDOW SIZE AND POSITION"
+msgstr "RECORDAR TAMAÑO Y POSICIÓN DE LA VENTANA"
+
+msgctxt "setting_window_remember_help"
+msgid "Start where and how big the window was last time. (Some desktops, like Wayland ones, place windows themselves.)"
+msgstr "Empezar donde y del tamaño que tenía la ventana la última vez. (Algunos escritorios, como los de Wayland, ubican las ventanas ellos mismos.)"
+
+msgctxt "value_language_auto"
+msgid "AUTOMATIC (SYSTEM)"
+msgstr "AUTOMÁTICO (SISTEMA)"
+
+msgctxt "value_aspect_core"
+msgid "CORE PROVIDED"
+msgstr "LA DEL CORE"
+
+msgctxt "value_aspect_square_pixels"
+msgid "SQUARE PIXELS (1:1 PAR)"
+msgstr "PÍXELES CUADRADOS (PAR 1:1)"
+
+msgctxt "value_aspect_stretch"
+msgid "STRETCH"
+msgstr "ESTIRAR"
+
+msgctxt "value_scaling_full"
+msgid "FULL"
+msgstr "COMPLETA"
+
+msgctxt "value_scaling_integer_under"
+msgid "INTEGER (UNDER)"
+msgstr "ENTERA (POR DEBAJO)"
+
+msgctxt "value_scaling_integer_over"
+msgid "INTEGER (OVER)"
+msgstr "ENTERA (POR ENCIMA)"
+
+msgctxt "value_scaling_auto"
+msgid "AUTO"
+msgstr "AUTO"
+
+msgctxt "value_filter_nearest"
+msgid "NEAREST"
+msgstr "VECINO MÁS CERCANO"
+
+msgctxt "value_filter_bilinear"
+msgid "BILINEAR"
+msgstr "BILINEAL"
+
+msgctxt "value_filter_sharp_bilinear"
+msgid "SHARP BILINEAR"
+msgstr "BILINEAL NÍTIDO"
+
+msgctxt "value_position_top_left"
+msgid "TOP LEFT"
+msgstr "ARRIBA IZQUIERDA"
+
+msgctxt "value_position_top"
+msgid "TOP"
+msgstr "ARRIBA"
+
+msgctxt "value_position_top_right"
+msgid "TOP RIGHT"
+msgstr "ARRIBA DERECHA"
+
+msgctxt "value_position_left"
+msgid "LEFT"
+msgstr "IZQUIERDA"
+
+msgctxt "value_position_center"
+msgid "CENTER"
+msgstr "CENTRO"
+
+msgctxt "value_position_right"
+msgid "RIGHT"
+msgstr "DERECHA"
+
+msgctxt "value_position_bottom_left"
+msgid "BOTTOM LEFT"
+msgstr "ABAJO IZQUIERDA"
+
+msgctxt "value_position_bottom"
+msgid "BOTTOM"
+msgstr "ABAJO"
+
+msgctxt "value_position_bottom_right"
+msgid "BOTTOM RIGHT"
+msgstr "ABAJO DERECHA"
+
+msgctxt "value_timing_vsync"
+msgid "VSYNC"
+msgstr "VSYNC"
+
+msgctxt "value_timing_exact"
+msgid "EXACT"
+msgstr "EXACTO"
+
+msgctxt "value_frames_2"
+msgid "2 (SMOOTHER)"
+msgstr "2 (MÁS FLUIDO)"
+
+msgctxt "value_frames_1"
+msgid "1 (LOWER LATENCY)"
+msgstr "1 (MENOS LATENCIA)"
+
+msgctxt "value_fullscreen_borderless"
+msgid "BORDERLESS"
+msgstr "SIN BORDES"
+
+msgctxt "value_fullscreen_exclusive"
+msgid "EXCLUSIVE"
+msgstr "EXCLUSIVA"
+
+msgctxt "value_window_fixed"
+msgid "FIXED SIZE"
+msgstr "TAMAÑO FIJO"
+
+msgctxt "value_window_dynamic"
+msgid "DYNAMIC (FOLLOWS THE GAME)"
+msgstr "DINÁMICO (SIGUE AL JUEGO)"
+
+msgctxt "tab_sound"
+msgid "SOUND"
+msgstr "SONIDO"
+
+msgctxt "section_advanced"
+msgid "ADVANCED"
+msgstr "AVANZADO"
+
+msgctxt "audio_device_default"
+msgid "SYSTEM DEFAULT"
+msgstr "EL DEL SISTEMA"
+
+msgctxt "audio_device_missing"
+msgid "NOT CONNECTED"
+msgstr "NO CONECTADO"
+
+msgctxt "audio_latency_now"
+msgid "TARGET NOW"
+msgstr "OBJETIVO AHORA"
+
+msgctxt "audio_latency_minimum"
+msgid "DEVICE MINIMUM"
+msgstr "MÍNIMO DEL DISPOSITIVO"
+
+msgctxt "audio_latency_no_game"
+msgid "START A GAME TO SEE THE LATENCY IN USE"
+msgstr "INICIA UN JUEGO PARA VER LA LATENCIA EN USO"
+
+msgctxt "setting_audio_device"
+msgid "OUTPUT DEVICE"
+msgstr "DISPOSITIVO DE SALIDA"
+
+msgctxt "setting_audio_device_help"
+msgid "Where the sound goes. System default: follows the system's choice, also when it changes."
+msgstr "Por dónde sale el sonido. El del sistema: sigue lo que elija el sistema, también cuando cambia."
+
+msgctxt "setting_volume"
+msgid "VOLUME (%)"
+msgstr "VOLUMEN (%)"
+
+msgctxt "setting_volume_help"
+msgid "piccolo's own volume, on top of the system's."
+msgstr "El volumen propio de piccolo, además del del sistema."
+
+msgctxt "setting_mute"
+msgid "MUTE"
+msgstr "SILENCIO"
+
+msgctxt "setting_mute_help"
+msgid "No sound. The game keeps running at the same speed."
+msgstr "Sin sonido. El juego sigue a la misma velocidad."
+
+msgctxt "setting_audio_latency"
+msgid "LATENCY (MS)"
+msgstr "LATENCIA (MS)"
+
+msgctxt "setting_audio_latency_help"
+msgid "How much sound is queued ahead. Less: sound closer to the picture, but it may cut out. Auto: starts low and goes up only when the sound runs out."
+msgstr "Cuánto sonido se encola por adelantado. Menos: el sonido más cerca de la imagen, pero puede cortarse. Auto: empieza bajo y sube solo cuando el sonido se acaba."
+
+msgctxt "value_latency_auto"
+msgid "AUTO"
+msgstr "AUTO"
+
+msgctxt "setting_rate_control"
+msgid "DYNAMIC RATE CONTROL"
+msgstr "CONTROL DINÁMICO DE VELOCIDAD"
+
+msgctxt "setting_rate_control_help"
+msgid "Plays a little faster or slower to keep the queue at the latency. Off: the queue drifts until sound cuts out or is dropped."
+msgstr "Toca un poco más rápido o más lento para mantener la cola en la latencia. Apagado: la cola se desvía hasta que el sonido se corta o se descarta."
+
+msgctxt "setting_max_deviation"
+msgid "MAX SPEED CHANGE"
+msgstr "CAMBIO MÁXIMO DE VELOCIDAD"
+
+msgctxt "setting_max_deviation_help"
+msgid "How far dynamic rate control may change the speed. Up to 0.5% nobody hears it."
+msgstr "Cuánto puede cambiar la velocidad el control dinámico. Hasta 0.5% nadie lo nota."
+
+msgctxt "setting_resampler_quality"
+msgid "RESAMPLER QUALITY"
+msgstr "CALIDAD DEL REMUESTREO"
+
+msgctxt "setting_resampler_quality_help"
+msgid "Converting the core's sample rate to the device's. Fastest dulls the highest tones; best costs the most CPU."
+msgstr "La conversión de la frecuencia del core a la del dispositivo. La más rápida apaga los agudos más altos; la mejor usa más CPU."
+
+msgctxt "value_quality_fastest"
+msgid "FASTEST"
+msgstr "MÁS RÁPIDA"
+
+msgctxt "value_quality_medium"
+msgid "MEDIUM"
+msgstr "MEDIA"
+
+msgctxt "value_quality_best"
+msgid "BEST"
+msgstr "MEJOR"
+
+msgctxt "game_mode_active"
+msgid "GAMEMODE: ACTIVE"
+msgstr "GAMEMODE: ACTIVO"
+
+msgctxt "game_mode_off"
+msgid "GAMEMODE: NOT IN USE"
+msgstr "GAMEMODE: SIN USAR"
+
+msgctxt "game_mode_not_available"
+msgid "GAMEMODE: NOT INSTALLED OR NOT RUNNING"
+msgstr "GAMEMODE: NO INSTALADO O NO RESPONDE"
+
+msgctxt "game_mode_not_supported"
+msgid "GAMEMODE: ONLY ON LINUX"
+msgstr "GAMEMODE: SOLO EN LINUX"
+
+msgctxt "setting_game_mode"
+msgid "GAME MODE"
+msgstr "MODO JUEGO"
+
+msgctxt "setting_game_mode_help"
+msgid "While a game runs, ask GameMode (Linux) for full CPU speed, so the clock doesn't drop and the sound doesn't cut out. Needs GameMode installed."
+msgstr "Mientras corre un juego, pedir a GameMode (Linux) la CPU a toda velocidad, para que el reloj no baje y el sonido no se corte. Necesita GameMode instalado."
+
+msgctxt "frame_delay_now"
+msgid "FRAME DELAY NOW"
+msgstr "FRAME DELAY AHORA"
+
+msgctxt "frame_delay_needs_game"
+msgid "START A GAME TO SEE THE DELAY IN USE"
+msgstr "INICIA UN JUEGO PARA VER EL DELAY EN USO"
+
+msgctxt "setting_frame_delay_auto"
+msgid "AUTO FRAME DELAY"
+msgstr "FRAME DELAY AUTOMÁTICO"
+
+msgctxt "setting_frame_delay_auto_help"
+msgid "Ignores FRAME DELAY: each game starts at the longest delay the display allows and lowers it each time a frame is missed (the first 5 seconds don't count: games stall on their own while starting). After a minute of play in a row without a miss (pausing, the menu or another window start the minute over) it locks and is kept for that game. If the game later gets more demanding (a heavier scene), the locked delay may be too long: missed frames and sound cutting out; turn AUTO off or SEARCH AGAIN."
+msgstr "Ignora FRAME DELAY: cada juego empieza en el delay más largo que permite la pantalla y lo baja cada vez que se pierde un frame (los primeros 5 segundos no cuentan: los juegos se traban solos al arrancar). Tras un minuto seguido de juego sin perder ninguno (la pausa, el menú u otra ventana reinician el minuto) queda fijo y se guarda para ese juego. Si después el juego exige más (una escena más pesada), el delay fijo puede quedar largo: se pierden frames y el sonido puede cortarse; apaga el automático o usa BUSCAR DE NUEVO."
+
+msgctxt "setting_catch_up"
+msgid "CATCH UP MISSED FRAMES"
+msgstr "RECUPERAR FRAMES PERDIDOS"
+
+msgctxt "setting_catch_up_help"
+msgid "Vsync timing: when the system stalls and a frame comes late, run the frames it missed, so the game and its sound don't fall behind. Off: a stall slows the game for a moment and the sound may cut out."
+msgstr "Con Vsync: cuando el sistema se traba y un frame llega tarde, correr los frames perdidos, así el juego y su sonido no se atrasan. Apagado: una trabada frena el juego un momento y el sonido puede cortarse."
+
+msgctxt "frame_delay_needs_vsync"
+msgid "ONLY WITH VSYNC TIMING (THE GAME RUNS IN EXACT)"
+msgstr "SOLO CON TIMING VSYNC (EL JUEGO CORRE EN EXACT)"
+
+msgctxt "frame_delay_locked"
+msgid "LOCKED"
+msgstr "FIJO"
+
+msgctxt "frame_delay_searching"
+msgid "SEARCHING, LOCKS AFTER"
+msgstr "BUSCANDO, QUEDA FIJO EN"
+
+msgctxt "frame_delay_search_again"
+msgid "SEARCH AGAIN"
+msgstr "BUSCAR DE NUEVO"
+
+msgctxt "frame_delay_search_again_help"
+msgid "Forget the delay found for this game and search again from the top (e.g. after changing hardware or settings)."
+msgstr "Olvidar el delay encontrado para este juego y buscar de nuevo desde arriba (por ejemplo, tras cambiar de hardware o de settings)."
+
+msgctxt "tab_core_options"
+msgid "CORE OPTIONS"
+msgstr "OPCIONES DEL CORE"
+
+msgctxt "core_options_core"
+msgid "CORE"
+msgstr "CORE"
+
+msgctxt "core_options_running"
+msgid "RUNNING"
+msgstr "EN USO"
+
+msgctxt "core_options_save_to"
+msgid "SAVE TO"
+msgstr "GUARDAR EN"
+
+msgctxt "core_options_save_to_help"
+msgid "WHERE CHANGES GO. A FOLDER VALUE WINS OVER THE CORE'S, A GAME VALUE OVER BOTH."
+msgstr "DÓNDE VAN LOS CAMBIOS. UN VALOR DE CARPETA GANA AL DEL CORE, UNO DE JUEGO A AMBOS."
+
+msgctxt "core_options_layer_core"
+msgid "THIS CORE"
+msgstr "ESTE CORE"
+
+msgctxt "core_options_layer_folder"
+msgid "THIS FOLDER"
+msgstr "ESTA CARPETA"
+
+msgctxt "core_options_layer_game"
+msgid "THIS GAME"
+msgstr "ESTE JUEGO"
+
+msgctxt "core_options_marker_core_help"
+msgid "SET FOR THIS CORE"
+msgstr "GUARDADO PARA ESTE CORE"
+
+msgctxt "core_options_marker_folder_help"
+msgid "SET FOR THIS FOLDER"
+msgstr "GUARDADO PARA ESTA CARPETA"
+
+msgctxt "core_options_marker_game_help"
+msgid "SET FOR THIS GAME"
+msgstr "GUARDADO PARA ESTE JUEGO"
+
+msgctxt "core_options_none"
+msgid "THIS CORE HAS NO OPTIONS"
+msgstr "ESTE CORE NO TIENE OPCIONES"
+
+msgctxt "core_options_not_running"
+msgid "START A GAME ON THIS CORE AND OPEN THE QUICK MENU (F1) TO CHANGE ITS OPTIONS. WHAT IS STORED FOR IT CAN BE DELETED HERE, EVEN IF THE CORE DOESN'T START."
+msgstr "INICIA UN JUEGO EN ESTE CORE Y ABRE EL MENÚ RÁPIDO (F1) PARA CAMBIAR SUS OPCIONES. LO GUARDADO PARA ÉL SE PUEDE BORRAR AQUÍ, AUNQUE EL CORE NO ARRANQUE."
+
+msgctxt "core_options_no_cores"
+msgid "NO CORE HAS RUN YET"
+msgstr "NINGÚN CORE HA CORRIDO TODAVÍA"
+
+msgctxt "core_options_stored"
+msgid "STORED VALUES"
+msgstr "VALORES GUARDADOS"
+
+msgctxt "core_options_stored_none"
+msgid "NOTHING STORED: THE CORE'S DEFAULTS"
+msgstr "NADA GUARDADO: LOS VALORES DEL CORE"
+
+msgctxt "core_options_section_core"
+msgid "FOR THE CORE"
+msgstr "PARA EL CORE"
+
+msgctxt "core_options_section_folder"
+msgid "FOLDER"
+msgstr "CARPETA"
+
+msgctxt "core_options_section_game"
+msgid "GAME"
+msgstr "JUEGO"
+
+msgctxt "core_options_delete"
+msgid "DELETE"
+msgstr "BORRAR"
+
+msgctxt "core_options_delete_section"
+msgid "DELETE SECTION"
+msgstr "BORRAR SECCIÓN"
+
+msgctxt "core_options_delete_all"
+msgid "DELETE ALL FOR THIS CORE"
+msgstr "BORRAR TODO DE ESTE CORE"
+
+msgctxt "core_options_delete_all_help"
+msgid "Back to the core's own defaults for every game. Use it when an option keeps the core from starting."
+msgstr "Volver a los valores del propio core en todos los juegos. Úsalo cuando una opción no deja arrancar al core."
+
+msgctxt "core_options_gone"
+msgid "NO LONGER DECLARED"
+msgstr "YA NO EXISTE"
+
+msgctxt "safe_start_title"
+msgid "SAFE START"
+msgstr "ARRANQUE SEGURO"
+
+msgctxt "safe_start_crashed"
+msgid "DIDN'T CLOSE PROPERLY LAST TIME (A CRASH OR A HANG)."
+msgstr "NO SE CERRÓ BIEN LA ÚLTIMA VEZ (UN CRASH O UN CUELGUE)."
+
+msgctxt "safe_start_after_options"
+msgid "ITS OPTIONS HAD BEEN CHANGED IN THAT SESSION."
+msgstr "SUS OPCIONES SE HABÍAN CAMBIADO EN ESA SESIÓN."
+
+msgctxt "safe_start_question"
+msgid "IT HAS STORED OPTIONS. START WITH:"
+msgstr "TIENE OPCIONES GUARDADAS. ARRANCAR CON:"
+
+msgctxt "safe_start_stored"
+msgid "STORED OPTIONS"
+msgstr "OPCIONES GUARDADAS"
+
+msgctxt "safe_start_defaults"
+msgid "CORE DEFAULTS, THIS TIME"
+msgstr "VALORES DEL CORE, SOLO ESTA VEZ"
+
+msgctxt "safe_start_defaults_help"
+msgid "The core's own option values for this start only. Nothing is deleted: fix the culprit in CORE OPTIONS."
+msgstr "Los valores propios del core, solo para este arranque. No se borra nada: corrige la culpable en OPCIONES DEL CORE."
+
+msgctxt "safe_start_delete"
+msgid "DELETE STORED OPTIONS"
+msgstr "BORRAR OPCIONES GUARDADAS"
+
+msgctxt "safe_start_delete_help"
+msgid "Deletes every option stored for this core (core, folders and games), then starts with its defaults."
+msgstr "Borra todas las opciones guardadas de este core (core, carpetas y juegos) y arranca con sus valores."
+
+msgctxt "safe_start_cancel"
+msgid "CANCEL"
+msgstr "CANCELAR"
+
+msgctxt "quick_menu_title"
+msgid "QUICK MENU"
+msgstr "MENÚ RÁPIDO"
+
+msgctxt "quick_menu_slot"
+msgid "SLOT"
+msgstr "SLOT"
+
+msgctxt "quick_menu_empty"
+msgid "EMPTY"
+msgstr "VACÍO"
+
+msgctxt "quick_menu_save"
+msgid "SAVE"
+msgstr "GUARDAR"
+
+msgctxt "quick_menu_load"
+msgid "LOAD"
+msgstr "CARGAR"
+
+msgctxt "quick_menu_reset"
+msgid "RESET"
+msgstr "REINICIAR"
+
+msgctxt "quick_menu_close_game"
+msgid "CLOSE GAME"
+msgstr "CERRAR JUEGO"
+
+msgctxt "quick_menu_keys"
+msgid "ARROWS OR 1-9: SLOT. S: SAVE. L: LOAD. F1 OR ESC: BACK TO THE GAME."
+msgstr "FLECHAS O 1-9: SLOT. S: GUARDAR. L: CARGAR. F1 O ESC: VOLVER AL JUEGO."
+
+msgctxt "status_game_closed"
+msgid "GAME CLOSED"
+msgstr "JUEGO CERRADO"
+
+msgctxt "status_no_core_for_file"
+msgid "NO CORE FOR THIS FILE"
+msgstr "NINGÚN CORE ABRE ESTE ARCHIVO"
+
+msgctxt "core_options_section"
+msgid "SECTION"
+msgstr "SECCIÓN"
+
+msgctxt "core_options_general"
+msgid "GENERAL"
+msgstr "GENERAL"
+
+msgctxt "quick_menu_tab_states"
+msgid "SAVESTATES"
+msgstr "SAVESTATES"
+
+msgctxt "core_options_running_note"
+msgid "THIS CORE IS RUNNING: CHANGE ITS OPTIONS IN THE QUICK MENU (F1). WHAT IS STORED FOR IT CAN BE DELETED HERE."
+msgstr "ESTE CORE ESTÁ CORRIENDO: CAMBIA SUS OPCIONES EN EL MENÚ RÁPIDO (F1). LO GUARDADO PARA ÉL SE PUEDE BORRAR AQUÍ."
+
+msgctxt "core_options_manager_title"
+msgid "OPTIONS MANAGER"
+msgstr "ADMINISTRADOR DE OPCIONES"
+
+msgctxt "menu_tools"
+msgid "TOOLS"
+msgstr "HERRAMIENTAS"
+
+msgctxt "menu_options_manager"
+msgid "OPTIONS MANAGER..."
+msgstr "ADMINISTRAR OPCIONES..."
+
+msgctxt "setting_ui_menu_boxes"
+msgid "MENU TITLE BOXES"
+msgstr "CAJAS EN LOS MENÚS"
+
+msgctxt "setting_ui_menu_boxes_help"
+msgid "A raised box behind each menu title on the bar."
+msgstr "Una caja en relieve detrás de cada título de menú en la barra."
+
+msgctxt "ui_theme"
+msgid "THEME"
+msgstr "TEMA"
+
+msgctxt "ui_theme_help"
+msgid "Sets every color below at once. Change them one by one for your own."
+msgstr "Cambia todos los colores de abajo a la vez. Cámbialos uno por uno para hacer el tuyo."
+
+msgctxt "ui_custom_theme"
+msgid "CUSTOM THEME"
+msgstr "TEMA PROPIO"
+
+msgctxt "ui_custom_theme_help"
+msgid "Your own themes, saved with SAVE THEME. Set THEME to CUSTOM to pick one."
+msgstr "Tus temas, guardados con GUARDAR TEMA. Pon TEMA en PERSONALIZADO para elegir uno."
+
+msgctxt "ui_custom_theme_unsaved"
+msgid "UNSAVED"
+msgstr "SIN GUARDAR"
+
+msgctxt "ui_custom_theme_none"
+msgid "NONE SAVED"
+msgstr "NINGUNO GUARDADO"
+
+msgctxt "ui_theme_save"
+msgid "SAVE THEME..."
+msgstr "GUARDAR TEMA..."
+
+msgctxt "ui_theme_save_help"
+msgid "Saves the colors as they are now as a theme of your own (in the themes folder in piccolo's folder), listed in CUSTOM THEME by its name."
+msgstr "Guarda los colores tal como están como un tema tuyo (en la carpeta themes de la carpeta de piccolo), que aparece en TEMA PROPIO con su nombre."
+
+msgctxt "ui_theme_save_title"
+msgid "SAVE THEME"
+msgstr "GUARDAR TEMA"
+
+msgctxt "ui_theme_save_name"
+msgid "NAME"
+msgstr "NOMBRE"
+
+msgctxt "ui_theme_save_replaces"
+msgid "REPLACES THIS THEME OF YOURS"
+msgstr "REEMPLAZA ESTE TEMA TUYO"
+
+msgctxt "ui_theme_save_new"
+msgid "NEW"
+msgstr "NUEVO"
+
+msgctxt "ui_theme_save_button"
+msgid "SAVE"
+msgstr "GUARDAR"
+
+msgctxt "ui_theme_save_failed"
+msgid "COULDN'T SAVE THE THEME"
+msgstr "NO SE PUDO GUARDAR EL TEMA"
+
+msgctxt "theme_blue"
+msgid "BLUE"
+msgstr "AZUL"
+
+msgctxt "theme_purple"
+msgid "PURPLE"
+msgstr "MORADO"
+
+msgctxt "theme_zsnes"
+msgid "ZSNES"
+msgstr "ZSNES"
+
+msgctxt "theme_black"
+msgid "BLACK"
+msgstr "NEGRO"
+
+msgctxt "section_colors"
+msgid "COLORS"
+msgstr "COLORES"
+
+msgctxt "tab_interface"
+msgid "INTERFACE"
+msgstr "INTERFAZ"
+
+msgctxt "setting_ui_color_bar"
+msgid "BAR"
+msgstr "LA BARRA"
+
+msgctxt "setting_ui_color_bar_help"
+msgid "The menu bar, at its top and bottom edges."
+msgstr "La barra de menú, en sus bordes de arriba y abajo."
+
+msgctxt "setting_ui_color_bar_center"
+msgid "BAR (CENTER)"
+msgstr "LA BARRA (CENTRO)"
+
+msgctxt "setting_ui_color_bar_center_help"
+msgid "The middle of the menu bar. Different from BAR: a gradient."
+msgstr "El centro de la barra de menú. Distinto de LA BARRA: un degradado."
+
+msgctxt "setting_ui_color_bar_light"
+msgid "BAR EDGE (LIGHT)"
+msgstr "BORDE DE LA BARRA (CLARO)"
+
+msgctxt "setting_ui_color_bar_light_help"
+msgid "The bar's raised edge, top."
+msgstr "El borde en relieve de la barra, arriba."
+
+msgctxt "setting_ui_color_bar_dark"
+msgid "BAR EDGE (DARK)"
+msgstr "BORDE DE LA BARRA (OSCURO)"
+
+msgctxt "setting_ui_color_bar_dark_help"
+msgid "The bar's raised edge, bottom."
+msgstr "El borde en relieve de la barra, abajo."
+
+msgctxt "setting_ui_color_menu_box"
+msgid "MENU TITLE BOXES"
+msgstr "CAJAS DE LOS MENÚS"
+
+msgctxt "setting_ui_color_menu_box_help"
+msgid "The boxes behind the menu titles (with MENU TITLE BOXES on)."
+msgstr "Las cajas detrás de los títulos de menú (con CAJAS EN LOS MENÚS)."
+
+msgctxt "setting_ui_color_menu_box_light"
+msgid "BOX EDGE (LIGHT)"
+msgstr "BORDE DE LAS CAJAS (CLARO)"
+
+msgctxt "setting_ui_color_menu_box_light_help"
+msgid "The boxes' raised edge, top and left."
+msgstr "El borde en relieve de las cajas, arriba e izquierda."
+
+msgctxt "setting_ui_color_menu_box_dark"
+msgid "BOX EDGE (DARK)"
+msgstr "BORDE DE LAS CAJAS (OSCURO)"
+
+msgctxt "setting_ui_color_menu_box_dark_help"
+msgid "The boxes' raised edge, bottom and right."
+msgstr "El borde en relieve de las cajas, abajo y derecha."
+
+msgctxt "setting_ui_color_menu"
+msgid "MENUS"
+msgstr "MENÚS"
+
+msgctxt "setting_ui_color_menu_help"
+msgid "The background of an open menu."
+msgstr "El fondo de un menú abierto."
+
+msgctxt "setting_ui_color_window"
+msgid "WINDOWS"
+msgstr "VENTANAS"
+
+msgctxt "setting_ui_color_window_help"
+msgid "Window backgrounds."
+msgstr "El fondo de las ventanas."
+
+msgctxt "setting_ui_color_window_light"
+msgid "WINDOW EDGE (LIGHT)"
+msgstr "BORDE DE LAS VENTANAS (CLARO)"
+
+msgctxt "setting_ui_color_window_light_help"
+msgid "The windows' edge."
+msgstr "El borde de las ventanas."
+
+msgctxt "setting_ui_color_window_dark"
+msgid "WINDOW EDGE (DARK)"
+msgstr "BORDE DE LAS VENTANAS (OSCURO)"
+
+msgctxt "setting_ui_color_window_dark_help"
+msgid "Window borders and separators."
+msgstr "Los bordes y separadores de las ventanas."
+
+msgctxt "setting_ui_color_field"
+msgid "FIELDS"
+msgstr "CAMPOS"
+
+msgctxt "setting_ui_color_field_help"
+msgid "Fields, lists and inactive tabs."
+msgstr "Los campos, las listas y las pestañas inactivas."
+
+msgctxt "setting_ui_color_field_hover"
+msgid "FIELDS (HOVER)"
+msgstr "CAMPOS (BAJO EL MOUSE)"
+
+msgctxt "setting_ui_color_field_hover_help"
+msgid "A field under the mouse."
+msgstr "Un campo bajo el mouse."
+
+msgctxt "setting_ui_color_highlight"
+msgid "HIGHLIGHT"
+msgstr "RESALTADO"
+
+msgctxt "setting_ui_color_highlight_help"
+msgid "Hovered, selected and pressed things."
+msgstr "Lo que está bajo el mouse, elegido o presionado."
+
+msgctxt "setting_ui_color_text"
+msgid "TEXT"
+msgstr "TEXTO"
+
+msgctxt "setting_ui_color_text_help"
+msgid "Text."
+msgstr "El texto."
+
+msgctxt "setting_ui_color_text_highlight"
+msgid "TEXT (HIGHLIGHT)"
+msgstr "TEXTO (RESALTADO)"
+
+msgctxt "setting_ui_color_text_highlight_help"
+msgid "Text on the highlight, check marks."
+msgstr "El texto resaltado y las marcas."
+
+msgctxt "setting_ui_color_text_disabled"
+msgid "TEXT (DISABLED)"
+msgstr "TEXTO (DESACTIVADO)"
+
+msgctxt "setting_ui_color_text_disabled_help"
+msgid "Greyed-out text and notes."
+msgstr "El texto desactivado y las notas."
+
+msgctxt "setting_ui_color_text_shadow"
+msgid "TEXT SHADOW"
+msgstr "SOMBRA DEL TEXTO"
+
+msgctxt "setting_ui_color_text_shadow_help"
+msgid "The shadow under menu and status text."
+msgstr "La sombra bajo el texto de los menús y la línea de estado."
+
+msgctxt "setting_ui_shadows"
+msgid "DROP SHADOWS"
+msgstr "SOMBRAS"
+
+msgctxt "setting_ui_shadows_help"
+msgid "Shadows under windows, open menus and menu text."
+msgstr "Sombras bajo las ventanas, los menús abiertos y el texto de los menús."
+
+msgctxt "setting_ui_color_background"
+msgid "BACKGROUND"
+msgstr "FONDO"
+
+msgctxt "setting_ui_color_background_help"
+msgid "Behind the game and the menu."
+msgstr "Detrás del juego y del menú."
+
+msgctxt "setting_ui_color_title"
+msgid "TITLE BARS (TOP)"
+msgstr "BARRAS DE TÍTULO (ARRIBA)"
+
+msgctxt "setting_ui_color_title_help"
+msgid "Window title bars, at the top."
+msgstr "Las barras de título de las ventanas, arriba."
+
+msgctxt "setting_ui_color_title_bottom"
+msgid "TITLE BARS (BOTTOM)"
+msgstr "BARRAS DE TÍTULO (ABAJO)"
+
+msgctxt "setting_ui_color_title_bottom_help"
+msgid "Window title bars, at the bottom. Different from the top: a gradient."
+msgstr "Las barras de título de las ventanas, abajo. Distinto de arriba: un degradado."
+
+msgctxt "setting_ui_color_check"
+msgid "CHECK MARKS"
+msgstr "MARCAS DE CHECK"
+
+msgctxt "setting_ui_color_check_help"
+msgid "The mark in a checked box."
+msgstr "La marca de una casilla activada."
+
+msgctxt "setting_ui_color_section"
+msgid "SECTION TITLES"
+msgstr "TÍTULOS DE SECCIÓN"
+
+msgctxt "setting_ui_color_section_help"
+msgid "The titles that divide a window into sections."
+msgstr "Los títulos que dividen una ventana en secciones."
+
+msgctxt "menu_interface"
+msgid "INTERFACE..."
+msgstr "INTERFAZ..."
+
+msgctxt "setting_ui_theme_cursor"
+msgid "THEME CURSOR"
+msgstr "CURSOR DEL TEMA"
+
+msgctxt "setting_ui_theme_cursor_help"
+msgid "A mouse cursor drawn in the theme's style instead of the system's."
+msgstr "Un cursor dibujado con el estilo del tema en vez del cursor del sistema."
+
+msgctxt "setting_ui_color_button"
+msgid "BUTTONS"
+msgstr "BOTONES"
+
+msgctxt "setting_ui_color_button_help"
+msgid "Buttons, check boxes and scroll bar grips, at the top."
+msgstr "Los botones, las casillas y las barras de desplazamiento, arriba."
+
+msgctxt "setting_ui_color_button_bottom"
+msgid "BUTTONS (BOTTOM)"
+msgstr "BOTONES (ABAJO)"
+
+msgctxt "setting_ui_color_button_bottom_help"
+msgid "Buttons at the bottom: with a different color than BUTTONS, a gradient."
+msgstr "Los botones abajo: con un color distinto de BOTONES, un degradado."
+
+msgctxt "setting_ui_color_button_light"
+msgid "BUTTON EDGE (LIGHT)"
+msgstr "BORDE DE LOS BOTONES (CLARO)"
+
+msgctxt "setting_ui_color_button_light_help"
+msgid "Buttons' raised edge, top and left."
+msgstr "El borde en relieve de los botones, arriba e izquierda."
+
+msgctxt "setting_ui_color_button_dark"
+msgid "BUTTON EDGE (DARK)"
+msgstr "BORDE DE LOS BOTONES (OSCURO)"
+
+msgctxt "setting_ui_color_button_dark_help"
+msgid "Buttons' raised edge, bottom and right."
+msgstr "El borde en relieve de los botones, abajo y derecha."
+
+msgctxt "setting_ui_color_button_text"
+msgid "BUTTON TEXT"
+msgstr "TEXTO DE LOS BOTONES"
+
+msgctxt "setting_ui_color_button_text_help"
+msgid "The text on buttons."
+msgstr "El texto de los botones."
+
+msgctxt "setting_ui_color_field_text"
+msgid "FIELD TEXT"
+msgstr "TEXTO DE LOS CAMPOS"
+
+msgctxt "setting_ui_color_field_text_help"
+msgid "Text in fields and in closed lists."
+msgstr "El texto de los campos y de las listas cerradas."
+
+msgctxt "setting_ui_color_cursor"
+msgid "CURSOR"
+msgstr "CURSOR"
+
+msgctxt "setting_ui_color_cursor_help"
+msgid "The theme's mouse cursor (with THEME CURSOR on)."
+msgstr "El cursor del tema (con CURSOR DEL TEMA)."
+
+msgctxt "setting_ui_color_cursor_edge"
+msgid "CURSOR EDGE"
+msgstr "BORDE DEL CURSOR"
+
+msgctxt "setting_ui_color_cursor_edge_help"
+msgid "The cursor's top and right edge: with the same color as CURSOR, a flat cursor."
+msgstr "El borde de arriba y derecho del cursor: con el mismo color que CURSOR, un cursor plano."
+
+msgctxt "input_title"
+msgid "INPUT"
+msgstr "CONTROLES"
+
+
+
+msgctxt "input_tab_devices"
+msgid "DEVICES"
+msgstr "DISPOSITIVOS"
+
+
+
+
+
+
+
+
+
+
+
+
+
+msgctxt "input_name"
+msgid "NAME"
+msgstr "NOMBRE"
+
+msgctxt "input_deadzone"
+msgid "DEADZONE"
+msgstr "ZONA MUERTA"
+
+msgctxt "input_deadzone_help"
+msgid "How far a stick must move before it counts."
+msgstr "Cuánto hay que mover un stick para que cuente."
+
+msgctxt "input_add_part"
+msgid "ADD KEYBOARD PLAYER"
+msgstr "AGREGAR JUGADOR DE TECLADO"
+
+msgctxt "input_add_part_help"
+msgid "Another player on the same keyboard, with its own keys and its own START."
+msgstr "Otro jugador en el mismo teclado, con sus propias teclas y su propio START."
+
+msgctxt "input_remove_part"
+msgid "REMOVE THIS PLAYER"
+msgstr "QUITAR ESTE JUGADOR"
+
+msgctxt "input_defaults"
+msgid "DEFAULTS"
+msgstr "POR DEFECTO"
+
+msgctxt "input_defaults_help"
+msgid "Every binding of this controller back to the defaults."
+msgstr "Todas las asignaciones de este control vuelven a las de por defecto."
+
+
+msgctxt "input_section_interface"
+msgid "INTERFACE"
+msgstr "INTERFAZ"
+
+msgctxt "input_section_hotkeys"
+msgid "HOTKEYS"
+msgstr "HOTKEYS"
+
+msgctxt "input_set"
+msgid "SET"
+msgstr "ASIGNAR"
+
+msgctxt "input_clear"
+msgid "CLEAR"
+msgstr "QUITAR"
+
+msgctxt "input_none"
+msgid "NONE"
+msgstr "NINGUNO"
+
+
+
+msgctxt "input_device_ignored_auto"
+msgid "IGNORED: NOT A REAL GAMEPAD"
+msgstr "IGNORADO: NO ES UN GAMEPAD REAL"
+
+msgctxt "input_device_ignored"
+msgid "IGNORED"
+msgstr "IGNORADO"
+
+msgctxt "input_device_disconnected"
+msgid "NOT CONNECTED"
+msgstr "NO CONECTADO"
+
+msgctxt "input_ignore"
+msgid "IGNORE"
+msgstr "IGNORAR"
+
+msgctxt "input_ignore_help"
+msgid "AUTOMATIC ignores a device whose sticks sit at an extreme from the start (not a real gamepad)."
+msgstr "AUTOMÁTICO ignora un dispositivo cuyos sticks están en un extremo desde el principio (no es un gamepad real)."
+
+msgctxt "input_ignore_auto"
+msgid "AUTOMATIC"
+msgstr "AUTOMÁTICO"
+
+msgctxt "input_ignore_yes"
+msgid "YES"
+msgstr "SÍ"
+
+msgctxt "input_ignore_no"
+msgid "NO"
+msgstr "NO"
+
+msgctxt "input_unmapped"
+msgid "NOT KNOWN AS A GAMEPAD"
+msgstr "NO RECONOCIDO COMO GAMEPAD"
+
+msgctxt "input_map"
+msgid "MAP..."
+msgstr "MAPEAR..."
+
+msgctxt "input_action_pad_b"
+msgid "B"
+msgstr "B"
+
+msgctxt "input_action_pad_y"
+msgid "Y"
+msgstr "Y"
+
+msgctxt "input_action_pad_select"
+msgid "SELECT"
+msgstr "SELECT"
+
+msgctxt "input_action_pad_start"
+msgid "START"
+msgstr "START"
+
+msgctxt "input_action_pad_up"
+msgid "UP"
+msgstr "ARRIBA"
+
+msgctxt "input_action_pad_down"
+msgid "DOWN"
+msgstr "ABAJO"
+
+msgctxt "input_action_pad_left"
+msgid "LEFT"
+msgstr "IZQUIERDA"
+
+msgctxt "input_action_pad_right"
+msgid "RIGHT"
+msgstr "DERECHA"
+
+msgctxt "input_action_pad_a"
+msgid "A"
+msgstr "A"
+
+msgctxt "input_action_pad_x"
+msgid "X"
+msgstr "X"
+
+msgctxt "input_action_pad_l"
+msgid "L"
+msgstr "L"
+
+msgctxt "input_action_pad_r"
+msgid "R"
+msgstr "R"
+
+msgctxt "input_action_pad_l2"
+msgid "L2"
+msgstr "L2"
+
+msgctxt "input_action_pad_r2"
+msgid "R2"
+msgstr "R2"
+
+msgctxt "input_action_pad_l3"
+msgid "L3"
+msgstr "L3"
+
+msgctxt "input_action_pad_r3"
+msgid "R3"
+msgstr "R3"
+
+msgctxt "input_action_left_x_plus"
+msgid "LEFT STICK RIGHT"
+msgstr "STICK IZQ. DERECHA"
+
+msgctxt "input_action_left_x_minus"
+msgid "LEFT STICK LEFT"
+msgstr "STICK IZQ. IZQUIERDA"
+
+msgctxt "input_action_left_y_plus"
+msgid "LEFT STICK DOWN"
+msgstr "STICK IZQ. ABAJO"
+
+msgctxt "input_action_left_y_minus"
+msgid "LEFT STICK UP"
+msgstr "STICK IZQ. ARRIBA"
+
+msgctxt "input_action_right_x_plus"
+msgid "RIGHT STICK RIGHT"
+msgstr "STICK DER. DERECHA"
+
+msgctxt "input_action_right_x_minus"
+msgid "RIGHT STICK LEFT"
+msgstr "STICK DER. IZQUIERDA"
+
+msgctxt "input_action_right_y_plus"
+msgid "RIGHT STICK DOWN"
+msgstr "STICK DER. ABAJO"
+
+msgctxt "input_action_right_y_minus"
+msgid "RIGHT STICK UP"
+msgstr "STICK DER. ARRIBA"
+
+msgctxt "input_action_pad_turbo"
+msgid "TURBO BUTTON"
+msgstr "BOTÓN TURBO"
+
+msgctxt "input_action_cursor_right"
+msgid "CURSOR RIGHT"
+msgstr "CURSOR DERECHA"
+
+msgctxt "input_action_cursor_left"
+msgid "CURSOR LEFT"
+msgstr "CURSOR IZQUIERDA"
+
+msgctxt "input_action_cursor_down"
+msgid "CURSOR DOWN"
+msgstr "CURSOR ABAJO"
+
+msgctxt "input_action_cursor_up"
+msgid "CURSOR UP"
+msgstr "CURSOR ARRIBA"
+
+msgctxt "input_action_mouse_left"
+msgid "CLICK / TRIGGER / TOUCH"
+msgstr "CLIC / GATILLO / TOQUE"
+
+msgctxt "input_action_mouse_right"
+msgid "RIGHT CLICK"
+msgstr "CLIC DERECHO"
+
+msgctxt "input_action_mouse_middle"
+msgid "MIDDLE CLICK"
+msgstr "CLIC CENTRAL"
+
+msgctxt "input_action_mouse_wheel_up"
+msgid "WHEEL UP"
+msgstr "RUEDA ARRIBA"
+
+msgctxt "input_action_mouse_wheel_down"
+msgid "WHEEL DOWN"
+msgstr "RUEDA ABAJO"
+
+msgctxt "input_action_gun_reload"
+msgid "LIGHTGUN RELOAD"
+msgstr "RECARGA DE PISTOLA"
+
+msgctxt "input_action_gun_aux_a"
+msgid "LIGHTGUN AUX A"
+msgstr "PISTOLA AUX A"
+
+msgctxt "input_action_gun_aux_b"
+msgid "LIGHTGUN AUX B"
+msgstr "PISTOLA AUX B"
+
+msgctxt "input_action_gun_aux_c"
+msgid "LIGHTGUN AUX C"
+msgstr "PISTOLA AUX C"
+
+msgctxt "input_action_gun_start"
+msgid "LIGHTGUN START"
+msgstr "PISTOLA START"
+
+msgctxt "input_action_gun_select"
+msgid "LIGHTGUN SELECT"
+msgstr "PISTOLA SELECT"
+
+msgctxt "remap_mapping"
+msgid "MAPPING"
+msgstr "MAPEO"
+
+msgctxt "remap_mouse"
+msgid "MOUSE"
+msgstr "MOUSE"
+
+msgctxt "remap_lightgun"
+msgid "LIGHTGUN"
+msgstr "PISTOLA"
+
+msgctxt "remap_back_help"
+msgid "Back to the ports. The remap is kept, and HOLD START TO REMAP won't ask about it again."
+msgstr "Vuelve a los puertos. El remapeo se guarda, y HOLD START TO REMAP no vuelve a preguntar por él."
+
+msgctxt "remap_cursor"
+msgid "MOUSE / POINTER / LIGHTGUN"
+msgstr "MOUSE / PUNTERO / PISTOLA"
+
+msgctxt "remap_cursor_help"
+msgid "The port's cursor: whatever the core asks for (a mouse, a touch pointer or a lightgun) comes from it. A mouse moves it; these move it with a stick and press its buttons. The lightgun's other buttons are the RetroPad's (A, B, Y, START, SELECT, D-PAD)."
+msgstr "El cursor del puerto: lo que el core pida (un mouse, un puntero táctil o una pistola) sale de él. Un mouse lo mueve; estas filas lo mueven con un stick y presionan sus botones. Los otros botones de la pistola son los del RetroPad (A, B, Y, START, SELECT, D-PAD)."
+
+msgctxt "remap_turbo"
+msgid "TURBO"
+msgstr "TURBO"
+
+msgctxt "remap_turbo_help"
+msgid "While held, this row's key or button presses its RetroPad button and lets go over and over. Double tap it: faster; triple tap: slower."
+msgstr "Mientras se sostiene, la tecla o botón de esta fila presiona y suelta su botón del RetroPad una y otra vez. Doble tap: más rápido; triple tap: más lento."
+
+msgctxt "remap_turbo_button_help"
+msgid "Hold it and press a button: that button's turbo goes on or off until the game closes (not kept). Best on a button the game doesn't use."
+msgstr "Sostenlo y presiona un botón: el turbo de ese botón se prende o se apaga hasta cerrar el juego (no se guarda). Mejor en un botón que el juego no usa."
+
+msgctxt "input_action_ui_up"
+msgid "UP"
+msgstr "ARRIBA"
+
+msgctxt "input_action_ui_down"
+msgid "DOWN"
+msgstr "ABAJO"
+
+msgctxt "input_action_ui_left"
+msgid "LEFT"
+msgstr "IZQUIERDA"
+
+msgctxt "input_action_ui_right"
+msgid "RIGHT"
+msgstr "DERECHA"
+
+msgctxt "input_action_ui_accept"
+msgid "ACCEPT"
+msgstr "ACEPTAR"
+
+msgctxt "input_action_ui_back"
+msgid "BACK"
+msgstr "VOLVER"
+
+msgctxt "input_action_ui_page_left"
+msgid "PAGE LEFT"
+msgstr "PÁGINA IZQUIERDA"
+
+msgctxt "input_action_ui_page_right"
+msgid "PAGE RIGHT"
+msgstr "PÁGINA DERECHA"
+
+msgctxt "input_action_ui_open_menu"
+msgid "OPEN MENU"
+msgstr "ABRIR MENÚ"
+
+msgctxt "input_action_hotkey_enable"
+msgid "HOTKEY ENABLE"
+msgstr "HABILITAR HOTKEYS"
+
+msgctxt "input_action_hotkey_menu"
+msgid "MENU"
+msgstr "MENÚ"
+
+msgctxt "input_action_hotkey_quick_menu"
+msgid "QUICK MENU"
+msgstr "MENÚ RÁPIDO"
+
+msgctxt "input_action_hotkey_save_state"
+msgid "SAVE STATE"
+msgstr "GUARDAR ESTADO"
+
+msgctxt "input_action_hotkey_load_state"
+msgid "LOAD STATE"
+msgstr "CARGAR ESTADO"
+
+msgctxt "input_action_hotkey_fast_forward"
+msgid "FAST FORWARD"
+msgstr "AVANCE RÁPIDO"
+
+msgctxt "input_action_hotkey_grab_mouse"
+msgid "MOUSE GRAB"
+msgstr "ATRAPAR MOUSE"
+
+
+
+msgctxt "input_player"
+msgid "PLAYER"
+msgstr "JUGADOR"
+
+
+
+
+msgctxt "input_column_action"
+msgid "ACTION"
+msgstr "ACCIÓN"
+
+msgctxt "input_column_pad"
+msgid "GAMEPAD"
+msgstr "GAMEPAD"
+
+msgctxt "input_column_key"
+msgid "KEY"
+msgstr "TECLA"
+
+msgctxt "setting_input_share_port1"
+msgid "GAMEPAD 1 AND KEYBOARD SHARE PORT 1"
+msgstr "GAMEPAD 1 Y TECLADO COMPARTEN EL PUERTO 1"
+
+msgctxt "setting_input_ports"
+msgid "PORTS"
+msgstr "PUERTOS"
+
+msgctxt "setting_input_ports_help"
+msgid "How many of the core's ports QUICK MENU > CONTROLS shows (1 to 4; per core: 2 for a SNES core, say). A controller on a port not shown stays there."
+msgstr "Cuántos de los puertos del core muestra MENÚ RÁPIDO > CONTROLES (1 a 4; por core: 2 para un core de SNES, por ejemplo). Un control en un puerto que no se muestra sigue ahí."
+
+msgctxt "setting_input_share_port1_help"
+msgid "The keyboard starts on port 1, and the first gamepad to press START joins it there (QUICK MENU > CONTROLS can take it off). Off: the keyboard joins its own port with START."
+msgstr "El teclado empieza en el puerto 1, y el primer gamepad que presione START se une ahí con él (MENÚ RÁPIDO > CONTROLES puede sacarlo). Apagado: el teclado se une a su propio puerto con START."
+
+msgctxt "setting_input_press_time"
+msgid "TIME TO PRESS"
+msgstr "TIEMPO PARA PRESIONAR"
+
+msgctxt "setting_input_press_time_help"
+msgid "Seconds each control waits for a press (BIND ALL, SET, MAP CONTROLLER's optional buttons) before going on."
+msgstr "Segundos que cada control espera que lo presiones (ASIGNAR TODO, SET, los botones opcionales de MAPEAR CONTROL) antes de seguir."
+
+msgctxt "setting_input_hold_time"
+msgid "HOLD TO BIND"
+msgstr "MANTENER PARA ASIGNAR"
+
+msgctxt "setting_input_hold_time_help"
+msgid "Seconds a gamepad's button must be held to be bound (SET, BIND ALL, MAP CONTROLLER): a ring closes meanwhile. Let go sooner and it isn't."
+msgstr "Segundos que hay que mantener un botón del gamepad para asignarlo (SET, ASIGNAR TODO, MAPEAR CONTROL): mientras, se cierra un círculo. Si lo sueltas antes, no se asigna."
+
+
+
+
+
+msgctxt "input_tab_settings"
+msgid "SETTINGS"
+msgstr "AJUSTES"
+
+
+msgctxt "input_bind_all"
+msgid "BIND ALL"
+msgstr "ASIGNAR TODO"
+
+msgctxt "input_bind_all_help"
+msgid "Asks for every control below in turn; nothing pressed for 5 seconds skips one, Esc stops."
+msgstr "Pide cada control de abajo en orden; si no presionas nada en 5 segundos se salta, Esc termina."
+
+msgctxt "input_cancel_binding"
+msgid "CANCEL"
+msgstr "CANCELAR"
+
+msgctxt "input_cancel_binding_help"
+msgid "Stops the SET or BIND ALL under way and puts back every binding it changed."
+msgstr "Detiene el SET o ASIGNAR TODO en curso y vuelve a poner cada asignación que cambió."
+
+msgctxt "input_extra_names"
+msgid "EXTRA BUTTONS"
+msgstr "BOTONES EXTRA"
+
+msgctxt "input_extra_names_help"
+msgid "Names of your own for this controller's extra buttons (VOLUME UP...): they show wherever its buttons are listed. Empty: its own name."
+msgstr "Nombres propios para los botones extra de este control (SUBIR VOLUMEN...): se muestran donde se listan sus botones. Vacío: su nombre de siempre."
+
+msgctxt "input_sdl_mapping"
+msgid "SDL MAPPING"
+msgstr "MAPEO DE SDL"
+
+msgctxt "input_add_help"
+msgid "Another button for the same action, on a new row: any of them does it."
+msgstr "Otro botón para la misma acción, en una fila nueva: cualquiera de ellos la hace."
+
+msgctxt "remap_percent_help"
+msgid "How far this key or button pushes the stick: 20 % walks where 100 % runs."
+msgstr "Cuánto empuja el stick esta tecla o botón: con 20 % se camina, con 100 % se corre."
+
+msgctxt "input_reset"
+msgid "RESET"
+msgstr "RESET"
+
+msgctxt "input_mapping"
+msgid "MAPPING"
+msgstr "CONTROL"
+
+
+msgctxt "input_joined"
+msgid "%s: PORT %d"
+msgstr "%s: PUERTO %d"
+
+msgctxt "input_left"
+msgid "%s DISCONNECTED (PORT %d)"
+msgstr "%s DESCONECTADO (PUERTO %d)"
+
+msgctxt "quick_menu_tab_controls"
+msgid "CONTROLS"
+msgstr "CONTROLES"
+
+msgctxt "quick_menu_no_ports"
+msgid "NOBODY HAS JOINED: PRESS START ON A CONTROLLER"
+msgstr "NADIE SE UNIÓ: PRESIONA START EN UN CONTROL"
+
+msgctxt "input_port"
+msgid "PORT"
+msgstr "PUERTO"
+
+msgctxt "input_port_empty"
+msgid "PRESS START TO JOIN"
+msgstr "PRESIONA START PARA UNIRTE"
+
+msgctxt "input_leave"
+msgid "UNASSIGN"
+msgstr "DESASIGNAR"
+
+msgctxt "input_leave_help"
+msgid "Takes it off this port only (it stays on any other)."
+msgstr "Lo saca solo de este puerto (sigue en los demás)."
+
+msgctxt "input_move_up"
+msgid "MOVE UP"
+msgstr "SUBIR"
+
+msgctxt "input_move_down"
+msgid "MOVE DOWN"
+msgstr "BAJAR"
+
+msgctxt "input_port_add"
+msgid "+ ADD CONTROLLER"
+msgstr "+ AGREGAR CONTROL"
+
+msgctxt "setting_input_port_device"
+msgid "DEVICE"
+msgstr "DISPOSITIVO"
+
+msgctxt "setting_input_port_device_help"
+msgid "What the core emulates on this port (its own list: joypad, mouse, multitap...)."
+msgstr "Lo que el core emula en este puerto (su propia lista: joypad, mouse, multitap...)."
+
+msgctxt "quick_menu_device"
+msgid "CORE DEVICE"
+msgstr "DISPOSITIVO DEL CORE"
+
+msgctxt "quick_menu_ports"
+msgid "PORTS"
+msgstr "PUERTOS"
+
+msgctxt "quick_menu_core_devices"
+msgid "CORE DEVICES"
+msgstr "DISPOSITIVOS DEL CORE"
+
+msgctxt "quick_menu_remap"
+msgid "REMAP"
+msgstr "REMAPEAR"
+
+msgctxt "remap_title"
+msgid "%s -> %s MAPPING"
+msgstr "ASIGNACIÓN %s -> %s"
+
+msgctxt "remap_use_retropad"
+msgid "DEFAULT ALL"
+msgstr "TODO POR DEFECTO"
+
+msgctxt "remap_use_retropad_help"
+msgid "Every control back to this controller's RetroPad bindings, unchanged, for this core."
+msgstr "Todos los controles vuelven a las asignaciones de RetroPad de este control, sin cambios, para este core."
+
+msgctxt "remap_scope_help"
+msgid "WHOSE REMAP THIS IS: THE CORE'S (EVERY GAME OF IT) OR THIS GAME'S OWN. THIS GAME STARTS AS A COPY OF THE CORE'S; BACK TO THIS CORE DROPS IT."
+msgstr "DE QUIÉN ES ESTE REMAPEO: DEL CORE (TODOS SUS JUEGOS) O PROPIO DE ESTE JUEGO. ESTE JUEGO EMPIEZA COMO COPIA DEL DEL CORE; VOLVER A ESTE CORE LO DESCARTA."
+
+msgctxt "remap_combos"
+msgid "COMBOS"
+msgstr "COMBOS"
+
+msgctxt "remap_combos_help"
+msgid "Several buttons pressed by one input (THREE PUNCHES). Kept per core: every game of this core can bind them."
+msgstr "Varios botones presionados con una sola entrada (TRES GOLPES). Se guardan por core: todos los juegos de este core pueden asignarlos."
+
+msgctxt "remap_combo_new"
+msgid "+ NEW COMBO"
+msgstr "+ NUEVO COMBO"
+
+msgctxt "remap_combo_edit"
+msgid "EDIT"
+msgstr "EDITAR"
+
+msgctxt "remap_combo_name"
+msgid "NAME"
+msgstr "NOMBRE"
+
+msgctxt "remap_combo_name_hint"
+msgid "OPTIONAL"
+msgstr "OPCIONAL"
+
+msgctxt "remap_combo_save"
+msgid "SAVE"
+msgstr "GUARDAR"
+
+msgctxt "remap_combo_delete"
+msgid "DELETE"
+msgstr "BORRAR"
+
+msgctxt "remap_combo_delete_help"
+msgid "Deletes the combo from this core, and from every remap that binds it."
+msgstr "Borra el combo de este core y de todos los remapeos que lo usan."
+
+msgctxt "remap_macros"
+msgid "MACROS"
+msgstr "MACROS"
+
+msgctxt "remap_macros_help"
+msgid "Button sequences played by one input (a special move). Kept per core: every game of this core can bind them."
+msgstr "Secuencias de botones que se reproducen con una sola entrada (un movimiento especial). Se guardan por core: todos los juegos de este core pueden asignarlas."
+
+msgctxt "remap_macro_new"
+msgid "+ NEW MACRO"
+msgstr "+ NUEVA MACRO"
+
+msgctxt "remap_macro_repeat"
+msgid "REPEAT WHILE HELD"
+msgstr "REPETIR MIENTRAS SE SOSTIENE"
+
+msgctxt "remap_macro_repeat_help"
+msgid "On: it plays again and again while its input is held, each time to the end. Off: once per press."
+msgstr "Activado: se repite mientras se sostiene su entrada, cada vez hasta el final. Apagado: una vez por pulsación."
+
+msgctxt "remap_macro_steps"
+msgid "STEPS"
+msgstr "PASOS"
+
+msgctxt "remap_macro_pause"
+msgid "PAUSE"
+msgstr "PAUSA"
+
+msgctxt "remap_macro_frames_help"
+msgid "How long this step lasts, in frames (60 is about a second in most games)."
+msgstr "Cuánto dura este paso, en frames (60 es alrededor de un segundo en la mayoría de los juegos)."
+
+msgctxt "remap_macro_add_step"
+msgid "+ STEP"
+msgstr "+ PASO"
+
+msgctxt "remap_macro_add_pause"
+msgid "+ PAUSE"
+msgstr "+ PAUSA"
+
+msgctxt "remap_macro_record"
+msgid "RECORD"
+msgstr "GRABAR"
+
+msgctxt "remap_macro_record_help"
+msgid "Play the sequence on the controller after GET READY: it is recorded as steps (it ends a second after you let go). It replaces the steps."
+msgstr "Toca la secuencia en el control después de PREPÁRATE: se graba como pasos (termina un segundo después de soltar). Reemplaza los pasos."
+
+msgctxt "remap_macro_get_ready"
+msgid "GET READY"
+msgstr "PREPÁRATE"
+
+msgctxt "remap_macro_recording"
+msgid "RECORDING: PLAY THE SEQUENCE"
+msgstr "GRABANDO: TOCA LA SECUENCIA"
+
+msgctxt "remap_macro_stop"
+msgid "STOP"
+msgstr "PARAR"
+
+msgctxt "remap_macro_change_steps"
+msgid "CHANGE STEPS TO"
+msgstr "CAMBIAR PASOS A"
+
+msgctxt "remap_macro_change_pauses"
+msgid "CHANGE PAUSES TO"
+msgstr "CAMBIAR PAUSAS A"
+
+msgctxt "remap_macro_apply"
+msgid "APPLY"
+msgstr "APLICAR"
+
+msgctxt "remap_macro_delete_help"
+msgid "Deletes the macro from this core, and from every remap that binds it."
+msgstr "Borra la macro de este core y de todos los remapeos que la usan."
+
+msgctxt "remap_prompt"
+msgid "%s ON PORT %d (%s): HOLD START TO REMAP (%d)"
+msgstr "%s EN EL PUERTO %d (%s): MANTÉN START PARA REMAPEAR (%d)"
+
+msgctxt "input_press_button"
+msgid "HOLD A BUTTON (%d)"
+msgstr "MANTÉN UN BOTÓN (%d)"
+
+msgctxt "input_press_key"
+msgid "PRESS A KEY (%d)"
+msgstr "PRESIONA UNA TECLA (%d)"
+
+msgctxt "map_title"
+msgid "MAP CONTROLLER"
+msgstr "MAPEAR CONTROL"
+
+
+msgctxt "map_offer_text"
+msgid "Follow this wizard to map its buttons, so piccolo recognizes them, and then the user interface. If you don't map it now, you can map its user interface controls in the INPUT settings and its RetroPad buttons in the quick menu."
+msgstr "Sigue este asistente para mapear sus botones, para que piccolo los reconozca, y después la interfaz. Si no lo mapeas ahora, puedes mapear sus controles de la interfaz en los ajustes de INPUT y sus botones del RetroPad en el menú rápido."
+
+msgctxt "map_offer_needed"
+msgid "It isn't known as a gamepad: it can't be used until it is mapped."
+msgstr "No se reconoce como gamepad: no se puede usar hasta mapearlo."
+
+msgctxt "map_map"
+msgid "MAP"
+msgstr "MAPEAR"
+
+msgctxt "map_not_now"
+msgid "NOT NOW (%d)"
+msgstr "AHORA NO (%d)"
+
+msgctxt "map_appearance"
+msgid "SELECT CONTROLLER TYPE"
+msgstr "ELIGE EL TIPO DE CONTROL"
+
+
+
+
+
+msgctxt "map_cancel"
+msgid "CANCEL"
+msgstr "CANCELAR"
+
+msgctxt "map_press"
+msgid "HOLD %s"
+msgstr "MANTÉN %s"
+
+msgctxt "map_skip"
+msgid "SKIP"
+msgstr "SALTAR"
+
+msgctxt "map_back"
+msgid "BACK"
+msgstr "ATRÁS"
+
+msgctxt "map_skip_in"
+msgid "SKIPPED IN %d S IF IT DOESN'T HAVE IT"
+msgstr "SE SALTA EN %d S SI NO LO TIENE"
+
+msgctxt "map_done"
+msgid "%s: MAPPED"
+msgstr "%s: MAPEADO"
+
+msgctxt "map_failed"
+msgid "%s: THE MAPPING WAS REFUSED"
+msgstr "%s: EL MAPEO FUE RECHAZADO"
+
+msgctxt "map_bottom"
+msgid "THE BOTTOM BUTTON"
+msgstr "EL BOTÓN DE ABAJO"
+
+msgctxt "map_right"
+msgid "THE RIGHT BUTTON"
+msgstr "EL BOTÓN DE LA DERECHA"
+
+msgctxt "map_left"
+msgid "THE LEFT BUTTON"
+msgstr "EL BOTÓN DE LA IZQUIERDA"
+
+msgctxt "map_top"
+msgid "THE TOP BUTTON"
+msgstr "EL BOTÓN DE ARRIBA"
+
+msgctxt "map_dpad_up"
+msgid "D-PAD UP"
+msgstr "CRUCETA ARRIBA"
+
+msgctxt "map_dpad_down"
+msgid "D-PAD DOWN"
+msgstr "CRUCETA ABAJO"
+
+msgctxt "map_dpad_left"
+msgid "D-PAD LEFT"
+msgstr "CRUCETA IZQUIERDA"
+
+msgctxt "map_dpad_right"
+msgid "D-PAD RIGHT"
+msgstr "CRUCETA DERECHA"
+
+msgctxt "map_left_x"
+msgid "LEFT STICK: PUSH IT RIGHT"
+msgstr "STICK IZQUIERDO: EMPÚJALO A LA DERECHA"
+
+msgctxt "map_left_y"
+msgid "LEFT STICK: PUSH IT DOWN"
+msgstr "STICK IZQUIERDO: EMPÚJALO HACIA ABAJO"
+
+msgctxt "map_right_x"
+msgid "RIGHT STICK: PUSH IT RIGHT"
+msgstr "STICK DERECHO: EMPÚJALO A LA DERECHA"
+
+msgctxt "map_right_y"
+msgid "RIGHT STICK: PUSH IT DOWN"
+msgstr "STICK DERECHO: EMPÚJALO HACIA ABAJO"
+
+msgctxt "input_map_unmapped"
+msgid "CONTROLLERS TO MAP"
+msgstr "CONTROLES PARA MAPEAR"
+
+msgctxt "input_section_enabled"
+msgid "ENABLED"
+msgstr "ACTIVOS"
+
+msgctxt "input_section_detected"
+msgid "DETECTED"
+msgstr "DETECTADOS"
+
+msgctxt "map_maker"
+msgid "LABELS"
+msgstr "ETIQUETAS"
+
+msgctxt "map_model"
+msgid "LAYOUT"
+msgstr "DISTRIBUCIÓN"
+
+
+
+msgctxt "input_hotkey_mode"
+msgid "HOTKEY MODE"
+msgstr "MODO DE HOTKEYS"
+
+msgctxt "input_hotkey_mode_help"
+msgid "How this controller's HOTKEY ENABLE turns hotkeys on. HOLD: while it is held. ONE HOTKEY: double tap it, then one hotkey works. STAYS ON: double tap it to turn hotkeys on, double tap again to turn them off."
+msgstr "Cómo activa los hotkeys el HABILITAR HOTKEYS de este control. MANTENER: mientras está apretado. UN HOTKEY: tócalo dos veces y funciona un hotkey. QUEDA ACTIVO: tócalo dos veces para activar los hotkeys y otras dos para desactivarlos."
+
+msgctxt "hotkey_mode_hold"
+msgid "HOLD"
+msgstr "MANTENER"
+
+msgctxt "hotkey_mode_one"
+msgid "ONE HOTKEY"
+msgstr "UN HOTKEY"
+
+msgctxt "hotkey_mode_stays"
+msgid "STAYS ON"
+msgstr "QUEDA ACTIVO"
+
+
+
+msgctxt "map_press_for"
+msgid "HOLD THE BUTTON FOR %s"
+msgstr "MANTÉN EL BOTÓN PARA %s"
+
+msgctxt "map_hold_hint"
+msgid "Let go before the ring closes if you want to choose another button."
+msgstr "Suéltalo antes de que se cierre el círculo si quieres elegir otro botón."
+
+msgctxt "map_step_extras"
+msgid "STEP 4: EXTRA BUTTONS"
+msgstr "PASO 4: BOTONES EXTRA"
+
+msgctxt "map_extras_guide"
+msgid "Does it have a GUIDE / HOME button (the logo in the middle)?"
+msgstr "¿Tiene un botón GUIDE / HOME (el logo del medio)?"
+
+msgctxt "map_extras_paddles"
+msgid "Does it have paddles on the back?"
+msgstr "¿Tiene paddles atrás?"
+
+msgctxt "map_extras_shoulders"
+msgid "Does it have extra shoulder buttons (L4 and R4)?"
+msgstr "¿Tiene botones de hombro extra (L4 y R4)?"
+
+msgctxt "map_extras_others"
+msgid "Does it have any other buttons?"
+msgstr "¿Tiene otros botones?"
+
+msgctxt "map_extras_others_text"
+msgid "Hold each other button, one at a time. When none are left, wait: it goes on by itself."
+msgstr "Mantén cada otro botón, de a uno. Cuando no queden más, espera: sigue solo."
+
+msgctxt "map_yes"
+msgid "YES"
+msgstr "SÍ"
+
+msgctxt "map_no"
+msgid "NO (%d)"
+msgstr "NO (%d)"
+
+msgctxt "map_finish"
+msgid "FINISH"
+msgstr "TERMINAR"
+
+msgctxt "map_paddle_1"
+msgid "LEFT PADDLE 1"
+msgstr "PADDLE IZQUIERDO 1"
+
+msgctxt "map_paddle_2"
+msgid "RIGHT PADDLE 1"
+msgstr "PADDLE DERECHO 1"
+
+msgctxt "map_paddle_3"
+msgid "LEFT PADDLE 2"
+msgstr "PADDLE IZQUIERDO 2"
+
+msgctxt "map_paddle_4"
+msgid "RIGHT PADDLE 2"
+msgstr "PADDLE DERECHO 2"
+
+msgctxt "map_other_n"
+msgid "OTHER BUTTON %d"
+msgstr "OTRO BOTÓN %d"
+
+msgctxt "map_l4"
+msgid "L4"
+msgstr "L4"
+
+msgctxt "map_r4"
+msgid "R4"
+msgstr "R4"
+
+msgctxt "map_other_button"
+msgid "ANOTHER BUTTON"
+msgstr "OTRO BOTÓN"
+
+msgctxt "map_guide"
+msgid "GUIDE / HOME"
+msgstr "GUIDE / HOME"
+
+msgctxt "map_reset"
+msgid "RESET"
+msgstr "REINICIAR"
+
+msgctxt "map_skip_n"
+msgid "SKIP (%d)"
+msgstr "SALTAR (%d)"
+
+msgctxt "map_restart"
+msgid "RESTART"
+msgstr "EMPEZAR DE NUEVO"
+
+msgctxt "map_summary"
+msgid "SUMMARY"
+msgstr "RESUMEN"
+
+msgctxt "map_summary_type"
+msgid "TYPE"
+msgstr "TIPO"
+
+msgctxt "map_summary_buttons"
+msgid "BUTTONS"
+msgstr "BOTONES"
+
+msgctxt "map_summary_interface"
+msgid "INTERFACE"
+msgstr "INTERFAZ"
+
+msgctxt "map_summary_extras"
+msgid "EXTRA BUTTONS"
+msgstr "BOTONES EXTRA"
+
+msgctxt "map_summary_changed"
+msgid "MAPPED"
+msgstr "MAPEADO"
+
+msgctxt "map_summary_unchanged"
+msgid "UNCHANGED"
+msgstr "SIN CAMBIOS"
+
+msgctxt "map_summary_added"
+msgid "%d ADDED"
+msgstr "%d AGREGADOS"
+
+msgctxt "map_summary_text"
+msgid "Press FINISH to save your mapping, RESTART to start over. CANCEL leaves the mapping as it was."
+msgstr "Presiona TERMINAR para guardar el mapeo, EMPEZAR DE NUEVO para volver a empezar. CANCELAR deja el mapeo como estaba."
+
+msgctxt "map_role_up"
+msgid "UP"
+msgstr "ARRIBA"
+
+msgctxt "map_role_down"
+msgid "DOWN"
+msgstr "ABAJO"
+
+msgctxt "map_role_left"
+msgid "LEFT"
+msgstr "IZQUIERDA"
+
+msgctxt "map_role_right"
+msgid "RIGHT"
+msgstr "DERECHA"
+
+msgctxt "map_role_page_left"
+msgid "PREVIOUS PAGE"
+msgstr "PÁGINA ANTERIOR"
+
+msgctxt "map_role_page_right"
+msgid "NEXT PAGE"
+msgstr "PÁGINA SIGUIENTE"
+
+msgctxt "map_role_accept"
+msgid "ACCEPT"
+msgstr "ACEPTAR"
+
+msgctxt "map_role_back"
+msgid "GO BACK"
+msgstr "VOLVER"
+
+msgctxt "map_role_modifier"
+msgid "HOTKEY ENABLE"
+msgstr "HABILITAR HOTKEYS"
+
+msgctxt "map_role_menu"
+msgid "MAIN MENU"
+msgstr "MENÚ PRINCIPAL"
+
+msgctxt "map_role_quick_menu"
+msgid "QUICK MENU (A HOTKEY)"
+msgstr "MENÚ RÁPIDO (UN HOTKEY)"
+
+msgctxt "map_detected"
+msgid "NEW CONTROLLER DETECTED"
+msgstr "NUEVO CONTROL DETECTADO"
+
+msgctxt "map_step_type"
+msgid "STEP 1: CONTROLLER TYPE"
+msgstr "PASO 1: TIPO DE CONTROL"
+
+msgctxt "map_step_buttons"
+msgid "STEP 2: CONTROLLER BUTTONS"
+msgstr "PASO 2: BOTONES DEL CONTROL"
+
+msgctxt "map_step_buttons_text"
+msgid "Press each button as it lights up, so piccolo knows where each one is on this controller. Then it works in games and in the next step."
+msgstr "Presiona cada botón cuando se ilumine, para que piccolo sepa dónde está cada uno en este control. Así funciona en los juegos y en el paso siguiente."
+
+msgctxt "map_step_interface"
+msgid "STEP 3: USER INTERFACE"
+msgstr "PASO 3: INTERFAZ"
+
+msgctxt "map_step_interface_text"
+msgid "Press the button you want for each control of the menus and windows. The drawing lights up the one you press."
+msgstr "Presiona el botón que quieras para cada control de los menús y ventanas. El dibujo ilumina el que presionas."
+
+msgctxt "map_start"
+msgid "START (%d)"
+msgstr "EMPEZAR (%d)"
+
+msgctxt "map_offer_any_button"
+msgid "Press any button on the controller to map it."
+msgstr "Presiona cualquier botón del control para mapearlo."
+
+msgctxt "map_type_goes_on"
+msgid "It goes on by itself when you leave it alone."
+msgstr "Sigue solo si no tocas nada."
+
+msgctxt "map_type_goes_on_any"
+msgid "It goes on by itself when you leave it alone, or when you press any button on the controller."
+msgstr "Sigue solo si no tocas nada, o cuando presionas cualquier botón del control."
+
+msgctxt "map_starts_any"
+msgid "Mapping starts by itself, or when you press any button on the controller."
+msgstr "El mapeo empieza solo, o cuando presionas cualquier botón del control."
+
+msgctxt "map_any_button"
+msgid "Or press any button on the controller."
+msgstr "O presiona cualquier botón del control."
+
+msgctxt "menu_cores"
+msgid "CORES..."
+msgstr "CORES..."
+
+msgctxt "cores_title"
+msgid "CORES"
+msgstr "CORES"
+
+msgctxt "cores_refresh"
+msgid "REFRESH"
+msgstr "ACTUALIZAR LISTA"
+
+msgctxt "cores_update_all"
+msgid "UPDATE ALL"
+msgstr "ACTUALIZAR TODOS"
+
+msgctxt "cores_install"
+msgid "INSTALL"
+msgstr "INSTALAR"
+
+msgctxt "cores_update"
+msgid "UPDATE"
+msgstr "ACTUALIZAR"
+
+msgctxt "cores_replace"
+msgid "REPLACE"
+msgstr "REEMPLAZAR"
+
+msgctxt "cores_remove"
+msgid "REMOVE"
+msgstr "QUITAR"
+
+msgctxt "cores_cancel"
+msgid "CANCEL"
+msgstr "CANCELAR"
+
+msgctxt "cores_column_core"
+msgid "CORE"
+msgstr "CORE"
+
+msgctxt "cores_column_systems"
+msgid "SYSTEMS"
+msgstr "SISTEMAS"
+
+msgctxt "cores_column_version"
+msgid "VERSION"
+msgstr "VERSIÓN"
+
+msgctxt "cores_column_status"
+msgid "STATUS"
+msgstr "ESTADO"
+
+msgctxt "cores_status_installed"
+msgid "INSTALLED"
+msgstr "INSTALADO"
+
+msgctxt "cores_status_update"
+msgid "UPDATE"
+msgstr "ACTUALIZAR"
+
+msgctxt "cores_status_not_installed"
+msgid "-"
+msgstr "-"
+
+msgctxt "cores_status_by_hand"
+msgid "YOURS"
+msgstr "TUYO"
+
+msgctxt "cores_free"
+msgid "FREE"
+msgstr "LIBRE"
+
+msgctxt "cores_non_free"
+msgid "NON-FREE"
+msgstr "NO LIBRE"
+
+msgctxt "cores_license"
+msgid "LICENSE"
+msgstr "LICENCIA"
+
+msgctxt "cores_size"
+msgid "DOWNLOAD"
+msgstr "DESCARGA"
+
+msgctxt "cores_installed_version"
+msgid "INSTALLED"
+msgstr "INSTALADO"
+
+msgctxt "cores_none_selected"
+msgid "PICK A CORE IN THE LIST."
+msgstr "ELIGE UN CORE DE LA LISTA."
+
+msgctxt "cores_empty"
+msgid "NO LIST YET: REFRESH TO GET IT."
+msgstr "TODAVÍA NO HAY LISTA: ACTUALIZAR LISTA PARA BAJARLA."
+
+msgctxt "cores_unavailable"
+msgid "CORE DOWNLOADS AREN'T PART OF THIS BUILD."
+msgstr "LAS DESCARGAS DE CORES NO SON PARTE DE ESTA VERSIÓN."
+
+msgctxt "cores_non_free_note"
+msgid "* NON-FREE: FREE TO USE, BUT ITS LICENSE ISN'T FREE SOFTWARE (FOR EXAMPLE, NO COMMERCIAL USE)."
+msgstr "* NO LIBRE: SE PUEDE USAR GRATIS, PERO SU LICENCIA NO ES DE SOFTWARE LIBRE (POR EJEMPLO, NO PERMITE USO COMERCIAL)."
+
+msgctxt "cores_by_hand_note"
+msgid "THIS FILE WAS PUT THERE BY HAND. REPLACE INSTALLS THE DOWNLOAD OVER IT."
+msgstr "ESTE ARCHIVO SE PUSO A MANO. REEMPLAZAR INSTALA LA DESCARGA ENCIMA."
+
+msgctxt "cores_downloading"
+msgid "DOWNLOADING"
+msgstr "DESCARGANDO"
+
+msgctxt "setting_core_server"
+msgid "CORE SERVER"
+msgstr "SERVIDOR DE CORES"
+
+msgctxt "setting_core_server_help"
+msgid "Where TOOLS > CORES downloads cores from. Must be an https:// address."
+msgstr "De dónde descarga cores HERRAMIENTAS > CORES. Debe ser una dirección https://."
+
+msgctxt "setting_core_server_insecure"
+msgid "ALLOW INSECURE CORE SERVER"
+msgstr "PERMITIR SERVIDOR DE CORES INSEGURO"
+
+msgctxt "setting_core_server_insecure_help"
+msgid "Development only: CORE SERVER may be http:// or file://. Cores are still checked against the signed list."
+msgstr "Solo para desarrollo: SERVIDOR DE CORES puede ser http:// o file://. Los cores se siguen comprobando contra la lista firmada."
+
+msgctxt "menu_network"
+msgid "NETWORK..."
+msgstr "RED..."
+
+msgctxt "net_title"
+msgid "NETWORK"
+msgstr "RED"
+
+msgctxt "setting_net_enabled"
+msgid "ALLOW CONNECTIONS"
+msgstr "PERMITIR CONEXIONES"
+
+msgctxt "setting_net_enabled_help"
+msgid "Lets paired devices (PICCOLETTO, another PICCOLO) connect to this one over the network. Off: nothing listens."
+msgstr "Deja que los dispositivos vinculados (PICCOLETTO, otro PICCOLO) se conecten a este por la red. Apagado: nada escucha."
+
+msgctxt "setting_net_name"
+msgid "NAME"
+msgstr "NOMBRE"
+
+msgctxt "setting_net_name_help"
+msgid "What other devices see when they look for this one."
+msgstr "Lo que ven los otros dispositivos cuando buscan este."
+
+msgctxt "setting_net_port"
+msgid "PORT"
+msgstr "PUERTO"
+
+msgctxt "setting_net_port_help"
+msgid "The UDP port for everything network. Change it only if another program uses it."
+msgstr "El puerto UDP para todo lo de red. Cámbialo solo si otro programa lo usa."
+
+msgctxt "net_this_device"
+msgid "THIS DEVICE"
+msgstr "ESTE DISPOSITIVO"
+
+msgctxt "net_this_device_help"
+msgid "This device's key, in short. The other device shows the same when it pairs with this one."
+msgstr "La llave de este dispositivo, en corto. El otro dispositivo muestra la misma cuando se vincula con este."
+
+msgctxt "net_off"
+msgid "NETWORKING IS OFF"
+msgstr "LA RED ESTÁ APAGADA"
+
+msgctxt "net_listen_failed"
+msgid "THE PORT COULD NOT BE OPENED (IN USE?)"
+msgstr "NO SE PUDO ABRIR EL PUERTO (¿EN USO?)"
+
+msgctxt "net_section_pairing"
+msgid "PAIRING"
+msgstr "VINCULAR"
+
+msgctxt "net_pair_button"
+msgid "PAIR A DEVICE"
+msgstr "VINCULAR UN DISPOSITIVO"
+
+msgctxt "net_pair_button_help"
+msgid "Shows a code to type on the other device."
+msgstr "Muestra un código para escribir en el otro dispositivo."
+
+msgctxt "net_pair_code"
+msgid "CODE"
+msgstr "CÓDIGO"
+
+msgctxt "net_pair_instructions"
+msgid "Type this code on the other device. It changes after a wrong try."
+msgstr "Escribe este código en el otro dispositivo. Cambia después de un intento fallido."
+
+msgctxt "net_pair_validity"
+msgid "VALIDITY"
+msgstr "VALIDEZ"
+
+msgctxt "net_pair_stop"
+msgid "STOP"
+msgstr "DETENER"
+
+msgctxt "net_pair_refresh"
+msgid "REFRESH"
+msgstr "RENOVAR"
+
+msgctxt "net_section_devices"
+msgid "PAIRED DEVICES"
+msgstr "DISPOSITIVOS VINCULADOS"
+
+msgctxt "net_no_devices"
+msgid "NO DEVICES PAIRED YET"
+msgstr "TODAVÍA NO HAY DISPOSITIVOS VINCULADOS"
+
+
+
+msgctxt "net_device_connected"
+msgid "CONNECTED"
+msgstr "CONECTADO"
+
+msgctxt "net_device_forget"
+msgid "FORGET"
+msgstr "OLVIDAR"
+
+msgctxt "net_device_forget_help"
+msgid "Unpairs this device: if it's connected now it forgets this piccolo too; either way it has to pair again to connect."
+msgstr "Desempareja este dispositivo: si está conectado ahora también olvida este piccolo; en todo caso tiene que emparejarse de nuevo para conectarse."
+
+msgctxt "status_net_paired"
+msgid "PAIRED WITH"
+msgstr "VINCULADO CON"
+
+msgctxt "status_net_pairing_failed"
+msgid "WRONG PAIRING CODE: A NEW ONE IS SHOWN"
+msgstr "CÓDIGO DE VINCULACIÓN INCORRECTO: SE MUESTRA UNO NUEVO"
+
+msgctxt "status_net_pairing_closed"
+msgid "PAIRING CLOSED"
+msgstr "VINCULACIÓN CERRADA"
+
+
+msgctxt "net_device_access_help"
+msgid "What this device may do here. GAMEPAD: play with its controllers. STREAM: also receive the game's picture and sound. FULL: also change settings, load games and take the game."
+msgstr "Lo que este dispositivo puede hacer aquí. GAMEPAD: jugar con sus controles. STREAM: además recibir la imagen y el sonido del juego. COMPLETO: además cambiar ajustes, cargar juegos y llevarse el juego."
+
+msgctxt "net_access_gamepad"
+msgid "GAMEPAD"
+msgstr "GAMEPAD"
+
+msgctxt "net_access_stream"
+msgid "STREAM"
+msgstr "STREAM"
+
+msgctxt "net_access_full"
+msgid "FULL"
+msgstr "COMPLETO"
+
+msgctxt "action_slot_next"
+msgid "NEXT SLOT"
+msgstr "SLOT SIGUIENTE"
+
+msgctxt "action_slot_previous"
+msgid "PREVIOUS SLOT"
+msgstr "SLOT ANTERIOR"
+
+msgctxt "action_pause"
+msgid "PAUSE"
+msgstr "PAUSA"
+
+msgctxt "action_reset"
+msgid "RESET"
+msgstr "REINICIAR"
+
+msgctxt "status_paused_remotely"
+msgid "PAUSED FROM"
+msgstr "EN PAUSA DESDE"
+
+msgctxt "status_resumed"
+msgid "RESUMED"
+msgstr "REANUDADO"
+
+msgctxt "status_net_unpaired"
+msgid "UNPAIRED:"
+msgstr "DESEMPAREJADO:"
+
+msgctxt "net_device_ping_help"
+msgid "The round trip to this device and back, as the connection measures it."
+msgstr "El viaje de ida y vuelta hasta este dispositivo, como lo mide la conexión."
+
+msgctxt "net_section_connected"
+msgid "CONNECTED DEVICES"
+msgstr "DISPOSITIVOS CONECTADOS"
+
+msgctxt "net_no_connected"
+msgid "NO DEVICES CONNECTED"
+msgstr "NINGÚN DISPOSITIVO CONECTADO"
+
+msgctxt "net_jitter"
+msgid "JITTER"
+msgstr "JITTER"
+
+msgctxt "net_loss"
+msgid "LOSS"
+msgstr "PÉRDIDA"
+
+msgctxt "net_speed_test"
+msgid "SPEED TEST"
+msgstr "PRUEBA DE VELOCIDAD"
+
+msgctxt "net_speed_test_help"
+msgid "The last speed test the device ran: the best rate each way that lost almost nothing. DOWN: from this piccolo to the device. UP: from the device to this piccolo."
+msgstr "La última prueba de velocidad que hizo el dispositivo: la mejor tasa en cada sentido casi sin pérdidas. BAJADA: de este piccolo al dispositivo. SUBIDA: del dispositivo a este piccolo."
+
+msgctxt "net_speed_down"
+msgid "DOWN"
+msgstr "BAJADA"
+
+msgctxt "net_speed_up"
+msgid "UP"
+msgstr "SUBIDA"
+
+msgctxt "cores_show_non_free"
+msgid "SHOW NON-FREE CORES"
+msgstr "MOSTRAR CORES NO LIBRES"
+
+msgctxt "cores_show_non_free_help"
+msgid "Also lists cores whose license isn't free software (marked *). Off: only free-licensed cores, plus non-free ones already installed."
+msgstr "También lista los cores cuya licencia no es de software libre (marcados con *). Apagado: solo cores con licencia libre, más los no libres ya instalados."
+
+msgctxt "cores_non_free_confirm_title"
+msgid "NON-FREE CORES"
+msgstr "CORES NO LIBRES"
+
+msgctxt "cores_non_free_confirm_text"
+msgid "NON-FREE CORES CAN BE USED FOR FREE, BUT THEIR LICENSES AREN'T FREE SOFTWARE: MOST FORBID COMMERCIAL USE, AND SOME DON'T ALLOW CHANGING OR SHARING CHANGED VERSIONS. SHOW THEM IN THE LIST?"
+msgstr "LOS CORES NO LIBRES SE PUEDEN USAR GRATIS, PERO SUS LICENCIAS NO SON DE SOFTWARE LIBRE: LA MAYORÍA PROHÍBE EL USO COMERCIAL Y ALGUNAS NO PERMITEN MODIFICARLOS NI COMPARTIR VERSIONES MODIFICADAS. ¿MOSTRARLOS EN LA LISTA?"
+
+msgctxt "cores_non_free_confirm_yes"
+msgid "SHOW THEM"
+msgstr "MOSTRARLOS"
+
+msgctxt "setting_run_ahead"
+msgid "RUN-AHEAD"
+msgstr "RUN-AHEAD"
+
+msgctxt "setting_run_ahead_help"
+msgid "Runs the game this many frames ahead and shows that, hiding the game's own input lag. For now only cores with their own run-ahead do it (bsnes, built for piccolo); for the others it does nothing yet. Each frame costs a full emulated frame more."
+msgstr "Corre el juego esta cantidad de frames por delante y muestra eso, ocultando el retraso propio del juego. Por ahora solo lo hacen los cores con run-ahead propio (bsnes, compilado para piccolo); en los demás todavía no hace nada. Cada frame cuesta un frame emulado completo más."
+
+msgctxt "run_ahead_none"
+msgid "THIS CORE HAS NO RUN-AHEAD OF ITS OWN (OTHERS: NOT YET)"
+msgstr "ESTE CORE NO TIENE RUN-AHEAD PROPIO (LOS DEMÁS: TODAVÍA NO)"
+
+msgctxt "run_ahead_in_use"
+msgid "RUN-AHEAD IN USE"
+msgstr "RUN-AHEAD EN USO"
+
+msgctxt "run_ahead_most"
+msgid "THIS CORE DOES UP TO"
+msgstr "ESTE CORE HACE HASTA"
+
+msgctxt "run_ahead_no_game"
+msgid "NO GAME RUNNING"
+msgstr "NINGÚN JUEGO CORRIENDO"
+# A controller with no particular look: its buttons named by position.
+# Layouts are by type of controller, not by model: layouts/<Maker>/<model>.cfg.
+# See frontends/common/input_layouts.h for the format; copy one to add yours.
+[layout]
+name = GENERIC CONTROLLER
+order = 0
+dpad = yes
+sticks = 2
+
+[labels]
+a = BOTTOM
+b = RIGHT
+x = LEFT
+y = TOP
+leftshoulder = L
+rightshoulder = R
+lefttrigger = L2
+righttrigger = R2
+back = SELECT
+start = START
+guide = HOME
+leftstick = L3
+rightstick = R3
+# Xbox 360 controller (and the many that copy it): A at the bottom.
+[layout]
+name = XBOX 360 CONTROLLER
+order = 10
+sdl_types = xbox360
+dpad = yes
+sticks = 2
+
+[labels]
+a = A
+b = B
+x = X
+y = Y
+leftshoulder = LB
+rightshoulder = RB
+lefttrigger = LT
+righttrigger = RT
+back = BACK
+start = START
+guide = XBOX
+leftstick = LS
+rightstick = RS
+# Xbox One and Series controllers: A at the bottom, VIEW / MENU.
+[layout]
+name = XBOX ONE / SERIES CONTROLLER
+order = 11
+sdl_types = xboxone
+dpad = yes
+sticks = 2
+
+[labels]
+a = A
+b = B
+x = X
+y = Y
+leftshoulder = LB
+rightshoulder = RB
+lefttrigger = LT
+righttrigger = RT
+back = VIEW
+start = MENU
+guide = XBOX
+leftstick = LS
+rightstick = RS
+# Super Nintendo joypad (and SNES-style pads like the 8BitDo SN30):
+# B at the bottom, A on the right; no sticks, triggers or HOME.
+[layout]
+name = SUPER NINTENDO JOYPAD
+order = 30
+dpad = yes
+sticks = 0
+
+[labels]
+a = B
+b = A
+x = Y
+y = X
+leftshoulder = L
+rightshoulder = R
+back = SELECT
+start = START
+# Switch Pro Controller and Joy-Con pairs: B at the bottom, A on the right.
+[layout]
+name = SWITCH PRO CONTROLLER
+order = 31
+sdl_types = switchpro joyconpair
+dpad = yes
+sticks = 2
+
+[labels]
+a = B
+b = A
+x = Y
+y = X
+leftshoulder = L
+rightshoulder = R
+lefttrigger = ZL
+righttrigger = ZR
+back = -
+start = +
+guide = HOME
+leftstick = LS
+rightstick = RS
+# Sega Genesis / Mega Drive 6-button pad (and pads like the 8BitDo M30):
+# A B C below, X Y Z above, START and MODE; no sticks, no shoulders.
+# The six buttons sit where libretro's Genesis cores expect them on the
+# RetroPad: A = Y, B = B, C = A, X = L, Y = X, Z = R.
+[layout]
+name = GENESIS 6-BUTTON PAD
+order = 60
+dpad = yes
+sticks = 0
+face = six
+
+[labels]
+x = A
+a = B
+b = C
+leftshoulder = X
+y = Y
+rightshoulder = Z
+back = MODE
+start = START
+# Sega Saturn pad (and Saturn-style pads): A B C below, X Y Z above, the
+# L / R shoulders and START; no sticks, no SELECT. A B C X Y Z sit where
+# libretro's cores expect them on the RetroPad (A = Y, B = B, C = A, X = L,
+# Y = X, Z = R), so L / R go on L2 / R2.
+[layout]
+name = SATURN PAD
+order = 61
+dpad = yes
+sticks = 0
+face = six
+
+[labels]
+x = A
+a = B
+b = C
+leftshoulder = X
+y = Y
+rightshoulder = Z
+lefttrigger = L
+righttrigger = R
+start = START
+# DualSense (PS5): cross at the bottom, CREATE / OPTIONS.
+[layout]
+name = DUALSENSE
+order = 21
+sdl_types = ps5
+dpad = yes
+sticks = 2
+
+[labels]
+a = CROSS
+b = CIRCLE
+x = SQUARE
+y = TRIANGLE
+leftshoulder = L1
+rightshoulder = R1
+lefttrigger = L2
+righttrigger = R2
+back = CREATE
+start = OPTIONS
+guide = PS
+leftstick = L3
+rightstick = R3
+# DualShock 3 / 4: cross at the bottom, circle on the right.
+[layout]
+name = DUALSHOCK
+order = 20
+sdl_types = ps3 ps4
+dpad = yes
+sticks = 2
+
+[labels]
+a = CROSS
+b = CIRCLE
+x = SQUARE
+y = TRIANGLE
+leftshoulder = L1
+rightshoulder = R1
+lefttrigger = L2
+righttrigger = R2
+back = SHARE
+start = OPTIONS
+guide = PS
+leftstick = L3
+rightstick = R3
+# piccolo's pass 0 on OpenGL ES (pass0.glsl): at the core's resolution, nearest.
+passes = 1
+pass0 = pass0.glsl
+pass0_filter = nearest
+pass0_scale = source
+// piccolo's pass 0 on OpenGL ES: the picture controls of a TV, at the core's
+// resolution, before any preset. The same as ../pass0.slang (read that for
+// the order and the why), in GLSL ES 1.00 for gl_shader_chain (frontends-common).
+// piccolo sets the uniforms from IMAGE SETTINGS; every default leaves the
+// picture unchanged (piccolo sets them all, the values here don't matter).
+//
+// SPDX-License-Identifier: MIT (piccolo's own; see LICENSE)
+
+uniform float BRIGHTNESS;
+uniform float CONTRAST;
+uniform float SATURATION;
+uniform float HUE;
+uniform float GAMMA;
+uniform float BLACK_LEVEL;
+uniform float TEMPERATURE;
+uniform float GAIN_R;
+uniform float GAIN_G;
+uniform float GAIN_B;
+uniform float PROFILE_GAMMA_IN;
+uniform float PROFILE_GAMMA_OUT;
+uniform float PROFILE_CURVE;
+uniform float PROFILE_STRENGTH;
+uniform float M00; uniform float M01; uniform float M02;
+uniform float M10; uniform float M11; uniform float M12;
+uniform float M20; uniform float M21; uniform float M22;
+
+void main()
+{
+    vec3 color = texture2D(u_source, v_coord).rgb;
+    color = clamp((color + BLACK_LEVEL) / (1.0 + BLACK_LEVEL), 0.0, 1.0);
+
+    vec3 linear = pow(color, vec3(PROFILE_GAMMA_IN));
+    mat3 profile = mat3(M00, M10, M20,    // GLSL matrices are column by column
+                        M01, M11, M21,
+                        M02, M12, M22);
+    linear = clamp(profile * linear, 0.0, 1.0);
+    vec3 profiled = pow(linear, vec3(1.0 / PROFILE_GAMMA_OUT));
+    if (PROFILE_CURVE > 0.5)
+    {
+        vec3 curve = 1.055 * pow(linear, vec3(1.0 / PROFILE_GAMMA_OUT)) - 0.055;
+        profiled = mix(curve, linear * 12.92, vec3(lessThanEqual(linear, vec3(0.0031308))));
+    }
+    color = mix(color, profiled, PROFILE_STRENGTH);
+
+    vec3 temperature = vec3(1.0 + 0.2 * TEMPERATURE, 1.0, 1.0 - 0.2 * TEMPERATURE);
+    color *= temperature * vec3(GAIN_R, GAIN_G, GAIN_B);
+
+    mat3 to_yiq = mat3(0.299, 0.596, 0.211,
+                       0.587, -0.274, -0.523,
+                       0.114, -0.322, 0.312);
+    mat3 to_rgb = mat3(1.0, 1.0, 1.0,
+                       0.956, -0.272, -1.106,
+                       0.621, -0.647, 1.703);
+    vec3 yiq = to_yiq * color;
+    float angle = radians(HUE);
+    float c = cos(angle);
+    float s = sin(angle);
+    yiq.yz = mat2(c, s, -s, c) * yiq.yz * SATURATION;
+    color = to_rgb * yiq;
+
+    color = (color - 0.5) * CONTRAST + 0.5 + BRIGHTNESS;
+    color = pow(clamp(color, 0.0, 1.0), vec3(GAMMA));
+    gl_FragColor = vec4(color, 1.0);
+}
+# CRT MASK: piccolo's simple CRT for weak GPUs (crt-mask.glsl), MIT.
+passes = 1
+pass0 = crt-mask.glsl
+pass0_filter = nearest
+pass0_scale = viewport
+lut = masks/aperture-2x2.png
+// A simple CRT for weak GPUs: the picture times a tiny mask texture, tiled
+// two screen pixels across (an aperture grille) and once per source line
+// down (the line, then the darker gap): one texture read and a multiply.
+// The idea is crt-potato's (a mask texture over the picture); this is
+// piccolo's own code and mask, not a port.
+//
+// The mask is tiled with fract()/mod() instead of a repeating texture: GLES 2
+// only repeats power-of-two textures.
+//
+// SPDX-License-Identifier: MIT (piccolo's own; see LICENSE)
+
+void main()
+{
+    vec3 color = texture2D(u_source, v_coord).rgb;
+    // Small numbers only (the Tegra 4 computes in fp20): the screen column
+    // within the mask, and where in its source line this pixel is.
+    float column = mod(floor(gl_FragCoord.x), u_lut_size.x);
+    float row = floor(fract(v_coord.y * u_source_size.y) * u_lut_size.y);
+    vec3 mask = texture2D(u_lut, (vec2(column, row) + 0.5) * u_lut_size.zw).rgb;
+    // The mask darkens; a little gain gives some of it back.
+    gl_FragColor = vec4(min(color * mask * 1.3, vec3(1.0)), 1.0);
+}
+# DOT: dot (Themaister, public domain), ported.
+passes = 1
+pass0 = dot.glsl
+pass0_filter = nearest
+pass0_scale = viewport
+// Dot: a handheld LCD's round pixels with a little glow.
+// Original by Themaister, license: public domain (libretro slang-shaders,
+// handheld/shaders/dot.slang). Ported to GLSL ES 1.00 for piccolo with its
+// default parameters fixed (gamma 2.4, shine 0.05, blend 0.65, soft 0). With
+// soft 0 every one of the original's nine taps reads the same texel, so this
+// reads it once and weighs the nine distances.
+
+float color_bloom(vec3 color)
+{
+    float bright = dot(color, vec3(0.30, 0.59, 0.11));
+    return mix(1.05, 0.95, bright);
+}
+
+vec3 lookup(vec2 inside, vec2 offset, vec3 color)
+{
+    vec2 delta = inside - (offset + vec2(0.5));
+    return color * exp(-2.4 * length(delta) * color_bloom(color));
+}
+
+void main()
+{
+    vec3 color = texture2D(u_source, v_coord).rgb;
+    vec2 inside = fract(v_coord * u_source_size.xy);
+    vec3 mid_color = lookup(inside, vec2(0.0, 0.0), color);
+    vec3 sum = mid_color;
+    sum += lookup(inside, vec2(-1.0, -1.0), color);
+    sum += lookup(inside, vec2( 0.0, -1.0), color);
+    sum += lookup(inside, vec2( 1.0, -1.0), color);
+    sum += lookup(inside, vec2(-1.0,  0.0), color);
+    sum += lookup(inside, vec2( 1.0,  0.0), color);
+    sum += lookup(inside, vec2(-1.0,  1.0), color);
+    sum += lookup(inside, vec2( 0.0,  1.0), color);
+    sum += lookup(inside, vec2( 1.0,  1.0), color);
+    gl_FragColor = vec4(mix(1.2 * mid_color, sum, 0.65), 1.0);
+}
+# LCD3X: lcd3x (Gigaherz, public domain), ported.
+passes = 1
+pass0 = lcd3x.glsl
+pass0_filter = nearest
+pass0_scale = viewport
+// LCD3x: a handheld LCD's sub-pixels and lines.
+// Original by Gigaherz, license: public domain (libretro slang-shaders,
+// handheld/shaders/lcd3x.slang). Ported to GLSL ES 1.00 for piccolo with its
+// default parameters fixed; the angles are taken modulo one period first, so
+// they stay exact with the Tegra 4's 20-bit floats.
+
+void main()
+{
+    vec3 color = texture2D(u_source, v_coord).rgb;
+    vec2 angle = fract(v_coord * u_source_size.xy) * 6.283185307;
+    const vec3 offsets = vec3(3.141592654) * vec3(1.0 / 2.0, 1.0 / 2.0 - 2.0 / 3.0, 1.0 / 2.0 - 4.0 / 3.0);
+    float brighten_scanlines = 16.0;
+    float brighten_lcd = 4.0;
+    float yfactor = (brighten_scanlines + sin(angle.y)) / (brighten_scanlines + 1.0);
+    vec3 xfactors = (brighten_lcd + sin(angle.x + offsets)) / (brighten_lcd + 1.0);
+    gl_FragColor = vec4(yfactor * xfactors * color, 1.0);
+}
+�PNG
+
+   IHDR         r�$   IDATx�c���?m��03g����9�u�%�d�    IEND�B`�# SCANLINES: scanlines-sine-abs (RiskyJumps, public domain), ported.
+passes = 1
+pass0 = scanlines.glsl
+pass0_filter = nearest
+pass0_scale = viewport
+// Scanlines Sine Absolute Value: an ultra light scanline shader.
+// Original by RiskyJumps, license: public domain (libretro slang-shaders,
+// scanlines/shaders/scanlines-sine-abs.slang). Ported to GLSL ES 1.00 for
+// piccolo with its default parameters fixed; the angle is taken modulo one
+// period first, so it stays exact with the Tegra 4's 20-bit floats.
+
+void main()
+{
+    vec3 color = texture2D(u_source, v_coord).rgb;
+    // freq 0.5: one sine period every two source lines; phase 0.5.
+    float angle = fract(v_coord.y * u_source_size.y * 0.5) * 6.283185307 + 0.5;
+    float lines = abs(sin(angle) * 1.25);   // amp 1.25, blacks 0, whites 1
+    gl_FragColor = vec4(color * lines, 1.0);
+}
+# piccolo: the final scale, bilinear (no preset chosen).
+passes = 1
+pass0 = scale.glsl
+pass0_filter = linear
+pass0_scale = viewport
+# piccolo: the final scale, nearest (no preset chosen).
+passes = 1
+pass0 = scale.glsl
+pass0_filter = nearest
+pass0_scale = viewport
+# piccolo: the final scale, sharp bilinear (no preset chosen).
+passes = 1
+pass0 = scale-sharp-bilinear.glsl
+pass0_filter = linear
+pass0_scale = viewport
+// piccolo's final scale, sharp bilinear (../scale-sharp-bilinear.slang in
+// GLSL ES 1.00): every source pixel is a sharp block of the whole part of the
+// scale; only the screen pixels where two source pixels meet are blended.
+//
+// SPDX-License-Identifier: MIT (piccolo's own; see LICENSE)
+
+void main()
+{
+    vec2 texel = v_coord * u_source_size.xy;
+    vec2 scale = max(floor(u_output_size.xy / u_source_size.xy), vec2(1.0));
+    vec2 inside = fract(texel) - 0.5;
+    vec2 flat_range = 0.5 - 0.5 / scale;
+    vec2 ramp = (inside - clamp(inside, -flat_range, flat_range)) * scale + 0.5;
+    vec2 coordinate = (floor(texel) + ramp) * u_source_size.zw;
+    gl_FragColor = vec4(texture2D(u_source, coordinate).rgb, 1.0);
+}
+// piccolo's final scale when no preset is chosen: the picture as is, sampled
+// nearest or bilinear (the preset decides: scale-nearest / scale-bilinear).
+//
+// SPDX-License-Identifier: MIT (piccolo's own; see LICENSE)
+
+void main()
+{
+    gl_FragColor = vec4(texture2D(u_source, v_coord).rgb, 1.0);
+}
+# GRAY: a gray theme, piccolo's BLUE with the color taken out.
+#
+# A theme is a .cfg file in the themes folder, next to the program or in
+# piccolo's own folder (the one with settings/ in it): copy this one, rename
+# it, change the colors. SETTINGS > INTERFACE > THEME lists it by its name.
+# A theme in piccolo's folder with the same name as one next to the program
+# replaces it.
+#
+# The keys are the same as the ui_ keys in settings/piccolo.cfg, so a look
+# made color by color in SETTINGS can be copied from there into a theme.
+# Colors are #RRGGBB. A key left out keeps BLUE's value.
+
+name = GRAY
+
+# Switches: true or false. (A # starts a comment only at the start of a line.)
+# a box behind each menu title on the bar
+ui_menu_boxes = false
+# drop shadows under windows, menus and menu text
+ui_shadows = false
+# piccolo's own pixel arrow instead of the system's
+ui_theme_cursor = false
+
+# behind the menu when no game runs
+ui_color_background = #000000
+# the menu bar, top and bottom
+ui_color_bar = #585858
+# the menu bar's middle (a gradient; the same = flat)
+ui_color_bar_center = #585858
+# the bar's raised edge
+ui_color_bar_light = #808080
+# the bar's dark edge
+ui_color_bar_dark = #2D2D2D
+# the box behind each menu title (with ui_menu_boxes)
+ui_color_menu_box = #585858
+# its raised edge, also an open menu's
+ui_color_menu_box_light = #808080
+# its dark edge
+ui_color_menu_box_dark = #808080
+# an open menu's background
+ui_color_menu = #494949
+# windows
+ui_color_window = #494949
+# windows' light edge
+ui_color_window_light = #808080
+# windows' dark edge
+ui_color_window_dark = #1C1C1C
+# fields, lists, inactive tabs
+ui_color_field = #353535
+# a field under the mouse
+ui_color_field_hover = #414141
+# hovered / selected / pressed
+ui_color_highlight = #9C9C9C
+# text
+ui_color_text = #E8E8E8
+# text on the highlight
+ui_color_text_highlight = #FFFFFF
+# disabled text
+ui_color_text_disabled = #989898
+# menu text's shadow (windows' shadows too, at 25%)
+ui_color_text_shadow = #1C1C1C
+# window title bars, top
+ui_color_title = #585858
+# window title bars, bottom (the same = flat)
+ui_color_title_bottom = #585858
+# check marks
+ui_color_check = #FFFFFF
+# section titles in windows
+ui_color_section = #E8E8E8
+# buttons, check boxes, scroll bar grips: top
+ui_color_button = #585858
+# their bottom (the same = flat)
+ui_color_button_bottom = #585858
+# their light edge (the same as dark = no raised edges)
+ui_color_button_light = #585858
+# their dark edge
+ui_color_button_dark = #585858
+# text on buttons
+ui_color_button_text = #E8E8E8
+# text in fields and combo boxes
+ui_color_field_text = #E8E8E8
+# the theme's mouse cursor (with ui_theme_cursor)
+ui_color_cursor = #BEBEBE
+# its top and right edge (the same = flat)
+ui_color_cursor_edge = #BEBEBE
