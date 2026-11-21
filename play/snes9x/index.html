@@ -97,22 +97,67 @@
     #files { position: static; inset: auto; width: auto; height: 42%; z-index: auto;
              border-left: 0; border-top: 2px solid var(--shadow); }
   }
+
+  /* The touch gamepad (piccolo-pad.js), when shown (body.has-pad): beside
+     the picture, or under it on an upright screen; FILES goes over the game. */
+  .pad { display: none; }
+  body.has-pad #main { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: minmax(0, 1fr);
+                       grid-template-areas: "padl stage padr"; }
+  body.has-pad #stage { grid-area: stage; }
+  body.has-pad #pad-left { grid-area: padl; }
+  body.has-pad #pad-right { grid-area: padr; }
+  body.has-pad .pad { display: flex; flex-direction: column; align-items: center; justify-content: space-around; gap: 3vmin;
+                      padding: 3vmin; background: var(--band); touch-action: none; user-select: none; -webkit-user-select: none;
+                      -webkit-touch-callout: none; --unit: min(9vmin, 56px); }
+  body.has-pad #files { position: fixed; inset: 38px 0 0 auto; width: min(100%, 360px); height: auto; z-index: 4;
+                        border-top: 0; border-left: 2px solid var(--shadow); }
+  @media (orientation: portrait) {
+    body.has-pad #main { grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1fr) auto;
+                         grid-template-areas: "stage stage" "padl padr"; }
+    body.has-pad .pad { --unit: min(12vw, 64px); padding: 4vw 3vw; border-top: 2px solid var(--shadow); }
+  }
+  .pad-button { display: flex; align-items: center; justify-content: center; background: var(--bg); color: var(--text);
+                border: 2px solid var(--edge); box-shadow: 3px 3px 0 var(--shadow); font-weight: 700; letter-spacing: 0.06em; }
+  .pad-button.held, .dpad span.held { background: var(--accent); color: var(--on-accent); border-color: var(--accent);
+                                      box-shadow: 1px 1px 0 var(--shadow); }
+  .pad-button.round { width: var(--unit); height: var(--unit); border-radius: 50%; font-size: calc(var(--unit) * 0.38); }
+  .pad-button.shoulder { width: calc(var(--unit) * 2.4); height: calc(var(--unit) * 0.7); border-radius: 10px 10px 4px 4px;
+                         font-size: calc(var(--unit) * 0.3); }
+  .pad-button.meta { width: calc(var(--unit) * 1.6); height: calc(var(--unit) * 0.5); border-radius: 999px; font-size: 10px; }
+  .dpad { position: relative; width: calc(var(--unit) * 2.6); height: calc(var(--unit) * 2.6); }
+  .dpad span { position: absolute; width: calc(var(--unit) * 0.9); height: calc(var(--unit) * 0.9); background: var(--bg);
+               border: 2px solid var(--edge); box-shadow: 3px 3px 0 var(--shadow); }
+  .dpad .up { left: calc(var(--unit) * 0.85); top: 0; }
+  .dpad .down { left: calc(var(--unit) * 0.85); bottom: 0; }
+  .dpad .left { left: 0; top: calc(var(--unit) * 0.85); }
+  .dpad .right { right: 0; top: calc(var(--unit) * 0.85); }
+  .face { position: relative; width: calc(var(--unit) * 2.6); height: calc(var(--unit) * 2.6); }
+  .face .pad-button { position: absolute; }
+  .face.four .x { left: calc(var(--unit) * 0.8); top: 0; }
+  .face.four .y { left: 0; top: calc(var(--unit) * 0.8); }
+  .face.four .a { right: 0; top: calc(var(--unit) * 0.8); }
+  .face.four .b { left: calc(var(--unit) * 0.8); bottom: 0; }
+  .face.two .b { left: 0; bottom: calc(var(--unit) * 0.4); }
+  .face.two .a { right: 0; top: calc(var(--unit) * 0.4); }
 </style>
 </head>
-<body data-channel="dev">
+<body data-channel="dev" data-pad="snes">
 <div id="app">
   <div id="strip">
     <a class="home" href="../" title="Choose another emulator"><img src="../icon-32.png" alt="">piccolo <span>play / Snes9x</span></a>
-    <span class="channel" id="channel" hidden>DEV 537611c</span>
+    <span class="channel" id="channel" hidden>DEV 59da01b</span>
     <span class="space"></span>
     <button id="open" hidden title="Open a game file (or drop it on the page)"><span class="long">Open game</span><span class="short">Open</span></button>
     <button id="files-toggle" hidden title="This session's files: saves, states, settings, games">Files</button>
+    <button id="pad-toggle" title="Buttons on the screen, beside or under the game">Pad</button>
     <button id="fullscreen" title="The game on the whole screen (Esc leaves)"><span class="long">Full screen</span><span class="short">Full</span></button>
   </div>
   <div id="main">
+    <div class="pad" id="pad-left"></div>
     <div id="stage">
       <canvas id="canvas" tabindex="-1" oncontextmenu="event.preventDefault()"></canvas>
     </div>
+    <div class="pad" id="pad-right"></div>
     <aside id="files" class="closed">
       <header>
         <span class="title">Files</span>
@@ -134,6 +179,8 @@
 <script src="../multitap-page.js"></script>
 <script src="../piccolo-files.js"></script>
 <script src="../piccolo-page.js"></script>
+<script src="../piccolo-pad.js"></script>
+<script>piccolo_pad_start();</script>
 <script>multitap_page_frame_16x9();   // the picture as a 16:9 window (multitap-page.js)</script>
 <script>piccolo_page_start();</script>
 </body>
