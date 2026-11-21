@@ -33,8 +33,11 @@
   #main { flex: 1; min-height: 0; display: flex; }
   /* The canvas fills its stage; SDL takes the window's size from the canvas's
      CSS size (multitap-page.js sends a resize event when the stage changes). */
-  #stage { position: relative; flex: 1; min-width: 0; background: #000; }
-  canvas { display: block; width: 100%; height: 100%; outline: none; }
+  #stage { position: relative; flex: 1; min-width: 0; background: #000; display: flex; align-items: center; justify-content: center; }
+  canvas { display: block; width: 100%; height: 100%; outline: none; flex: none; }
+  /* A 16:9 window in steps (the script below): the page around it. */
+  #stage.framed { background: var(--bg); }
+  #stage.framed canvas { box-shadow: 6px 6px 0 var(--shadow); }
   #overlay { position: fixed; inset: 0; z-index: 5; display: flex; align-items: center; justify-content: center;
              background: var(--bg); text-transform: uppercase; letter-spacing: 1px; text-align: center; padding: 16px; }
   #overlay.gone { display: none; }
@@ -114,6 +117,39 @@
 <script src="../multitap-page.js"></script>
 <script src="../piccolo-files.js"></script>
 <script src="../piccolo-page.js"></script>
+<script>
+// The picture is a 16:9 window inside the stage, in fixed steps (480p, 720p,
+// 810p, 1080p, 1440p, 2160p, in CSS pixels): the biggest that fits, centered.
+// A stage smaller than 480p (a phone) keeps the whole stage. SDL takes its
+// window size from the canvas's CSS size (multitap-page.js sends the resize
+// event when the stage changes; this runs first, in the same frame).
+(function () {
+  var STEPS = [2160, 1440, 1080, 810, 720, 480];
+  var stage = document.getElementById('stage');
+  var canvas = document.getElementById('canvas');
+  function fit() {
+    var width = stage.clientWidth;
+    var height = stage.clientHeight;
+    for (var i = 0; i < STEPS.length; i++) {
+      var stepHeight = STEPS[i];
+      var stepWidth = Math.ceil(stepHeight * 16 / 9);
+      if (stepWidth <= width && stepHeight <= height) {
+        canvas.style.width = stepWidth + 'px';
+        canvas.style.height = stepHeight + 'px';
+        stage.classList.add('framed');
+        return;
+      }
+    }
+    canvas.style.width = '';
+    canvas.style.height = '';
+    stage.classList.remove('framed');
+  }
+  new ResizeObserver(fit).observe(stage);
+  window.addEventListener('resize', fit);
+  document.addEventListener('fullscreenchange', fit);
+  fit();
+})();
+</script>
 <script>piccolo_page_start();</script>
 </body>
 </html>

@@ -2,41 +2,113 @@
 <!-- piccoletto in the browser: piccolo's companion (the gamepad, remote play,
      devices). piccolo's web/package.sh puts this folder in the web zip as
      piccoletto/, next to piccolo's pages; the shared scripts and sw.js are
-     one folder up (frontends-common's web/). Everything here is relative. -->
+     one folder up (frontends-common's web/), the websites' shared look in
+     ../_site/v1. Everything here is relative. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
-<meta name="theme-color" content="#101820">
+<meta name="theme-color" content="#1A2840">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>piccoletto</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-32.png">
+<link rel="stylesheet" href="../_site/v1/site.css">
 <style>
-  :root { --back: #101820; --bar: #2f4f7f; --text: #e8eef4; }
-  html, body { margin: 0; height: 100%; background: var(--back); overflow: hidden; }
-  body { font: 13px/1.4 ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace; color: var(--text);
+  /* The look is piccolo's websites' (../_site/v1/site.css: tokens, fonts).
+     On a computer: a thin strip on top and the picture as a 16:9 window. On
+     a phone (narrow or short screen): no strip, the pads take the screen. */
+  html, body { height: 100%; overflow: hidden; }
+  body { font-size: 13px; line-height: 1.4;
          /* The pads take every touch: no scrolling, zooming or long-press menus. */
          touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
-  /* The canvas fills the screen; SDL takes the window's size from its CSS
-     size (multitap-page.js sends a resize event when it changes). dvh: the
-     phone's visible height, without the browser's bars. */
-  #stage { position: fixed; inset: 0; height: 100dvh; }
-  canvas { display: block; width: 100%; height: 100%; outline: none; }
+  button { font: inherit; }
+  /* dvh: the phone's visible height, without the browser's bars. */
+  #app { display: flex; flex-direction: column; height: 100dvh; }
+  #strip { flex: none; display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 8px; background: var(--band);
+           border-bottom: 2px solid var(--shadow); }
+  #strip a.home { display: flex; align-items: center; gap: 8px; color: var(--text); text-decoration: none;
+                  font: 600 17px/1 var(--font-heading); white-space: nowrap; }
+  #strip a.home img { width: 22px; height: 22px; }
+  #strip a.home span { font: 400 13px/1 var(--font-text); color: var(--muted); }
+  #strip .space { flex: 1; }
+  #strip button { min-height: 26px; padding: 2px 10px; background: var(--bg); color: var(--text); border: 2px solid var(--edge);
+                  box-shadow: 2px 2px 0 var(--shadow); font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; }
+  #strip button:hover { border-color: var(--accent); }
+  /* The canvas fills its stage; SDL takes the window's size from its CSS
+     size (multitap-page.js sends a resize event when it changes). */
+  #stage { position: relative; flex: 1; min-height: 0; background: #000; display: flex; align-items: center; justify-content: center; }
+  canvas { display: block; width: 100%; height: 100%; outline: none; flex: none; }
+  /* A 16:9 window in steps (the script below): the page around it. */
+  #stage.framed { background: var(--bg); }
+  #stage.framed canvas { box-shadow: 6px 6px 0 var(--shadow); }
   #overlay { position: fixed; inset: 0; z-index: 5; display: flex; align-items: center; justify-content: center;
-             background: var(--back); text-transform: uppercase; letter-spacing: 1px; text-align: center; padding: 16px; }
+             background: var(--bg); text-transform: uppercase; letter-spacing: 1px; text-align: center; padding: 16px; }
   #overlay.gone { display: none; }
   #overlay .box { max-width: 36em; }
-  #overlay progress { width: 16em; height: 6px; margin-top: 12px; accent-color: var(--bar); }
+  #overlay progress { width: 16em; height: 6px; margin-top: 12px; accent-color: var(--accent); }
+  @media (max-width: 640px), (max-height: 500px) {
+    #strip { display: none; }
+  }
 </style>
 </head>
 <body>
-<div id="stage"><canvas id="canvas" tabindex="-1" oncontextmenu="event.preventDefault()"></canvas></div>
+<div id="app">
+  <div id="strip">
+    <a class="home" href="../" title="Back to piccolo in the browser"><img src="icon-32.png" alt="">piccolo <span>play / piccoletto</span></a>
+    <span class="space"></span>
+    <button id="fullscreen" type="button" title="piccoletto on the whole screen (Esc leaves)">Full screen</button>
+  </div>
+  <div id="stage"><canvas id="canvas" tabindex="-1" oncontextmenu="event.preventDefault()"></canvas></div>
+</div>
 <div id="overlay"><div class="box"><div id="message">LOADING PICCOLETTO</div><progress id="progress" max="1" value="0"></progress></div></div>
 <script src="../multitap-storage.js"></script>
 <script src="../multitap-page.js"></script>
 <script src="piccoletto-page.js"></script>
+<script>
+// The picture is a 16:9 window inside the stage, in fixed steps (480p, 720p,
+// 810p, 1080p, 1440p, 2160p, in CSS pixels): the biggest that fits, centered.
+// A stage smaller than 480p (a phone) keeps the whole stage. SDL takes its
+// window size from the canvas's CSS size (multitap-page.js sends the resize
+// event when the stage changes; this runs first, in the same frame).
+(function () {
+  var STEPS = [2160, 1440, 1080, 810, 720, 480];
+  var stage = document.getElementById('stage');
+  var canvas = document.getElementById('canvas');
+  function fit() {
+    var width = stage.clientWidth;
+    var height = stage.clientHeight;
+    for (var i = 0; i < STEPS.length; i++) {
+      var stepHeight = STEPS[i];
+      var stepWidth = Math.ceil(stepHeight * 16 / 9);
+      if (stepWidth <= width && stepHeight <= height) {
+        canvas.style.width = stepWidth + 'px';
+        canvas.style.height = stepHeight + 'px';
+        stage.classList.add('framed');
+        return;
+      }
+    }
+    canvas.style.width = '';
+    canvas.style.height = '';
+    stage.classList.remove('framed');
+  }
+  new ResizeObserver(fit).observe(stage);
+  window.addEventListener('resize', fit);
+  document.addEventListener('fullscreenchange', fit);
+  fit();
+})();
+</script>
+<script>
+  document.getElementById('fullscreen').addEventListener('click', function () {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen({ navigationUI: 'hide' });
+    }
+    document.getElementById('canvas').focus();
+  });
+</script>
 <script>piccoletto_page_start();</script>
 </body>
 </html>
