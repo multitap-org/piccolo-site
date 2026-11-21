@@ -8,7 +8,7 @@
 # Reads MANIFEST, downloads every file it lists, checks each SHA-256, then
 # swaps the new folder in whole (DEST is never half updated; a failed fetch
 # leaves the old copy as it was). Exit 0: DEST changed; 1: failed;
-# 2: DEST already matched. Needs curl and sha256sum. The other sites' repos
+# 2: DEST already matched or another run is updating it. Needs curl and sha256sum. The other sites' repos
 # carry a copy of this script (keep them the same).
 set -u
 
@@ -17,8 +17,18 @@ url=${SITE_ASSETS_URL:-https://get-piccolo.app/assets/v1}
 dest=${dest%/}
 parent=$(dirname "$dest")
 mkdir -p "$parent" || exit 1
-work=$(mktemp -d "$parent/.site-assets.XXXXXX") || exit 1
-trap 'rm -rf "$work"' EXIT
+# One update at a time (two publishers can share a site): a lock folder,
+# taken over when it's older than 10 minutes (a killed run).
+lock="$dest.lock"
+if ! mkdir "$lock" 2>/dev/null; then
+    if [ -n "$(find "$lock" -maxdepth 0 -mmin +10 2>/dev/null)" ]; then
+        rm -rf "$lock" && mkdir "$lock" 2>/dev/null || exit 2
+    else
+        exit 2
+    fi
+fi
+work=$(mktemp -d "$parent/.site-assets.XXXXXX") || { rmdir "$lock"; exit 1; }
+trap 'rm -rf "$work"; rmdir "$lock"' EXIT
 
 curl -fsSL --max-time 60 -o "$work/MANIFEST" "$url/MANIFEST" || { echo "fetch-site-assets: no $url/MANIFEST" >&2; exit 1; }
 if [ -f "$dest/MANIFEST" ] && cmp -s "$work/MANIFEST" "$dest/MANIFEST"; then
@@ -43,5 +53,4 @@ if [ -e "$dest" ]; then
 fi
 mv "$work" "$dest" || { [ -n "$old" ] && mv "$old" "$dest"; exit 1; }
 [ -n "$old" ] && rm -rf "$old"
-trap - EXIT
 exit 0
