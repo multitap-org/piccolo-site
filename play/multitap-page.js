@@ -76,55 +76,27 @@ function multitap_page_follow_stage() {
   observer.observe(document.getElementById('stage'));
 }
 
-// The picture as a window inside the stage, in fixed steps (CSS pixels),
-// responsive: a wide stage gets 16:9 steps (854x480, 1280x720, 1440x810,
-// 1920x1080, 2560x1440, 3840x2160), one that's narrow for its height
-// (width / height under 1.55, between 4:3 and 16:9) gets 4:3 steps (640x480,
-// 800x600, 960x720, 1024x768, 1280x960, 1440x1080, 1920x1440). The biggest
-// step that fits, centered, with the class "framed" on the stage (the page
-// draws its surroundings); the other shape when none of its own fits. A
-// stage smaller than 640x480 (a phone) keeps the whole stage.
-// SDL takes its window size from the canvas's CSS size: call this before
-// multitap_page_start, so it runs before SDL's own resize handling (the
-// resize event multitap_page_follow_stage sends).
-const MULTITAP_PAGE_STEPS_WIDE = [[3840, 2160], [2560, 1440], [1920, 1080], [1440, 810], [1280, 720], [854, 480]];
-const MULTITAP_PAGE_STEPS_4_3 = [[1920, 1440], [1440, 1080], [1280, 960], [1024, 768], [960, 720], [800, 600], [640, 480]];
-const MULTITAP_PAGE_NARROW = 1.55;
-
-// The first (biggest) of `steps` that fits width x height, or null.
-function multitap_page_step(steps, width, height) {
-  for (const step of steps) {
-    if (step[0] <= width && step[1] <= height) {
-      return step;
-    }
-  }
-  return null;
+// The canvas fills the stage and the frontend places and scales the picture
+// inside it (Andrés, 2026-11-21: the fixed 16:9 / 4:3 steps wasted the
+// screen, a phone's most of all). Nothing to do any more; kept for pages
+// that still call it.
+function multitap_page_frame_16x9() {
 }
 
-function multitap_page_frame_16x9() {
-  const stage = document.getElementById('stage');
-  const canvas = document.getElementById('canvas');
-  function fit() {
-    const width = stage.clientWidth;
-    const height = stage.clientHeight;
-    const narrow = height > 0 && width / height < MULTITAP_PAGE_NARROW;
-    const first = narrow ? MULTITAP_PAGE_STEPS_4_3 : MULTITAP_PAGE_STEPS_WIDE;
-    const second = narrow ? MULTITAP_PAGE_STEPS_WIDE : MULTITAP_PAGE_STEPS_4_3;
-    const step = multitap_page_step(first, width, height) || multitap_page_step(second, width, height);
-    if (step !== null) {
-      canvas.style.width = step[0] + 'px';
-      canvas.style.height = step[1] + 'px';
-      stage.classList.add('framed');
-    } else {
-      canvas.style.width = '';
-      canvas.style.height = '';
-      stage.classList.remove('framed');
-    }
+// The frontend tells the page what it shows (piccolo: src/web_pad.h): body
+// gets "playing" while a game is played (the page may hide its strip), and
+// "has-picture" with --picture-aspect (width / height) while a game's
+// picture is on screen (an upright phone can give the canvas only the
+// height that picture needs).
+function multitap_page_game(playing, aspect) {
+  document.body.classList.toggle('playing', playing);
+  const has_picture = aspect > 0;
+  document.body.classList.toggle('has-picture', has_picture);
+  if (has_picture) {
+    document.documentElement.style.setProperty('--picture-aspect', String(aspect));
+  } else {
+    document.documentElement.style.removeProperty('--picture-aspect');
   }
-  new ResizeObserver(fit).observe(stage);
-  window.addEventListener('resize', fit);
-  document.addEventListener('fullscreenchange', fit);
-  fit();
 }
 
 // Starts the frontend. config:
@@ -134,6 +106,7 @@ function multitap_page_frame_16x9() {
 //   skipped      top-level names in its folder that aren't kept on OPFS
 //   sw, sw_scope sw.js's URL and scope (relative to the page)
 //   started      called once the filesystem is there, before main() (may be null)
+//   environment  more environment variables for the frontend, { NAME: 'value' } (may be null)
 async function multitap_page_start(config) {
   if (!(await multitap_page_isolation(config.sw, config.sw_scope))) {
     return;
@@ -162,7 +135,11 @@ async function multitap_page_start(config) {
         progress.value = Number(match[1]);
       }
     },
-    preRun: [multitap_storage_environment],
+    preRun: [multitap_storage_environment, function () {
+      for (const name in config.environment || {}) {
+        Module.ENV[name] = config.environment[name];
+      }
+    }],
     // The filesystem exists and main() hasn't run: the folder goes in now.
     onRuntimeInitialized: function () {
       multitap_storage_install();

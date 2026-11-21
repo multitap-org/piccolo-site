@@ -48,12 +48,14 @@ function piccolo_page_files() {
   }, true);
 }
 
-// FULL SCREEN: the game alone on the screen (the stage, not the strip or
-// FILES); the browser's Esc leaves it.
+// FULL SCREEN: the whole page on the screen, the same layout with the touch
+// pad (it steps aside by itself while a gamepad is in use, piccolo-pad.js);
+// the strip hides while a game is played anyway. The browser's Esc (or
+// back) leaves it.
 function piccolo_page_fullscreen() {
   const button = document.getElementById('fullscreen');
-  const stage = document.getElementById('stage');
-  if (!stage.requestFullscreen) {
+  const page = document.documentElement;
+  if (!page.requestFullscreen) {
     button.hidden = true;
     return;
   }
@@ -61,12 +63,12 @@ function piccolo_page_fullscreen() {
     if (document.fullscreenElement) {
       document.exitFullscreen();
     } else {
-      stage.requestFullscreen().catch(function (error) { console.log('Full screen: ' + error.message); });
+      page.requestFullscreen({ navigationUI: 'hide' }).catch(function (error) { console.log('Full screen: ' + error.message); });
     }
     document.getElementById('canvas').focus();
   });
   document.addEventListener('fullscreenchange', function () {
-    button.classList.toggle('active', document.fullscreenElement === stage);
+    button.classList.toggle('active', document.fullscreenElement === page);
   });
 }
 
@@ -76,8 +78,10 @@ function piccolo_page_open(file) {
 }
 
 function piccolo_page_start() {
-  // The dev channel (every push to main) says so, with its commit; a release says nothing.
-  if (document.body.dataset.channel === 'dev') {
+  // The dev channel (every push to main) says so, with its commit, and shows
+  // piccolo's fps meter (SHOW FPS); a release says nothing.
+  const dev = document.body.dataset.channel === 'dev';
+  if (dev) {
     document.getElementById('channel').hidden = false;
   }
   piccolo_page_fullscreen();
@@ -91,6 +95,7 @@ function piccolo_page_start() {
     skipped: ['cache', 'piccoletto'],
     sw: '../sw.js',
     sw_scope: '../',
+    environment: dev ? { PICCOLO_SHOW_FPS: '1' } : null,
     started: function () {
       piccolo_page_files();
       piccolo_files_start();
