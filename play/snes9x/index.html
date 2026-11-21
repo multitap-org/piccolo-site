@@ -86,7 +86,7 @@
 <div id="app">
   <div id="strip">
     <a class="home" href="../" title="Choose another emulator"><img src="../icon-32.png" alt="">piccolo <span>play / Snes9x</span></a>
-    <span class="channel" id="channel" hidden>DEV 3963088</span>
+    <span class="channel" id="channel" hidden>DEV 25b96c5</span>
     <span class="space"></span>
     <button id="open" hidden title="Open a game file (or drop it on the page)">Open game</button>
     <button id="files-toggle" hidden title="This session's files: saves, states, settings, games">Files</button>
@@ -117,39 +117,7 @@
 <script src="../multitap-page.js"></script>
 <script src="../piccolo-files.js"></script>
 <script src="../piccolo-page.js"></script>
-<script>
-// The picture is a 16:9 window inside the stage, in fixed steps (480p, 720p,
-// 810p, 1080p, 1440p, 2160p, in CSS pixels): the biggest that fits, centered.
-// A stage smaller than 480p (a phone) keeps the whole stage. SDL takes its
-// window size from the canvas's CSS size (multitap-page.js sends the resize
-// event when the stage changes; this runs first, in the same frame).
-(function () {
-  var STEPS = [2160, 1440, 1080, 810, 720, 480];
-  var stage = document.getElementById('stage');
-  var canvas = document.getElementById('canvas');
-  function fit() {
-    var width = stage.clientWidth;
-    var height = stage.clientHeight;
-    for (var i = 0; i < STEPS.length; i++) {
-      var stepHeight = STEPS[i];
-      var stepWidth = Math.ceil(stepHeight * 16 / 9);
-      if (stepWidth <= width && stepHeight <= height) {
-        canvas.style.width = stepWidth + 'px';
-        canvas.style.height = stepHeight + 'px';
-        stage.classList.add('framed');
-        return;
-      }
-    }
-    canvas.style.width = '';
-    canvas.style.height = '';
-    stage.classList.remove('framed');
-  }
-  new ResizeObserver(fit).observe(stage);
-  window.addEventListener('resize', fit);
-  document.addEventListener('fullscreenchange', fit);
-  fit();
-})();
-</script>
+<script>multitap_page_frame_16x9();   // the picture as a 16:9 window (multitap-page.js)</script>
 <script>piccolo_page_start();</script>
 </body>
 </html>

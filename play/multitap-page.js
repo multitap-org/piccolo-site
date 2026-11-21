@@ -76,6 +76,40 @@ function multitap_page_follow_stage() {
   observer.observe(document.getElementById('stage'));
 }
 
+// The picture as a 16:9 window inside the stage, in fixed steps (480p,
+// 720p, 810p, 1080p, 1440p, 2160p, in CSS pixels): the biggest that fits,
+// centered, with the class "framed" on the stage (the page draws its
+// surroundings). A stage smaller than 480p (a phone) keeps the whole stage.
+// SDL takes its window size from the canvas's CSS size: call this before
+// multitap_page_start, so it runs before SDL's own resize handling (the
+// resize event multitap_page_follow_stage sends).
+const MULTITAP_PAGE_STEPS = [2160, 1440, 1080, 810, 720, 480];
+
+function multitap_page_frame_16x9() {
+  const stage = document.getElementById('stage');
+  const canvas = document.getElementById('canvas');
+  function fit() {
+    const width = stage.clientWidth;
+    const height = stage.clientHeight;
+    for (const step_height of MULTITAP_PAGE_STEPS) {
+      const step_width = Math.ceil(step_height * 16 / 9);
+      if (step_width <= width && step_height <= height) {
+        canvas.style.width = step_width + 'px';
+        canvas.style.height = step_height + 'px';
+        stage.classList.add('framed');
+        return;
+      }
+    }
+    canvas.style.width = '';
+    canvas.style.height = '';
+    stage.classList.remove('framed');
+  }
+  new ResizeObserver(fit).observe(stage);
+  window.addEventListener('resize', fit);
+  document.addEventListener('fullscreenchange', fit);
+  fit();
+}
+
 // Starts the frontend. config:
 //   name         its folder name (app_storage_init's) and module script (<name>.js)
 //   title        what the loading message calls it ("PICCOLO")
