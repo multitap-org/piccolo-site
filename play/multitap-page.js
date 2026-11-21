@@ -76,14 +76,30 @@ function multitap_page_follow_stage() {
   observer.observe(document.getElementById('stage'));
 }
 
-// The picture as a 16:9 window inside the stage, in fixed steps (480p,
-// 720p, 810p, 1080p, 1440p, 2160p, in CSS pixels): the biggest that fits,
-// centered, with the class "framed" on the stage (the page draws its
-// surroundings). A stage smaller than 480p (a phone) keeps the whole stage.
+// The picture as a window inside the stage, in fixed steps (CSS pixels),
+// responsive: a wide stage gets 16:9 steps (854x480, 1280x720, 1440x810,
+// 1920x1080, 2560x1440, 3840x2160), one that's narrow for its height
+// (width / height under 1.55, between 4:3 and 16:9) gets 4:3 steps (640x480,
+// 800x600, 960x720, 1024x768, 1280x960, 1440x1080, 1920x1440). The biggest
+// step that fits, centered, with the class "framed" on the stage (the page
+// draws its surroundings); the other shape when none of its own fits. A
+// stage smaller than 640x480 (a phone) keeps the whole stage.
 // SDL takes its window size from the canvas's CSS size: call this before
 // multitap_page_start, so it runs before SDL's own resize handling (the
 // resize event multitap_page_follow_stage sends).
-const MULTITAP_PAGE_STEPS = [2160, 1440, 1080, 810, 720, 480];
+const MULTITAP_PAGE_STEPS_WIDE = [[3840, 2160], [2560, 1440], [1920, 1080], [1440, 810], [1280, 720], [854, 480]];
+const MULTITAP_PAGE_STEPS_4_3 = [[1920, 1440], [1440, 1080], [1280, 960], [1024, 768], [960, 720], [800, 600], [640, 480]];
+const MULTITAP_PAGE_NARROW = 1.55;
+
+// The first (biggest) of `steps` that fits width x height, or null.
+function multitap_page_step(steps, width, height) {
+  for (const step of steps) {
+    if (step[0] <= width && step[1] <= height) {
+      return step;
+    }
+  }
+  return null;
+}
 
 function multitap_page_frame_16x9() {
   const stage = document.getElementById('stage');
@@ -91,18 +107,19 @@ function multitap_page_frame_16x9() {
   function fit() {
     const width = stage.clientWidth;
     const height = stage.clientHeight;
-    for (const step_height of MULTITAP_PAGE_STEPS) {
-      const step_width = Math.ceil(step_height * 16 / 9);
-      if (step_width <= width && step_height <= height) {
-        canvas.style.width = step_width + 'px';
-        canvas.style.height = step_height + 'px';
-        stage.classList.add('framed');
-        return;
-      }
+    const narrow = height > 0 && width / height < MULTITAP_PAGE_NARROW;
+    const first = narrow ? MULTITAP_PAGE_STEPS_4_3 : MULTITAP_PAGE_STEPS_WIDE;
+    const second = narrow ? MULTITAP_PAGE_STEPS_WIDE : MULTITAP_PAGE_STEPS_4_3;
+    const step = multitap_page_step(first, width, height) || multitap_page_step(second, width, height);
+    if (step !== null) {
+      canvas.style.width = step[0] + 'px';
+      canvas.style.height = step[1] + 'px';
+      stage.classList.add('framed');
+    } else {
+      canvas.style.width = '';
+      canvas.style.height = '';
+      stage.classList.remove('framed');
     }
-    canvas.style.width = '';
-    canvas.style.height = '';
-    stage.classList.remove('framed');
   }
   new ResizeObserver(fit).observe(stage);
   window.addEventListener('resize', fit);
