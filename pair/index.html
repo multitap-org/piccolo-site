@@ -123,8 +123,11 @@ function readLink(hash) {
   if (!/^[a-z2-7]{51}[aq]$/.test(key)) {
     return null;
   }
-  var beacon = (fields.b || "").toLowerCase();
-  if (beacon !== "" && !/^[a-z0-9.:\[\]-]{1,253}$/.test(beacon)) {
+  // b: the characters net_pair_link_parse takes (beacon_text_ok), case kept
+  // (a URL's path may care). Nothing in it needs escaping, and the app reads
+  // it unescaped: "%3A" for a port's ":" would make it drop the beacon.
+  var beacon = fields.b || "";
+  if (beacon !== "" && !/^[A-Za-z0-9._:\/\[\]-]{1,253}$/.test(beacon)) {
     return null;
   }
   return { key: key, beacon: beacon };
@@ -138,7 +141,7 @@ function show() {
     return;
   }
   // The hash handed on as it came, rebuilt from the checked fields only.
-  var hash = "k=" + link.key + (link.beacon !== "" ? "&b=" + encodeURIComponent(link.beacon) : "");
+  var hash = "k=" + link.key + (link.beacon !== "" ? "&b=" + link.beacon : "");
   document.getElementById("key").textContent = link.key;
   document.getElementById("beacon").textContent = link.beacon !== "" ? link.beacon : DEFAULT_BEACON + " (default)";
   // Android: an intent for piccoletto's piccoletto://pair?k=...&b=... (Play
