@@ -30,6 +30,8 @@
   #strip button:hover, #strip button.active { border-color: var(--accent); }
   #strip button.active { background: var(--accent); color: var(--on-accent); }
   #strip button[hidden] { display: none; }
+  #strip button { white-space: nowrap; }
+  #strip .short { display: none; }
   #main { flex: 1; min-height: 0; display: flex; }
   /* The canvas fills its stage; SDL takes the window's size from the canvas's
      CSS size (multitap-page.js sends a resize event when the stage changes). */
@@ -78,7 +80,22 @@
      strip keeps only the buttons. */
   @media (max-width: 640px) {
     #files { position: fixed; inset: 38px 0 0 auto; width: min(100%, 360px); z-index: 4; }
-    #strip a.home span { display: none; }
+    /* The strip on a phone: the icon, then the buttons sharing the rest in
+       equal parts, short labels, never wrapping. */
+    #strip { gap: 6px; padding: 0 6px; }
+    #strip a.home { font-size: 0; gap: 0; }
+    #strip a.home span, #strip .space { display: none; }
+    #strip .channel { font-size: 10px; padding: 1px 4px; }
+    #strip button { flex: 1 1 0; min-width: 0; padding: 2px 4px; overflow: hidden; text-overflow: ellipsis; }
+    #strip .long { display: none; }
+    #strip .short { display: inline; }
+  }
+  /* A phone upright: like a Game Boy, the game on top and FILES under it,
+     open from the start (piccolo-files.js); closed, the game has it all. */
+  @media (max-width: 640px) and (orientation: portrait) {
+    #main { flex-direction: column; }
+    #files { position: static; inset: auto; width: auto; height: 42%; z-index: auto;
+             border-left: 0; border-top: 2px solid var(--shadow); }
   }
 </style>
 </head>
@@ -86,11 +103,11 @@
 <div id="app">
   <div id="strip">
     <a class="home" href="../" title="Choose another emulator"><img src="../icon-32.png" alt="">piccolo <span>play / SameBoy</span></a>
-    <span class="channel" id="channel" hidden>DEV 6f22916</span>
+    <span class="channel" id="channel" hidden>DEV 537611c</span>
     <span class="space"></span>
-    <button id="open" hidden title="Open a game file (or drop it on the page)">Open game</button>
+    <button id="open" hidden title="Open a game file (or drop it on the page)"><span class="long">Open game</span><span class="short">Open</span></button>
     <button id="files-toggle" hidden title="This session's files: saves, states, settings, games">Files</button>
-    <button id="fullscreen" title="The game on the whole screen (Esc leaves)">Full screen</button>
+    <button id="fullscreen" title="The game on the whole screen (Esc leaves)"><span class="long">Full screen</span><span class="short">Full</span></button>
   </div>
   <div id="main">
     <div id="stage">

@@ -12,6 +12,32 @@ const piccolo_files = {
 };
 
 const PICCOLO_FILES_OPEN_KEY = 'piccolo-files-open';
+// A phone upright has the panel under the game (core.html), open unless it
+// was closed there: its own remembered state, apart from the side panel's.
+const PICCOLO_FILES_OPEN_PORTRAIT_KEY = 'piccolo-files-open-portrait';
+const PICCOLO_FILES_PORTRAIT = '(max-width: 640px) and (orientation: portrait)';
+
+function piccolo_files_portrait() {
+  return window.matchMedia(PICCOLO_FILES_PORTRAIT).matches;
+}
+
+function piccolo_files_open_key() {
+  return piccolo_files_portrait() ? PICCOLO_FILES_OPEN_PORTRAIT_KEY : PICCOLO_FILES_OPEN_KEY;
+}
+
+// What the panel starts as: what was left last time in this layout; never
+// set, open under the game on an upright phone, closed beside it elsewhere.
+function piccolo_files_remembered_open() {
+  try {
+    const value = localStorage.getItem(piccolo_files_open_key());
+    if (value !== null) {
+      return value === '1';
+    }
+  } catch (error) {
+    // No storage: the default.
+  }
+  return piccolo_files_portrait();
+}
 
 function piccolo_files_element(id) {
   return document.getElementById(id);
@@ -237,7 +263,7 @@ function piccolo_files_set_open(open) {
   piccolo_files_element('files').classList.toggle('closed', !open);
   piccolo_files_element('files-toggle').classList.toggle('active', open);
   try {
-    localStorage.setItem(PICCOLO_FILES_OPEN_KEY, open ? '1' : '0');
+    localStorage.setItem(piccolo_files_open_key(), open ? '1' : '0');
   } catch (error) {
     // Not remembered: fine.
   }
@@ -265,13 +291,16 @@ function piccolo_files_start() {
     }
     input.value = '';
   });
-  let open = false;
-  try {
-    open = localStorage.getItem(PICCOLO_FILES_OPEN_KEY) === '1';
-  } catch (error) {
-    open = false;
-  }
-  piccolo_files_set_open(open);
+  piccolo_files_set_open(piccolo_files_remembered_open());
+  // Turning the phone (or resizing across the line): that layout's own state.
+  window.matchMedia(PICCOLO_FILES_PORTRAIT).addEventListener('change', function () {
+    const open = piccolo_files_remembered_open();
+    piccolo_files_element('files').classList.toggle('closed', !open);
+    piccolo_files_element('files-toggle').classList.toggle('active', open);
+    if (open) {
+      piccolo_files_refresh(true);
+    }
+  });
   // piccolo writes files as it plays (saves, states): keep the list current.
   piccolo_files.timer = setInterval(function () { piccolo_files_refresh(false); }, 2000);
 }
