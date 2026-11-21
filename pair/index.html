@@ -1,0 +1,159 @@
+<!doctype html>
+<!-- The pair link's page (frontends-common net_pair_link.h):
+       https://get-piccolo.app/pair#k=<host key, 52 base32 chars>[&b=<beacon>]
+     piccolo's pairing panel shows it as a QR code and COPY LINK. Everything
+     after # stays in the browser (it never reaches any server), and this page
+     sends nothing anywhere: it only reads the hash and hands it on, to
+     piccoletto or to piccoletto in the browser. The 6-digit code piccolo
+     shows is typed there; the link alone pairs nothing. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>piccolo: pair a device</title>
+<link rel="icon" href="../assets/v1/img/piccolo-icon-small.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/v1/site.css">
+<style>
+  main.wrap { padding-top: 48px; padding-bottom: 56px; display: grid; gap: 28px; max-width: 760px; }
+  main h1 { margin: 0; }
+  .lede { margin: 0; color: var(--muted); }
+  .choices { display: grid; gap: 16px; }
+  .choice { padding: 20px 22px; display: grid; gap: 10px; justify-items: start; }
+  .choice h2 { margin: 0; font-size: 22px; text-shadow: none; }
+  .choice p { margin: 0; color: var(--muted); font-size: 15px; }
+  .steps { margin: 0; padding-left: 22px; display: grid; gap: 6px; color: var(--muted); }
+  .steps b { color: var(--text); }
+  .facts { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; font-size: 14px; }
+  .facts dt { color: var(--muted); }
+  .facts dd { margin: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+  .problem { padding: 20px 22px; border-left: 4px solid var(--accent); }
+  .problem p { margin: 0; }
+</style>
+</head>
+<body data-site="home">
+<!-- sites-header (tools/sync-snippets.sh) -->
+<header class="sites-bar">
+  <div class="wrap sites-bar-row">
+    <a class="sites-brand" href="https://get-piccolo.app/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#1A2840"/><rect x="8" y="26" width="24" height="10" fill="#E0E6F0"/><rect x="15" y="19" width="10" height="24" fill="#E0E6F0"/><circle cx="43" cy="38" r="7" fill="#FFC93C"/><circle cx="53" cy="26" r="7" fill="#E0E6F0"/></svg> piccolo</a>
+    <nav class="sites-nav" aria-label="piccolo's sites">
+      <a data-site="home" href="https://get-piccolo.app/">Home</a>
+      <a data-site="play" href="https://get-piccolo.app/play/">Play</a>
+      <a data-site="cores" href="https://cores.get-piccolo.app/cores/">Cores</a>
+      <a data-site="releases" href="https://releases.get-piccolo.app/">Releases</a>
+      <a data-site="status" href="https://beacon.get-piccolo.app/status/">Status</a>
+      <a href="https://github.com/multitap-org/piccolo">GitHub</a>
+    </nav>
+  </div>
+</header>
+<!-- /sites-header -->
+<main class="wrap">
+  <div>
+    <h1>Pair with a piccolo</h1>
+  </div>
+
+  <!-- Shown when the hash has a valid key. -->
+  <div id="ok" hidden>
+    <div class="choices">
+      <p class="lede">This link says which piccolo to pair with. To finish, type the
+        <b>6-digit code</b> that piccolo shows next to it: the link alone pairs nothing,
+        and it stops working when piccolo closes its pairing window.</p>
+      <section class="panel choice" id="android">
+        <h2>On this phone: piccoletto</h2>
+        <p>piccoletto opens with this link and asks for the code.</p>
+        <a class="btn primary" id="open-app" href="#">Open in piccoletto</a>
+      </section>
+      <section class="panel choice">
+        <h2>In this browser</h2>
+        <p>piccoletto in the browser: a gamepad and remote play, nothing to install.</p>
+        <a class="btn" id="open-web" href="#">Open piccoletto in the browser</a>
+      </section>
+      <section class="panel choice" id="other-steps">
+        <h2>Somewhere else</h2>
+        <ol class="steps">
+          <li>Open piccoletto (Android) or piccoletto in the browser.</li>
+          <li>Paste this page's address where it asks for a pairing link.</li>
+          <li>Type the <b>6-digit code</b> piccolo shows.</li>
+        </ol>
+      </section>
+      <dl class="facts">
+        <dt>piccolo's key</dt><dd id="key"></dd>
+        <dt>Beacon</dt><dd id="beacon"></dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- Shown when it doesn't. -->
+  <section class="panel problem" id="bad" hidden>
+    <p>This pairing link is incomplete. Copy it again from piccolo
+      (SETTINGS &gt; NETWORK, PAIR A DEVICE, COPY LINK) or scan its QR code.</p>
+  </section>
+  <noscript><p class="lede">This page needs JavaScript to read the link.</p></noscript>
+</main>
+<!-- sites-footer (tools/sync-snippets.sh) -->
+<footer class="sites-foot">
+  <div class="wrap sites-foot-row">
+    <p>piccolo is free software (MIT), part of the <a href="https://github.com/multitap-org">Multitap</a> project.</p>
+    <p class="sites-foot-links"><a href="https://get-piccolo.app/">Home</a> <a href="https://get-piccolo.app/play/">Play</a> <a href="https://cores.get-piccolo.app/cores/">Cores</a> <a href="https://releases.get-piccolo.app/">Releases</a> <a href="https://beacon.get-piccolo.app/status/">Status</a> <a href="https://github.com/multitap-org/piccolo">GitHub</a> <a href="https://github.com/multitap-org/piccolo/issues">Issues</a></p>
+  </div>
+</footer>
+<!-- /sites-footer -->
+<script>
+"use strict";
+
+// Same rules as net_pair_link_parse: k = a 32-byte key in RFC 4648 base32
+// without padding (52 characters; the last one carries 4 zero bits, so it's
+// a or q), any case; b = a beacon host name, optional.
+var DEFAULT_BEACON = "beacon.get-piccolo.app";
+var PICCOLETTO_PACKAGE = "site.multitap.piccoletto";
+var PICCOLETTO_WEB = "https://get-piccolo.app/play/piccoletto/";
+
+function readLink(hash) {
+  var fields = {};
+  var parts = hash.replace(/^#/, "").split("&");
+  for (var i = 0; i < parts.length; i++) {
+    var eq = parts[i].indexOf("=");
+    if (eq > 0) {
+      fields[parts[i].slice(0, eq)] = decodeURIComponent(parts[i].slice(eq + 1));
+    }
+  }
+  var key = (fields.k || "").toLowerCase();
+  if (!/^[a-z2-7]{51}[aq]$/.test(key)) {
+    return null;
+  }
+  var beacon = (fields.b || "").toLowerCase();
+  if (beacon !== "" && !/^[a-z0-9.:\[\]-]{1,253}$/.test(beacon)) {
+    return null;
+  }
+  return { key: key, beacon: beacon };
+}
+
+function show() {
+  var link = readLink(location.hash);
+  document.getElementById("ok").hidden = link === null;
+  document.getElementById("bad").hidden = link !== null;
+  if (link === null) {
+    return;
+  }
+  // The hash handed on as it came, rebuilt from the checked fields only.
+  var hash = "k=" + link.key + (link.beacon !== "" ? "&b=" + encodeURIComponent(link.beacon) : "");
+  document.getElementById("key").textContent = link.key;
+  document.getElementById("beacon").textContent = link.beacon !== "" ? link.beacon : DEFAULT_BEACON + " (default)";
+  // Android: an intent for piccoletto's piccoletto://pair?k=...&b=... (Play
+  // Store when it isn't installed). Once get-piccolo.app/pair is an App Link
+  // (.well-known/assetlinks.json), scanning the QR opens piccoletto without
+  // this page.
+  var android = /Android/i.test(navigator.userAgent);
+  document.getElementById("android").hidden = !android;
+  document.getElementById("open-app").href =
+    "intent://pair?" + hash + "#Intent;scheme=piccoletto;package=" + PICCOLETTO_PACKAGE + ";end";
+  document.getElementById("open-web").href = PICCOLETTO_WEB + "#" + hash;
+}
+
+show();
+window.addEventListener("hashchange", show);
+</script>
+</body>
+</html>

@@ -17,5 +17,5 @@ jobs:
           git diff --exit-code assets/v1/MANIFEST || { echo "run tools/make-manifest.sh"; exit 1; }
       - name: Sites bar and footer are current
         run: |
-          tools/sync-snippets.sh assets/v1 index.html
-          git diff --exit-code index.html || { echo "run tools/sync-snippets.sh assets/v1 index.html"; exit 1; }
+          tools/sync-snippets.sh assets/v1 index.html pair/index.html
+          git diff --exit-code index.html pair/index.html || { echo "run tools/sync-snippets.sh assets/v1 index.html pair/index.html"; exit 1; }
