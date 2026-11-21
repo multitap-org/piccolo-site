@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- piccoletto in the browser: piccolo's companion (the gamepad, remote play,
+     devices). piccolo's web/package.sh puts this folder in the web zip as
+     piccoletto/, next to piccolo's pages; the shared scripts and sw.js are
+     one folder up (frontends-common's web/). Everything here is relative. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#101820">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>piccoletto</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-32.png">
+<style>
+  :root { --back: #101820; --bar: #2f4f7f; --text: #e8eef4; }
+  html, body { margin: 0; height: 100%; background: var(--back); overflow: hidden; }
+  body { font: 13px/1.4 ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace; color: var(--text);
+         /* The pads take every touch: no scrolling, zooming or long-press menus. */
+         touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+  /* The canvas fills the screen; SDL takes the window's size from its CSS
+     size (multitap-page.js sends a resize event when it changes). dvh: the
+     phone's visible height, without the browser's bars. */
+  #stage { position: fixed; inset: 0; height: 100dvh; }
+  canvas { display: block; width: 100%; height: 100%; outline: none; }
+  #overlay { position: fixed; inset: 0; z-index: 5; display: flex; align-items: center; justify-content: center;
+             background: var(--back); text-transform: uppercase; letter-spacing: 1px; text-align: center; padding: 16px; }
+  #overlay.gone { display: none; }
+  #overlay .box { max-width: 36em; }
+  #overlay progress { width: 16em; height: 6px; margin-top: 12px; accent-color: var(--bar); }
+</style>
+</head>
+<body>
+<div id="stage"><canvas id="canvas" tabindex="-1" oncontextmenu="event.preventDefault()"></canvas></div>
+<div id="overlay"><div class="box"><div id="message">LOADING PICCOLETTO</div><progress id="progress" max="1" value="0"></progress></div></div>
+<script src="../multitap-storage.js"></script>
+<script src="../multitap-page.js"></script>
+<script src="piccoletto-page.js"></script>
+<script>piccoletto_page_start();</script>
+</body>
+</html>

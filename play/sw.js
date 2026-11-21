@@ -1,4 +1,5 @@
-// piccolo's service worker (docs/wasm.md). Two jobs:
+// The service worker of a site with Multitap's frontends (piccolo, piccoletto),
+// at the site's root, shared by every page under it. Two jobs:
 //
 // 1. Cross-origin isolation where the server can't send the headers
 //    (GitHub Pages, a plain static server): every response from this origin
@@ -11,18 +12,26 @@
 
 'use strict';
 
-const CACHE = 'piccolo-v1';
+const CACHE = 'multitap-v1';
 
 self.addEventListener('install', function () {
   self.skipWaiting();
 });
 
+// Older caches (piccolo-v1 from the first builds) go.
 self.addEventListener('activate', function (event) {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil((async function () {
+    for (const name of await caches.keys()) {
+      if (name !== CACHE) {
+        await caches.delete(name);
+      }
+    }
+    await self.clients.claim();
+  })());
 });
 
 function isolated(response) {
-  // Opaque responses (cross-origin, no CORS) can't be rewritten; piccolo loads none.
+  // Opaque responses (cross-origin, no CORS) can't be rewritten; the pages load none.
   if (response.status === 0) {
     return response;
   }
