@@ -1,0 +1,21 @@
+# The shared look (assets/README.md): MANIFEST lists exactly what's in
+# assets/v1/, and index.html carries the current sites bar and footer.
+name: Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  assets:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: MANIFEST is current
+        run: |
+          tools/make-manifest.sh
+          git diff --exit-code assets/v1/MANIFEST || { echo "run tools/make-manifest.sh"; exit 1; }
+      - name: Sites bar and footer are current
+        run: |
+          tools/sync-snippets.sh assets/v1 index.html
+          git diff --exit-code index.html || { echo "run tools/sync-snippets.sh assets/v1 index.html"; exit 1; }

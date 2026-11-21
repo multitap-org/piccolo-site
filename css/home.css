@@ -1,0 +1,31 @@
+/* get-piccolo.app's own parts. The shared look (colors, fonts, sites bar,
+   footer, buttons, cards) is in assets/v1/site.css. */
+
+section { padding: 72px 0; }
+.band { background: var(--band); }
+
+.hero { padding: 88px 0 80px; text-align: center; }
+.logo { width: min(560px, 100%); height: auto; }
+.tagline { font-size: 24px; margin: 28px 0 12px; }
+.tagline strong { color: var(--accent); font-weight: 700; }
+.lede { max-width: 640px; margin: 0 auto; color: var(--muted); }
+.actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+
+.logo-small { width: min(420px, 100%); height: auto; margin-bottom: 16px; }
+#piccoletto p { max-width: 720px; }
+.tagline-small { font-size: 20px; margin: 0 0 8px; }
+.modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin: 32px 0 24px; }
+.modes .card { background: var(--card); }
+.note { color: var(--muted); font-size: 15px; }
+
+@media (prefers-color-scheme: light) {
+  .tagline strong { color: var(--text); box-shadow: inset 0 -0.4em 0 var(--accent); }
+}
+
+@media (max-width: 600px) {
+  section { padding: 56px 0; }
+  .hero { padding: 56px 0; }
+  .tagline { font-size: 20px; }
+}
