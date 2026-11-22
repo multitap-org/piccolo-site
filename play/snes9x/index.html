@@ -152,7 +152,7 @@
 <div id="app">
   <div id="strip">
     <a class="home" href="../" title="Choose another emulator"><img src="../icon-32.png" alt="">piccolo <span>play / Snes9x</span></a>
-    <span class="channel" id="channel" hidden>DEV e484b27</span>
+    <span class="channel" id="channel" hidden>DEV a23e922</span>
     <span class="space"></span>
     <button id="open" hidden title="Open a game file (or drop it on the page)"><span class="long">Open game</span><span class="short">Open</span></button>
     <button id="files-toggle" hidden title="This session's files: saves, states, settings, games">Files</button>
@@ -182,6 +182,7 @@
 </div>
 <div id="overlay"><div class="box"><div id="message">LOADING PICCOLO</div><progress id="progress" max="1" value="0"></progress></div></div>
 <input id="file" type="file" hidden>
+<script src="../piccolo-gl-state.js"></script>   <!-- before piccolo makes its WebGL context -->
 <script src="../multitap-storage.js"></script>
 <script src="../multitap-page.js"></script>
 <script src="../piccolo-files.js"></script>
