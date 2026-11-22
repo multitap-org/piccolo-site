@@ -1,0 +1,6 @@
+# get-piccolo.app: everything may be indexed. /pair/ asks not to be in
+# its own page (noindex), so it stays crawlable for that tag to be read.
+User-agent: *
+Allow: /
+
+Sitemap: https://get-piccolo.app/sitemap.xml
