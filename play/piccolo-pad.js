@@ -25,12 +25,14 @@ const PICCOLO_PAD_BIT = { B: 0, Y: 1, SELECT: 2, START: 3, UP: 4, DOWN: 5, LEFT:
                           QUICK: 16, MENU: 17 };
 const PICCOLO_PAD_SHOWN_KEY = 'piccolo-pad-shown';
 const PICCOLO_PAD_DEADZONE = 0.3;   // of the d-pad's half size: closer to its middle is no direction
+const PICCOLO_PAD_BUZZ_MS = 20;   // a press's buzz (piccolo's own touch pad: haptics.cpp BUZZ_MS)
 const PICCOLO_PAD_BOTH_REACH = 0.62;   // A + B: closer than this share of the distance between their centres to each
 
 const piccolo_pad = {
   shown: false,
   fingers: new Map(),   // pointerId -> bits that finger holds
   sent: 0,              // the bits piccolo has
+  vibrate: true,        // SETTINGS' touch pad VIBRATE (piccolo says: piccolo_pad_set_vibrate)
   attached: false,      // piccolo took the show / hide (its router exists)
   targets: null,        // [{ element, bits, dpad, left, top, right, bottom }] (null: measure again)
   lit: 0,               // the bits drawn as held
@@ -190,13 +192,18 @@ function piccolo_pad_update() {
   if (bits === piccolo_pad.sent) {
     return;
   }
-  if ((bits & ~piccolo_pad.sent) !== 0 && navigator.vibrate) {
-    navigator.vibrate(12);
+  if ((bits & ~piccolo_pad.sent) !== 0 && piccolo_pad.vibrate && navigator.vibrate) {
+    navigator.vibrate(PICCOLO_PAD_BUZZ_MS);
   }
   piccolo_pad.sent = bits;
   if (typeof Module !== 'undefined' && Module.ccall && piccolo_pad.attached) {
     Module.ccall('piccolo_web_pad_state', null, ['number'], [bits]);
   }
+}
+
+// piccolo's touch pad VIBRATE setting (src/web_pad.h: web_pad_set_vibrate).
+function piccolo_pad_set_vibrate(on) {
+  piccolo_pad.vibrate = on;
 }
 
 // Draws what's held (only called when it changed).
