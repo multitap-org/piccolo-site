@@ -5,8 +5,10 @@
 // its own (pointer events): one per button, sliding from one to the next,
 // the d-pad in eight directions. What's held goes to piccolo as RetroPad
 // bits (piccolo_web_pad_state), a controller in its input router like any
-// pad (START joins a port). MENU (bit 16, never a core's) opens piccolo's
-// QUICK MENU: without a keyboard it's the only way there. Shown on touch
+// pad (START joins a port). MENU (bit 17) opens piccolo's MAIN MENU, QUICK
+// (bit 16) its QUICK MENU (never a core's: without a keyboard they're the
+// only way there; in the menus the pad moves, B accepts, A goes back,
+// START opens the menu bar). Shown on touch
 // screens and hidden while a real gamepad is in use; PAD in the strip shows
 // or hides it anywhere (remembered).
 //
@@ -18,9 +20,9 @@
 'use strict';
 
 // RETRO_DEVICE_ID_JOYPAD_* as bits.
-// MENU is piccolo's own (WEB_PAD_MENU_BIT in src/web_pad.h).
+// QUICK and MENU are piccolo's own (WEB_PAD_QUICK_MENU_BIT, WEB_PAD_MAIN_MENU_BIT in src/web_pad.h).
 const PICCOLO_PAD_BIT = { B: 0, Y: 1, SELECT: 2, START: 3, UP: 4, DOWN: 5, LEFT: 6, RIGHT: 7, A: 8, X: 9, L: 10, R: 11,
-                          MENU: 16 };
+                          QUICK: 16, MENU: 17 };
 const PICCOLO_PAD_SHOWN_KEY = 'piccolo-pad-shown';
 const PICCOLO_PAD_DEADZONE = 0.3;   // of the d-pad's half size: closer to its middle is no direction
 
@@ -79,14 +81,11 @@ function piccolo_pad_build(kind) {
     face.appendChild(piccolo_pad_button('A', ['A'], 'round a'));
   }
   right.appendChild(face);
-  // MENU: sideways at the top of the d-pad's side, upright in the middle
-  // between SELECT and START (the CSS shows one of the two).
-  left.insertBefore(piccolo_pad_button('MENU', ['MENU'], 'meta menu sideways'), left.firstChild);
+  // MENU at the top of the d-pad's side, QUICK at the top of the buttons' side.
+  left.insertBefore(piccolo_pad_button('MENU', ['MENU'], 'meta menu'), left.firstChild);
+  right.insertBefore(piccolo_pad_button('QUICK', ['QUICK'], 'meta menu'), right.firstChild);
   left.appendChild(piccolo_pad_button('SELECT', ['SELECT'], 'meta'));
   right.appendChild(piccolo_pad_button('START', ['START'], 'meta'));
-  const middle = document.getElementById('pad-middle');
-  middle.textContent = '';
-  middle.appendChild(piccolo_pad_button('MENU', ['MENU'], 'meta menu upright'));
 }
 
 // The buttons and the d-pad where they are now (only shown ones: a hidden
@@ -250,7 +249,7 @@ function piccolo_pad_set_shown(shown) {
 // stage's size depends on it).
 function piccolo_pad_start() {
   piccolo_pad_build(document.body.dataset.pad === 'snes' ? 'snes' : 'gb');
-  for (const id of ['pad-left', 'pad-right', 'pad-middle']) {
+  for (const id of ['pad-left', 'pad-right']) {
     const half = document.getElementById(id);
     for (const type of ['pointerdown', 'pointermove', 'pointerup', 'pointercancel']) {
       half.addEventListener(type, piccolo_pad_finger);
@@ -271,7 +270,7 @@ function piccolo_pad_start() {
   });
   // Any layout change moves the buttons: measured again at the next touch.
   const observer = new ResizeObserver(piccolo_pad_forget_layout);
-  for (const id of ['main', 'pad-left', 'pad-right', 'pad-middle']) {
+  for (const id of ['main', 'pad-left', 'pad-right']) {
     observer.observe(document.getElementById(id));
   }
   window.addEventListener('resize', piccolo_pad_forget_layout);
