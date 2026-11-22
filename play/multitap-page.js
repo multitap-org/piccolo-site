@@ -76,6 +76,37 @@ function multitap_page_follow_stage() {
   observer.observe(document.getElementById('stage'));
 }
 
+// The screen's refresh rate, measured (browsers don't tell it, and a phone's
+// changes: an S22 runs 60, 48, 96 or 120 Hz): the median of the last
+// animation frames' intervals, in globalThis.multitap_display_hz (0 until
+// measured). The frontend reads it each loop (app_shell_display_refresh_hz):
+// near the core's rate it runs one core frame per refresh (Vsync timing),
+// otherwise its own clock with catch-up (Exact).
+const MULTITAP_DISPLAY_FRAMES = 120;   // the intervals kept (two seconds at 60 Hz)
+function multitap_page_measure_display() {
+  const intervals = [];
+  let last = 0;
+  let count = 0;
+  globalThis.multitap_display_hz = 0;
+  function frame(time) {
+    const interval = time - last;
+    last = time;
+    if (interval > 2 && interval < 100) {   // (not the first, nor after a hidden page's pause)
+      intervals.push(interval);
+      if (intervals.length > MULTITAP_DISPLAY_FRAMES) {
+        intervals.shift();
+      }
+    }
+    // Worked out every half second, once there's enough to go on.
+    if (++count % 30 === 0 && intervals.length >= 60) {
+      const sorted = intervals.slice().sort(function (a, b) { return a - b; });
+      globalThis.multitap_display_hz = 1000 / sorted[sorted.length >> 1];
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+
 // The canvas fills the stage and the frontend places and scales the picture
 // inside it (Andrés, 2026-11-21: the fixed 16:9 / 4:3 steps wasted the
 // screen, a phone's most of all). Nothing to do any more; kept for pages
@@ -145,6 +176,7 @@ async function multitap_page_start(config) {
       multitap_storage_install();
       document.getElementById('overlay').classList.add('gone');
       multitap_page_follow_stage();
+      multitap_page_measure_display();
       if (config.started) {
         config.started();
       }
