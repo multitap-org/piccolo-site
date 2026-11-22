@@ -5,7 +5,7 @@
 // its own (pointer events): one per button, sliding from one to the next,
 // the d-pad in eight directions. What's held goes to piccolo as RetroPad
 // bits (piccolo_web_pad_state), a controller in its input router like any
-// pad (START joins a port). MENU (bit 17) opens piccolo's MAIN MENU, QUICK
+// pad (START joins a port). HOME (bit 17) opens piccolo's MAIN MENU, "..."
 // (bit 16) its QUICK MENU (never a core's: without a keyboard they're the
 // only way there; in the menus the pad moves, B accepts, A goes back,
 // START opens the menu bar). Shown on touch
@@ -81,9 +81,11 @@ function piccolo_pad_build(kind) {
     face.appendChild(piccolo_pad_button('A', ['A'], 'round a'));
   }
   right.appendChild(face);
-  // MENU at the top of the d-pad's side, QUICK at the top of the buttons' side.
-  left.insertBefore(piccolo_pad_button('MENU', ['MENU'], 'meta menu'), left.firstChild);
-  right.insertBefore(piccolo_pad_button('QUICK', ['QUICK'], 'meta menu'), right.firstChild);
+  // HOME (the main menu) at the top of the d-pad's side, "..." (the quick
+  // menu) at the top of the buttons' side: the same words as piccolo's own
+  // touch pad (touch_pad_menu, touch_pad_quick in src/strings.txt).
+  left.insertBefore(piccolo_pad_button('HOME', ['MENU'], 'meta menu'), left.firstChild);
+  right.insertBefore(piccolo_pad_button('...', ['QUICK'], 'meta menu'), right.firstChild);
   // SELECT / START: sideways at the bottom of each half; upright close
   // together in the middle, under the d-pad and the buttons (the CSS shows
   // one of the two).

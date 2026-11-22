@@ -3519,8 +3519,28 @@ msgid "Move and resize the touch gamepad's buttons (drag a group, pinch or SIZE,
 msgstr "Mueve y cambia el tamaño de los botones del control táctil (arrastra un grupo, pellizca o SIZE, RESET, DONE). Vertical y horizontal tienen su propio layout."
 
 msgctxt "touch_pad_menu"
-msgid "MENU"
-msgstr "MENÚ"
+msgid "HOME"
+msgstr "INICIO"
+
+msgctxt "setting_touch_pad_style"
+msgid "STYLE"
+msgstr "ESTILO"
+
+msgctxt "setting_touch_pad_style_help"
+msgid "Which controller the touch gamepad looks like: RETROPAD has every button and both sticks; the others only the buttons that controller has, with its names (SUPER NINTENDO: no sticks, no L2 / R2). Set it for a core or a game with SCOPE."
+msgstr "A qué control se parece el control táctil: RETROPAD tiene todos los botones y ambos sticks; los demás sólo los botones de ese control, con sus nombres (SUPER NINTENDO: sin sticks, sin L2 / R2). Elígelo para un core o un juego con ÁMBITO."
+
+msgctxt "touch_pad_style_retropad"
+msgid "RETROPAD"
+msgstr "RETROPAD"
+
+msgctxt "touch_pad_style_missing"
+msgid "(GONE)"
+msgstr "(NO ESTÁ)"
+
+msgctxt "touch_pad_quick"
+msgid "..."
+msgstr "..."
 
 msgctxt "setting_menu_backdrop"
 msgid "BACKDROP"
@@ -3786,9 +3806,6 @@ msgctxt "dvr_back_to_now"
 msgid "BACK TO NOW"
 msgstr "VOLVER AL PRESENTE"
 
-msgctxt "dvr_hud_from"
-msgid "◀◀ PLAYING FROM"
-msgstr "◀◀ JUGANDO DESDE"
 
 msgctxt "dvr_hud_nothing"
 msgid "REWIND: NOTHING RECORDED YET"
@@ -3801,6 +3818,26 @@ msgstr "REBOBINAR: ESTE CORE NO TIENE SAVESTATES"
 msgctxt "dvr_hud_off"
 msgid "REWIND IS OFF (SETTINGS > GENERAL)"
 msgstr "EL REBOBINADO ESTÁ APAGADO (AJUSTES > GENERAL)"
+
+msgctxt "input_action_hotkey_remap"
+msgid "REMAP (HOLD)"
+msgstr "REMAPEAR (MANTENER)"
+
+msgctxt "remap_card_port"
+msgid "PORT %u"
+msgstr "PUERTO %u"
+
+msgctxt "remap_card_hold"
+msgid "HOLD"
+msgstr "MANTÉN"
+
+msgctxt "remap_card_to_remap"
+msgid "TO REMAP"
+msgstr "PARA REMAPEAR"
+
+msgctxt "input_conflict_also"
+msgid "ALSO %s: both fire together. Bind one of them elsewhere."
+msgstr "TAMBIÉN %s: se activan juntos. Asigna uno de los dos a otro control."
 # A controller with no particular look: its buttons named by position.
 # Layouts are by type of controller, not by model: layouts/<Maker>/<model>.cfg.
 # See frontends/common/input_layouts.h for the format; copy one to add yours.
