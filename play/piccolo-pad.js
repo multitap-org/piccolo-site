@@ -54,7 +54,7 @@ function piccolo_pad_button(label, names, kind) {
 }
 
 // The two halves: d-pad side and buttons side, each with its shoulder on top
-// (SNES) and SELECT / START at the bottom.
+// (SNES); SELECT / START under them.
 function piccolo_pad_build(kind) {
   const left = document.getElementById('pad-left');
   const right = document.getElementById('pad-right');
@@ -84,8 +84,15 @@ function piccolo_pad_build(kind) {
   // MENU at the top of the d-pad's side, QUICK at the top of the buttons' side.
   left.insertBefore(piccolo_pad_button('MENU', ['MENU'], 'meta menu'), left.firstChild);
   right.insertBefore(piccolo_pad_button('QUICK', ['QUICK'], 'meta menu'), right.firstChild);
-  left.appendChild(piccolo_pad_button('SELECT', ['SELECT'], 'meta'));
-  right.appendChild(piccolo_pad_button('START', ['START'], 'meta'));
+  // SELECT / START: sideways at the bottom of each half; upright close
+  // together in the middle, under the d-pad and the buttons (the CSS shows
+  // one of the two).
+  left.appendChild(piccolo_pad_button('SELECT', ['SELECT'], 'meta sideways'));
+  right.appendChild(piccolo_pad_button('START', ['START'], 'meta sideways'));
+  const meta = document.getElementById('pad-meta');
+  meta.textContent = '';
+  meta.appendChild(piccolo_pad_button('SELECT', ['SELECT'], 'meta upright'));
+  meta.appendChild(piccolo_pad_button('START', ['START'], 'meta upright'));
 }
 
 // The buttons and the d-pad where they are now (only shown ones: a hidden
@@ -249,7 +256,7 @@ function piccolo_pad_set_shown(shown) {
 // stage's size depends on it).
 function piccolo_pad_start() {
   piccolo_pad_build(document.body.dataset.pad === 'snes' ? 'snes' : 'gb');
-  for (const id of ['pad-left', 'pad-right']) {
+  for (const id of ['pad-left', 'pad-right', 'pad-meta']) {
     const half = document.getElementById(id);
     for (const type of ['pointerdown', 'pointermove', 'pointerup', 'pointercancel']) {
       half.addEventListener(type, piccolo_pad_finger);
@@ -270,7 +277,7 @@ function piccolo_pad_start() {
   });
   // Any layout change moves the buttons: measured again at the next touch.
   const observer = new ResizeObserver(piccolo_pad_forget_layout);
-  for (const id of ['main', 'pad-left', 'pad-right']) {
+  for (const id of ['main', 'pad-left', 'pad-right', 'pad-meta']) {
     observer.observe(document.getElementById(id));
   }
   window.addEventListener('resize', piccolo_pad_forget_layout);

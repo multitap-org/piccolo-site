@@ -108,6 +108,8 @@
   body.has-pad #stage { grid-area: stage; }
   body.has-pad #pad-left { grid-area: padl; }
   body.has-pad #pad-right { grid-area: padr; }
+  /* SELECT / START: in the halves sideways, a row of their own upright. */
+  body.has-pad #pad-meta, .pad-button.meta.upright { display: none; }
   body.has-pad .pad { display: flex; flex-direction: column; align-items: center; justify-content: space-around; gap: 3vmin;
                       padding: 3vmin; background: var(--band); touch-action: none; user-select: none; -webkit-user-select: none;
                       -webkit-touch-callout: none; --unit: min(15vh, 9vw, 72px); }
@@ -117,11 +119,15 @@
     /* Like a Game Boy: the picture on top, as tall as its shape needs once a
        game is running (piccolo tells its aspect: --picture-aspect), the pad
        takes all the rest. */
-    body.has-pad #main { grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1fr) auto;
-                         grid-template-areas: "stage stage" "padl padr"; }
-    body.has-pad.has-picture #main { grid-template-rows: min(calc(100vw / var(--picture-aspect)), 62%) minmax(0, 1fr); }
+    body.has-pad #main { grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1fr) auto auto;
+                         grid-template-areas: "stage stage" "padl padr" "padm padm"; }
+    body.has-pad.has-picture #main { grid-template-rows: min(calc(100vw / var(--picture-aspect)), 62%) minmax(0, 1fr) auto; }
     /* (Two halves of 2.6 units: all of it fits 100vw.) */
     body.has-pad .pad { --unit: min(13vw, 72px); padding: 4vw 3vw; border-top: 2px solid var(--shadow); }
+    body.has-pad #pad-meta { display: flex; grid-area: padm; flex-direction: row; justify-content: center; gap: 5vw;
+                             padding: 2vw 3vw 7vw; border-top: 0; }
+    body.has-pad .pad-button.meta.sideways { display: none; }
+    body.has-pad .pad-button.meta.upright { display: flex; }
   }
   .pad-button { display: flex; align-items: center; justify-content: center; background: var(--bg); color: var(--text);
                 border: 2px solid var(--edge); box-shadow: 3px 3px 0 var(--shadow); font-weight: 700; letter-spacing: 0.06em; }
@@ -144,15 +150,18 @@
   .face.four .y { left: 0; top: calc(var(--unit) * 0.8); }
   .face.four .a { right: 0; top: calc(var(--unit) * 0.8); }
   .face.four .b { left: calc(var(--unit) * 0.8); bottom: 0; }
-  .face.two .b { left: 0; bottom: calc(var(--unit) * 0.4); }
-  .face.two .a { right: 0; top: calc(var(--unit) * 0.4); }
+  /* A and B close together, on a slant (as on a Game Boy). */
+  /* (As tall as the d-pad, so both halves line up.) */
+  .face.two { width: calc(var(--unit) * 2.15); }
+  .face.two .b { left: 0; bottom: calc(var(--unit) * 0.35); }
+  .face.two .a { right: 0; top: calc(var(--unit) * 0.35); }
 </style>
 </head>
 <body data-channel="dev" data-pad="snes">
 <div id="app">
   <div id="strip">
     <a class="home" href="../" title="Choose another emulator"><img src="../icon-32.png" alt="">piccolo <span>play / piccobots</span></a>
-    <span class="channel" id="channel" hidden>DEV 92d7191</span>
+    <span class="channel" id="channel" hidden>DEV cd640e0</span>
     <span class="space"></span>
     <button id="open" hidden title="Open a game file (or drop it on the page)"><span class="long">Open game</span><span class="short">Open</span></button>
     <button id="files-toggle" hidden title="This session's files: saves, states, settings, games">Files</button>
@@ -165,6 +174,7 @@
       <canvas id="canvas" tabindex="-1" oncontextmenu="event.preventDefault()"></canvas>
     </div>
     <div class="pad" id="pad-right"></div>
+    <div class="pad" id="pad-meta"></div>
     <aside id="files" class="closed">
       <header>
         <span class="title">Files</span>
