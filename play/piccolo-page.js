@@ -49,7 +49,7 @@ function piccolo_page_files() {
 }
 
 // FULL SCREEN: the whole page on the screen, the same layout with the touch
-// pad (it steps aside by itself while a gamepad is in use, piccolo-pad.js);
+// pad (it steps aside by itself while a gamepad is in use, multitap-pad.js);
 // the strip hides while a game is played anyway. The browser's Esc (or
 // back) leaves it.
 function piccolo_page_fullscreen() {
@@ -101,4 +101,14 @@ function piccolo_page_start() {
       piccolo_files_start();
     },
   });
+}
+
+// The touch pad shown or hidden (multitap-pad.js's on_shown): upright, it
+// takes the place under the game where FILES was open.
+function piccolo_page_pad_shown(shown) {
+  const files = document.getElementById('files');
+  if (shown && window.matchMedia('(orientation: portrait)').matches && files !== null &&
+      !files.classList.contains('closed') && typeof piccolo_files_set_open === 'function') {
+    piccolo_files_set_open(false);
+  }
 }

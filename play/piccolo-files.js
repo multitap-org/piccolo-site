@@ -27,7 +27,7 @@ function piccolo_files_open_key() {
 
 // What the panel starts as: what was left last time in this layout; never
 // set, open under the game on an upright phone (unless the touch gamepad
-// has that place: piccolo-pad.js), closed beside it elsewhere.
+// has that place: multitap-pad.js), closed beside it elsewhere.
 function piccolo_files_remembered_open() {
   try {
     const value = localStorage.getItem(piccolo_files_open_key());

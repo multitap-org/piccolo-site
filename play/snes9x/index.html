@@ -100,7 +100,7 @@
              border-left: 0; border-top: 2px solid var(--shadow); }
   }
 
-  /* The touch gamepad (piccolo-pad.js), when shown (body.has-pad): beside
+  /* The touch gamepad (frontends-common's multitap-pad.js), when shown (body.has-pad): beside
      the picture, or under it on an upright screen; FILES goes over the game. */
   .pad { display: none; }
   body.has-pad #main { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: minmax(0, 1fr);
@@ -161,7 +161,7 @@
 <div id="app">
   <div id="strip">
     <a class="home" href="../" title="Choose another emulator"><img src="../icon-32.png" alt="">piccolo <span>play / Snes9x</span></a>
-    <span class="channel" id="channel" hidden>DEV 76f92c0</span>
+    <span class="channel" id="channel" hidden>DEV 80fff2a</span>
     <span class="space"></span>
     <button id="open" hidden title="Open a game file (or drop it on the page)"><span class="long">Open game</span><span class="short">Open</span></button>
     <button id="files-toggle" hidden title="This session's files: saves, states, settings, games">Files</button>
@@ -197,8 +197,12 @@
 <script src="../multitap-page.js"></script>
 <script src="../piccolo-files.js"></script>
 <script src="../piccolo-page.js"></script>
-<script src="../piccolo-pad.js"></script>
-<script>piccolo_pad_start();</script>
+<script src="../multitap-pad.js"></script>
+<script>
+  multitap_pad_start({ root: '#main', kind: document.body.dataset.pad === 'snes' ? 'snes' : 'gb', state: 'piccolo_web_pad_state',
+                       show: 'piccolo_web_pad_show', toggle: 'pad-toggle', storage_key: 'piccolo-pad-shown', menu_button: true,
+                       on_shown: piccolo_page_pad_shown, observe: ['main', 'pad-left', 'pad-right', 'pad-meta'] });
+</script>
 <script>piccolo_page_start();</script>
 </body>
 </html>
