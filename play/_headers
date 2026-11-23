@@ -1,5 +1,0 @@
-# Cloudflare Pages / Netlify: what piccolo's threads need (README.txt).
-/*
-  Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: require-corp
-  Cross-Origin-Resource-Policy: same-origin
