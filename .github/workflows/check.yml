@@ -19,3 +19,11 @@ jobs:
         run: |
           tools/sync-snippets.sh assets/v1 index.html pair/index.html
           git diff --exit-code index.html pair/index.html || { echo "run tools/sync-snippets.sh assets/v1 index.html pair/index.html"; exit 1; }
+      # get-piccolo.app/play/ is the piccolo-web image (piccolo's web.yml), not
+      # this repo: a play/ folder here is a mistake nobody serves (2026-11-22).
+      - name: No play/ folder
+        run: |
+          if git ls-files --error-unmatch play >/dev/null 2>&1; then
+            echo "play/ must not be in piccolo-site: /play/ is the piccolo-web image (docs/sites.md)"
+            exit 1
+          fi

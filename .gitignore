@@ -1,0 +1,3 @@
+# get-piccolo.app/play/ is the piccolo-web image (CI on piccolo main), never
+# a folder here: copying a web build into play/ publishes nothing.
+/play/
