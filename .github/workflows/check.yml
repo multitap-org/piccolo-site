@@ -19,6 +19,22 @@ jobs:
         run: |
           tools/sync-snippets.sh assets/v1 index.html pair/index.html
           git diff --exit-code index.html pair/index.html || { echo "run tools/sync-snippets.sh assets/v1 index.html pair/index.html"; exit 1; }
+      # The blog's pages are committed (nothing is built on the server), so
+      # they must match what tools/make-blog.py writes from blog/posts/. The
+      # converter's version is pinned: another one may write other HTML.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Blog pages are current
+        run: |
+          pip install --quiet markdown==3.10.2
+          tools/make-blog.py
+          if [ -n "$(git status --porcelain blog sitemap.xml)" ]; then
+            git status --short blog sitemap.xml
+            git diff blog sitemap.xml
+            echo "run tools/make-blog.py"
+            exit 1
+          fi
       # get-piccolo.app/play/ is the piccolo-web image (piccolo's web.yml), not
       # this repo: a play/ folder here is a mistake nobody serves (2026-11-22).
       - name: No play/ folder

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>piccolo&#x27;s blog</title>
+  <subtitle>News and progress notes from piccolo, a small libretro frontend for playing games.</subtitle>
+  <link href="https://get-piccolo.app/blog/"/>
+  <link rel="self" href="https://get-piccolo.app/blog/feed.xml"/>
+  <id>https://get-piccolo.app/blog/</id>
+  <updated>2026-11-26T00:00:00Z</updated>
+  <author><name>piccolo</name></author>
+  <entry>
+    <title>Hello, world</title>
+    <link href="https://get-piccolo.app/blog/hello-world/"/>
+    <id>https://get-piccolo.app/blog/hello-world/</id>
+    <published>2026-11-26T00:00:00Z</published>
+    <updated>2026-11-26T00:00:00Z</updated>
+    <summary>The first post.</summary>
+    <content type="html">&lt;p&gt;Hello, world.&lt;/p&gt;</content>
+  </entry>
+</feed>

@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- Written by tools/make-blog.py from blog/posts/ and tools/blog-page.html:
+     change those, not this page. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#1A2840">
+<link rel="icon" href="{{root}}img/piccolo-icon-small.svg" type="image/svg+xml">
+<link rel="icon" href="{{root}}img/piccolo-icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{{root}}img/piccolo-icon-256.png">
+<meta property="og:type" content="{{og_type}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:image" content="https://get-piccolo.app/img/piccolo-logo-dark.png">
+<meta property="og:url" content="{{url}}">
+<link rel="canonical" href="{{url}}">
+<link rel="alternate" type="application/atom+xml" title="piccolo's blog" href="https://get-piccolo.app/blog/feed.xml">
+<link rel="stylesheet" href="{{root}}assets/v1/site.css">
+<link rel="stylesheet" href="{{root}}css/blog.css">
+</head>
+<body data-site="blog">
+
+<!-- sites-header (tools/make-blog.py) -->
+{{header}}
+<!-- /sites-header -->
+
+<main class="wrap blog">
+{{content}}
+</main>
+
+<!-- sites-footer (tools/make-blog.py) -->
+{{footer}}
+<!-- /sites-footer -->
+
+</body>
+</html>
