@@ -96,7 +96,7 @@ h2 { font-size: 34px; margin: 0 0 24px; }
 }
 
 /* ---- The sites bar: the same markup on every site (sites-header.html).
-   <body data-site="home|play|cores|releases|status"> lights its entry and
+   <body data-site="home|play|blog|cores|releases|status"> lights its entry and
    names the site next to the brand. ---- */
 .sites-bar { background: var(--band); border-bottom: 2px solid var(--shadow); }
 .sites-bar-row { display: flex; align-items: center; gap: 8px 20px; flex-wrap: wrap; min-height: 56px; }
@@ -107,6 +107,7 @@ h2 { font-size: 34px; margin: 0 0 24px; }
 .sites-brand svg { width: 28px; height: 28px; flex: none; }
 .sites-brand::after { font: 400 14px/1 var(--font-text); color: var(--muted); letter-spacing: 0; }
 body[data-site="play"] .sites-brand::after { content: "/ play"; }
+body[data-site="blog"] .sites-brand::after { content: "/ blog"; }
 body[data-site="cores"] .sites-brand::after { content: "/ cores"; }
 body[data-site="releases"] .sites-brand::after { content: "/ releases"; }
 body[data-site="status"] .sites-brand::after { content: "/ status"; }
@@ -118,11 +119,15 @@ body[data-site="status"] .sites-brand::after { content: "/ status"; }
 .sites-nav a:hover { color: var(--text); box-shadow: inset 0 -3px 0 var(--accent); }
 body[data-site="home"] .sites-nav a[data-site="home"],
 body[data-site="play"] .sites-nav a[data-site="play"],
+body[data-site="blog"] .sites-nav a[data-site="blog"],
 body[data-site="cores"] .sites-nav a[data-site="cores"],
 body[data-site="releases"] .sites-nav a[data-site="releases"],
 body[data-site="status"] .sites-nav a[data-site="status"] {
   background: var(--accent); color: var(--on-accent); box-shadow: none;
 }
+/* An entry that is only an icon (GitHub): the svg carries its own size. */
+.sites-nav a.sites-nav-icon { display: flex; align-items: center; padding: 8px 11px; }
+.sites-nav-icon svg { display: block; flex: none; }
 
 /* ---- The footer: identical everywhere (sites-footer.html). ---- */
 .sites-foot { border-top: 2px solid var(--shadow); color: var(--muted); font-size: 14px; padding: 28px 0 32px; }

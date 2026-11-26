@@ -10,7 +10,7 @@ get-piccolo.app (this repo), play. (piccolo's `web/`), cores. and releases.
 - `fonts/`: Fredoka 600 (headings) and IBM Plex Mono 400/700 (text), woff2,
   latin, with their OFL licenses. Served from here: no Google Fonts.
 - `sites-header.html`, `sites-footer.html`: the sites bar and the footer, the
-  same markup on every site. A page sets `<body data-site="home|play|cores|releases|status">`
+  same markup on every site. A page sets `<body data-site="home|play|blog|cores|releases|status">`
   and site.css lights that entry.
 - `img/`: the icon and the logo (copies of piccolo/assets/branding).
 - `MANIFEST`: `sha256  path` for every file above (`tools/make-manifest.sh`).
