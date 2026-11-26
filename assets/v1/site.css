@@ -109,7 +109,7 @@ h2 { font-size: 34px; margin: 0 0 24px; }
 body[data-site="play"] .sites-brand::after { content: "/ play"; }
 body[data-site="blog"] .sites-brand::after { content: "/ blog"; }
 body[data-site="cores"] .sites-brand::after { content: "/ cores"; }
-body[data-site="releases"] .sites-brand::after { content: "/ releases"; }
+body[data-site="releases"] .sites-brand::after { content: "/ downloads"; }
 body[data-site="status"] .sites-brand::after { content: "/ status"; }
 .sites-nav { display: flex; gap: 2px; margin-left: auto; }
 .sites-nav a {
